@@ -17,6 +17,7 @@ import Camp from "../assets/campaign.jpeg"
 import Email from "../assets/email.jpeg"
 import Webdev from "../assets/web development.jpeg"
 import Geo from "../assets/geo.jpeg"
+import Branding from "../assets/branding1.png"
 import { useNavigate,Link } from 'react-router-dom'; // Import useNavigate hook
 
 
@@ -93,7 +94,7 @@ const serviceItems = [
     title: "Branding",
     description: "Build a brand that speaks, resonates, and scales—powered by AI intelligence.",
     path: "/services/branding", // Updated path
-    image: Geo, // Replace with your branding-related image if needed
+    image: Branding, // Replace with your branding-related image if needed
     features: [
       "Visual identity systems designed for digital and AI-first platforms",
       "AI-led brand positioning and tone of voice development",

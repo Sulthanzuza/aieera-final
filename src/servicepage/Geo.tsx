@@ -77,20 +77,7 @@ const GEOService = () => {
                 Traditional SEO is no longer enough. Enter the era of Generative Engine Optimization—where we optimize for AI assistants, not just search engines.
               </motion.p>
               
-              <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.9 }}
-                className="flex flex-wrap gap-4"
-              >
-                <button className="bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors flex items-center group">
-                  Get Started
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button className="border border-white/20 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition-colors">
-                  Learn More
-                </button>
-              </motion.div>
+              
             </div>
             
             <motion.div 
@@ -144,10 +131,7 @@ const GEOService = () => {
                       <div className="text-purple-500 mb-6">{feature.icon}</div>
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
-                      <button className="mt-6 text-purple-400 flex items-center group">
-                        Learn more 
-                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </button>
+                      
                     </div>
                   </div>
                 </div>
