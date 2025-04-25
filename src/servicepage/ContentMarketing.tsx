@@ -6,7 +6,7 @@ import AnimatedWords from '../components/AnimatedWords';
 import Img1 from '../assets/services/content 1.jpeg'
 import Img2 from '../assets/services/content2.jpeg'
 import Img3 from '../assets/services/content3.jpeg'
-import Img4 from '../assets/services/img4.jpeg'
+import Img4 from '../assets/services/content2.jpeg'
 import Main from '../assets/services/content main.jpeg'
 import Bg from '../assets/services/contentbg.jpeg' 
 const images = [Img1, Img2, Img4,Img3];
