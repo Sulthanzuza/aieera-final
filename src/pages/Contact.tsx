@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Mail, Phone, MapPin, CheckCircle } from 'lucide-react';
 
 const contactMethods = [
   {
@@ -38,7 +38,29 @@ const formVariants = {
   }
 };
 
+const successMessageVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      duration: 0.6
+    }
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.8,
+    transition: {
+      duration: 0.3
+    }
+  }
+};
+
 const Contact = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -46,37 +68,68 @@ const Contact = () => {
     message: ''
   });
 
-  const [success, setSuccess] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+    
+    // Reset the submission status when user starts typing again
+    if (isSubmitted) {
+      setIsSubmitted(false);
+    }
   };
-  
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
-    setSuccess(false);
-  
+    setIsSubmitting(true);
+    
+    // Prepare data for FormSubmit
+    const formSubmitData = new FormData();
+    Object.entries(formData).forEach(([key, value]) => {
+      formSubmitData.append(key, value);
+    });
+    
+    // Add the hidden fields
+    formSubmitData.append('_captcha', 'false');
+    formSubmitData.append('_subject', 'New Contact Form Submission');
+    formSubmitData.append('_next', window.location.href); // Ensures we stay on the same page
+    
     try {
-      const form = new FormData();
-      form.append("firstName", formData.firstName);
-      form.append("lastName", formData.lastName);
-      form.append("email", formData.email);
-      form.append("message", formData.message);
-  
-      await fetch('https://script.google.com/macros/s/AKfycbwHJjzsa1Q6Vkn135Tscxz0eavwjOLigkA2hBiebXA5GL8a8x8i2aYWnNMUTZ1nlrK7/exec', {
+      // Use fetch to submit the form data
+      const response = await fetch('https://formsubmit.co/ajax/hello@aieera.com', {
         method: 'POST',
-        body: form,
+        body: formSubmitData
       });
-  
-      setSuccess(true);
+      
+      if (response.ok) {
+        // Form submitted successfully
+        setIsSubmitted(true);
+        // Reset form fields
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          message: ''
+        });
+        
+        // Scroll to the top of the form to ensure the success message is visible
+        const formElement = document.getElementById('contact-form');
+        if (formElement) {
+          formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      } else {
+        // Handle error
+        console.error('Form submission failed');
+        alert('There was an error submitting the form. Please try again later.');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
+      alert('There was an error submitting the form. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
     }
-  
-    setLoading(false);
   };
 
   return (
@@ -136,77 +189,106 @@ const Contact = () => {
         </div>
 
         <motion.div
+          id="contact-form"
           variants={formVariants}
           initial="hidden"
           animate="visible"
           className="glass-card rounded-xl p-8 max-w-2xl mx-auto"
         >
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  First Name
-                </label>
-                <input
-                  name="firstName"
-                  type="text"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Last Name
-                </label>
-                <input
-                  name="lastName"
-                  type="text"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                />
-              </div>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Email
-              </label>
-              <input
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Message
-              </label>
-              <textarea
-                name="message"
-                rows={4}
-                value={formData.message}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-              />
-            </div>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              type="submit"
-              disabled={loading}
-              className="w-full bg-gradient-to-r from-gray-700 to-gray-900 text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </motion.button>
-            {success && <p className="text-green-600 text-center mt-4">Message sent successfully!</p>}
-          </form>
+<AnimatePresence mode="wait">
+            {isSubmitted ? (
+              <motion.div
+                key="success"
+                variants={successMessageVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                className="bg-gray-50 border-2 border-gray-200 rounded-lg p-6 mb-6 flex flex-col items-center text-center"
+              >
+                <CheckCircle className="h-12 w-12 text-gray-800 mb-3" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Message Sent Successfully!</h3>
+                <p className="text-gray-600 mb-4">Thank you for contacting us. We'll be in touch soon.</p>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setIsSubmitted(false)}
+                  className="w-full bg-gradient-to-r from-black to-gray-800 text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-70"
+                >
+                  Send Another Message
+                </motion.button>
+              </motion.div>
+            ) : (
+              <motion.form
+                key="form"
+                className="space-y-6"
+                onSubmit={handleSubmit}
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-800 mb-2">
+                      First Name
+                    </label>
+                    <input
+                      name="firstName"
+                      type="text"
+                      required
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-800 mb-2">
+                      Last Name
+                    </label>
+                    <input
+                      name="lastName"
+                      type="text"
+                      required
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-800 mb-2">
+                    Email
+                  </label>
+                  <input
+                    name="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-800 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    name="message"
+                    rows={4}
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                  />
+                </div>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-black to-gray-800 text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-70"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </motion.button>
+              </motion.form>
+            )}
+          </AnimatePresence>
         </motion.div>
       </div>
     </div>

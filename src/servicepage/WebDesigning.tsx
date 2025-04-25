@@ -2,13 +2,32 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Pen, LayoutTemplate, Eye, Code2, Sparkles ,ArrowRight } from 'lucide-react';
-
+import AnimatedWords from '../components/AnimatedWords';
+import Img1 from '../assets/services/web des1.jpeg'
+import Img2 from '../assets/services/geo2.jpeg'
+import Img3 from '../assets/services/geo3.jpeg'
+import Img4 from '../assets/services/geo4.jpeg' 
+import BG from '../assets/services/webdesbg.jpeg'
+const images = [Img1, Img2, Img4,Img3];
 const Webdesign = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-
+  const animatedWords = [
+    "trust",
+    "clarity",
+    "ease",
+    "speed",
+    "professionalism",
+    "navigation",
+    "confidence",
+    "accessibility",
+    "responsiveness",
+    "experience"
+  ];
+  
+  
   const features = [
     {
       icon: <LayoutTemplate className="w-8 h-8" />,
@@ -36,8 +55,11 @@ const Webdesign = () => {
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
       {/* Hero Section with Animated Background */}
       <div className="relative min-h-screen">
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg')] bg-cover bg-center opacity-10" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/80 to-[#0A0A0A]" />
+      <div
+  className="absolute inset-0 bg-cover bg-center opacity-10"
+  style={{ backgroundImage: `url(${BG})` }}
+/>
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/80 to-[#0A0A0A]" />
   
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,17 +78,20 @@ const Webdesign = () => {
                 Intelligent Web Design
               </motion.div>
   
-              <motion.h1
+              <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="text-5xl lg:text-7xl font-bold leading-tight mb-6"
+                className="mb-6"
               >
-                Visually Striking
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">
-                  Web Experiences
-                </span>
-              </motion.h1>
+                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                  Web Designing
+                </h1>
+                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                   is
+                </h1>
+                <AnimatedWords words={animatedWords} interval={3000} />
+              </motion.div>
   
               <motion.p
                 initial={{ opacity: 0 }}

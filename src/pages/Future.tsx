@@ -264,7 +264,7 @@ const Future = () => {
           initial={{ y: 0 }}
           animate={{ y: [0, 20, 0] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-gradient-to-r from-blue-200 to-cyan-200 opacity-20 blur-xl"
+          className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-gradient-to-r from-gray-200 to-stone-200 opacity-20 blur-xl"
         />
       </div>
     </div>

@@ -55,3 +55,47 @@ body {
   animation: fade-in 0.6s ease-out forwards;
 }
 
+/* Create a subtle silver glazing effect with pseudo-element */
+.card-with-glazing {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-with-glazing::before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: -75%;
+  left: -75%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.03) 40%,
+    rgba(211, 211, 211, 0.15) 47%,
+    rgba(192, 192, 192, 0.3) 50%,
+    rgba(211, 211, 211, 0.15) 53%,
+    rgba(255, 255, 255, 0.03) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  z-index: 30;
+  pointer-events: none;
+  animation: moveGlazing 8s infinite linear;
+}
+
+@keyframes moveGlazing {
+  0% {
+    top: -75%;
+    left: -75%;
+  }
+  100% {
+    top: 100%;
+    left: 100%;
+  }
+}
+
+/* Optional: Make the glazing effect more visible or faster on hover */
+.card-with-glazing:hover::before {
+  animation-duration: 4s;
+}

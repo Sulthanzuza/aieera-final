@@ -1,13 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { TrendingUp, Search, Code, ArrowRight,Activity } from 'lucide-react';
+import { TrendingUp, Search, Code, ArrowRight, Activity } from 'lucide-react';
+import AnimatedWords from '../components/AnimatedWords';
+import Img1 from '../assets/services/brandding1.jpg'
+import Img2 from '../assets/services/branding2.webp'
+import Img3 from '../assets/services/branding 1.jpg'
+import Img4 from '../assets/services/web devbg.jpeg'
+import BG from '../assets/services/branding 1.jpg'
+
+const images = [Img1, Img2, Img4, Img3];
 
 const Branding = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
+  const animatedWords = [
+    "future",
+    "innovation",
+    "growth",
+    "success",
+    "excellence"
+  ];
 
   const features = [
     {
@@ -36,10 +51,14 @@ const Branding = () => {
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
       {/* Hero Section with Animated Background */}
       <div className="relative min-h-screen">
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg')] bg-cover bg-center opacity-10" />
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url(${BG})` }}
+        />
+
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/80 to-[#0A0A0A]" />
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -55,31 +74,34 @@ const Branding = () => {
               >
                 Next-Gen SEO Solution
               </motion.div>
-              
-              <motion.h1 
+
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="text-5xl lg:text-7xl font-bold leading-tight mb-6"
+                className="mb-6"
               >
-                Search Engine
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">
-                  Optimization
-                </span>
-              </motion.h1>
-              
-              <motion.p 
+                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                  Branding
+                </h1>
+                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                  is
+                </h1>
+                <AnimatedWords words={animatedWords} interval={3000} />
+              </motion.div>
+
+              <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.7 }}
                 className="text-xl text-gray-300 mb-8 max-w-2xl"
               >
-             "What if SEO could predict trends before they happen?"</motion.p>
-              
+                "What if SEO could predict trends before they happen?"</motion.p>
+
 
             </div>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
@@ -87,8 +109,8 @@ const Branding = () => {
             >
               <div className="relative w-full aspect-square max-w-lg mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-3xl opacity-20 animate-pulse" />
-                <img 
-                  src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg"
+                <img
+                  src={BG}
                   alt="AI Visualization"
                   className="relative z-10 rounded-2xl object-cover w-full h-full"
                 />
@@ -110,7 +132,7 @@ const Branding = () => {
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Choose SEO?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our AI doesn’t just optimize—it forecasts. Get ahead of competitors with predictive SEO strategies. </p>
+              Our AI doesn’t just optimize—it forecasts. Get ahead of competitors with predictive SEO strategies. </p>
           </motion.div>
 
           <div className="mt-20 space-y-20">
@@ -130,18 +152,18 @@ const Branding = () => {
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
                       <button className="mt-6 text-purple-400 flex items-center group">
-                        Learn more 
+                        Learn more
                         <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </button>
                     </div>
                   </div>
                 </div>
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
-                  <img 
-                    src={`https://images.pexels.com/photos/${3861958 + index}/pexels-photo-${3861958 + index}.jpeg`}
-                    alt={feature.title}
-                    className="rounded-2xl shadow-2xl"
-                  />
+                <img 
+  src={images[index]}
+  alt={feature.title}
+  className="rounded-2xl shadow-2xl"
+/>
                 </div>
               </motion.div>
             ))}
@@ -149,7 +171,7 @@ const Branding = () => {
         </div>
       </section>
 
-     
+
     </div>
   );
 };

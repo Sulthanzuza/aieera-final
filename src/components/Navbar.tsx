@@ -17,7 +17,7 @@ const Navbar = () => {
           {/* Logo */}
           <motion.div whileHover={{ scale: 1.05 }} className="flex-shrink-0 flex items-center">
   <Link to="/" className="flex items-center space-x-2">
-    <img src={Logo} alt="logo icon" className="h-12 object-contain" />
+    <img src={Logo} alt="logo icon" className="h-12 object-contain white" />
     
     
   

@@ -2,12 +2,31 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Bot, Brain, Database, LineChart, MessageSquare, Search, ArrowRight } from 'lucide-react';
+import AnimatedWords from '../components/AnimatedWords';
+import Img1 from '../assets/services/geo1.jpeg'
+import Img2 from '../assets/services/geo2.jpeg'
+import Img3 from '../assets/services/geo3.jpeg'
+import Img4 from '../assets/services/geo4.jpeg' 
+const images = [Img1, Img2, Img4,Img3];
 
 const GEOService = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const animatedWords = [
+    "visibility",
+    "authority",
+    "automation",
+    "strategy",
+    "precision",
+    "scalability",
+    "reach",
+    "momentum",
+    "ranking",
+    "dominance"
+  ];
 
   const features = [
     {
@@ -56,17 +75,20 @@ const GEOService = () => {
                 Next-Gen SEO Solution
               </motion.div>
               
-              <motion.h1 
+              <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="text-5xl lg:text-7xl font-bold leading-tight mb-6"
+                className="mb-6"
               >
-                Generative Engine
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">
-                  Optimization
-                </span>
-              </motion.h1>
+                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                  Generative Engine
+                </h1>
+                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                  Optimization is
+                </h1>
+                <AnimatedWords words={animatedWords} interval={3000} />
+              </motion.div>
               
               <motion.p 
                 initial={{ opacity: 0 }}
@@ -136,11 +158,11 @@ const GEOService = () => {
                   </div>
                 </div>
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
-                  <img 
-                    src={`https://images.pexels.com/photos/${3861958 + index}/pexels-photo-${3861958 + index}.jpeg`}
-                    alt={feature.title}
-                    className="rounded-2xl shadow-2xl"
-                  />
+                <img 
+  src={images[index]}
+  alt={feature.title}
+  className="rounded-2xl shadow-2xl"
+/>
                 </div>
               </motion.div>
             ))}

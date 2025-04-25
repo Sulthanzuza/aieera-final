@@ -19,6 +19,7 @@ import Webdev from "../assets/web development.jpeg"
 import Geo from "../assets/geo.jpeg"
 import Branding from "../assets/branding1.png"
 import { useNavigate,Link } from 'react-router-dom'; // Import useNavigate hook
+import { desc } from 'framer-motion/client';
 
 
 
@@ -27,14 +28,15 @@ const serviceItems = [
   {
     icon: <Brain className="w-8 h-8" />,
     title: "AI-Powered SEO",
-    description: "Complex data analysis using more advanced tools",
+    description: "Smarter search rankings, effortlessly.",
     path: "/services/seo-service", // Added path for navigation
     image: Seo,
+    desc1:"We use AI to delve deep into search patterns, understand your competitors, and discover what your customers is really looking for. Then we make your site so you can steps into the ranks and stay there.",
     features: [
-      "Real-time data processing",
-      "Pattern recognition",
-      "Predictive modeling",
-      "Automated reporting"
+      "Live analysis of search trends",
+      "Smart keyword suggestions using pattern recognitions",
+      "AI powered content target strategy planning",
+      "clear, actionable reports"
     ]
   },
   {
@@ -53,40 +55,43 @@ const serviceItems = [
   {
     icon: <Bot className="w-8 h-8" />,
     title: "AI-Powered PPC / Paid Ads",
-    description: "Turn clicks into conversions for your marketing campagins",
+    description: "More clicks, less guesswork",
     path: "/services/paid-ads", // Added path for navigation
     image: PPC,
+    desc1:"Our AI make ad system fine tunes your campaigns as they run adjusting bids, targeting high intent users, and tweaking ads for better results",
     features: [
-      "Campaign automation",
-      "A/B testing",
-      "Customer journey mapping",
-      "Performance tracking"
+      "Fully Automated campaign management with machine learning",
+      " Ongoing A/B testing that improves your ads on the run",
+      "Smart customers targeting across the customer journey",
+      "Live performance tracking and effectiv"
     ]
   },
   {
     icon: <Target className="w-8 h-8" />,
-    title: "AI Social Media Marketing",
-    description: "AI enabled targeting and integration",
-    path: "/services/ai-social-media-marketing", // Added path for navigation
+    title: "Next Gen Social Media Marketing",
+    description: "Turn followers into fans",
+    path: "/services/socialmedia-marketing", // Added path for navigation
     image: Smm,
+    desc1:"Let AI with our specialist prompt engineer make your social media game more attention than ever. We analyze what’s trending, how your audience behaves, and what content hits home then we make posts that truly connect.",
     features: [
-      "Audience segmentation",
-      "Behavioral targeting",
-      "Custom audiences",
-      "Look-alike modeling"
+      "Acute audience targeting based on behavior and interests",
+      "Content recommendations powered by engagement insights",
+      "Tools to build and grow custom and look like audiences",
+      "Deliver the right content at the right time with strategies from our digital marketing services suite."
     ]
   },
   {
     icon: <Megaphone className="w-8 h-8" />,
-    title: "Email Marketing Automation",
-    description: "AI-powered content creation and optimization",
-    path: "/services/email-marketing-automation", // Added path for navigation
+    title: "Automated Email Engagement",
+    description: "Emails that feel personal sent automatically",
+    path: "/services/email-automation", 
     image: Email,
+    desc1:"We blend creativity with AI insights to plan and write content that ranks converts all while reinforcing your brand’s voice.",
     features: [
-      "SEO optimization",
-      "Content personalization",
-      "Multi-channel content",
-      "Performance analytics"
+      "AI helping content creation that saves time",
+      "Spot on topic and keyword suggestions",
+      "Performance predictions before you publish",
+      "Automated distribution to the right channels"
     ]
   },
   {
@@ -105,66 +110,71 @@ const serviceItems = [
   {
     icon: <LineChart className="w-8 h-8" />,
     title: "Content Marketing with AI tools",
-    description: "Future-proof insights for strategic planning",
+    description: "Create smarter content that gets results.",
     path: "/services/content-marketing", // Added path for navigation
     image: Content,
+    desc1:"We blend creativity with AI insights to plan and write content that ranks converts all while reinforcing your brand’s voice.",
     features: [
-      "Trend analysis",
-      "Market forecasting",
-      "Risk assessment",
-      "Growth opportunities"
+      "AI helping content creation that saves time",
+      "Spot on topic and keyword suggestions",
+      "Performance predictions before you publish",
+      "Automated distribution to the right channels"
     ]
   },
   {
     icon: <Zap className="w-8 h-8" />,
     title: "AI Chatbots & Lead Generation",
     description: "Instant connections, Instant leads",
-    path: "/services/ai-chatbots-lead-generation", // Added path for navigation
+    path: "/services/chat-bots", // Added path for navigation
     image: Camp,
+    desc1:"Our smart chatbots are always online, guiding your visitors, answering questions, and turning casual clicks into sales leads.",
     features: [
-      "Real-time monitoring",
-      "Dynamic optimization",
-      "Performance tracking",
-      "ROI maximization"
+      "Deliver and respond human like supportive ",
+      "Chatbots that understand context and intent",
+      "Seamless handoff to your team when needed",
+      "Bots that get better with every conversation"
     ]
   },
   {
     icon: <SlidersHorizontal className="w-8 h-8" />,
     title: "Customization & Strategy",
-    description: "Future-proof insights for strategic planning",
-    path: "/services/customization-strategy", // Added path for navigation
+    description: "Marketing that’s built around you",
+    path: "/services/customization", // Added path for navigation
     image: Strategy,
+    desc1:"No all in one here. We don’t just listen your requirements we fulfill it, study your industry, and build a strategy that’s adapt, data backed, and designed to scale",
     features: [
-      "Trend analysis",
-      "Market forecasting",
-      "Risk assessment",
-      "Growth opportunities"
+      "In depth competitor and market research",
+      "Strategic marketing plans aligned with your goals",
+      "Clear KPIs to measure success",
+      "Ongoing fine tuning based on real results"
     ]
   },
   {
     icon: <Code className="w-8 h-8" />,
     title: "Web Development",
-    description: "Future-proof insights for strategic planning",
+    description: "A Strong foundation for your digital growth",
     path: "/services/web-development", // Added path for navigation
     image: Webdev,
+    desc1:"From fast loading pages to scalable backends, we build websites that are beautiful, secure, and ready for anything effective for both users and search engines.",
     features: [
-      "Trend analysis",
-      "Market forecasting",
-      "Risk assessment",
-      "Growth opportunities"
+      "Built with modern tech (React, Vue, Angular)",
+      "Secure and scalable backend architecture",
+      "Speed and performance optimization",
+      "Fully SEO friendly structure from the ground up"
     ]
   },
   {
     icon: <Pen className="w-8 h-8" />,
     title: "Web Designing",
-    description: "Future-proof insights for strategic planning",
+    description: "Designs that captivate and convert.",
     path: "/services/web-designing", // Added path for navigation
     image: Web,
+    desc1:"We make visually stunning, instinctual websites that reflect your brand’s personality and guide users exactly where you want them to go.",
     features: [
-      "Trend analysis",
-      "Market forecasting",
-      "Risk assessment",
-      "Growth opportunities"
+      "latest, user first designs",
+      "Responsive layouts that look great on any devices",
+      "Visuals designs match your brand identity",
+      "Designs that make action and more conversions"
     ]
   }
 ];
@@ -288,81 +298,89 @@ const Home = () => {
     )}
 
 <Swiper
-  ref={swiperRef}
-  slidesPerView={1}
-  spaceBetween={30}
-  breakpoints={{
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
-  }}
-  loop={true}
-  speed={1000}
-  autoplay={{
-    delay: 3000,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  }}
-  modules={[Autoplay, Navigation]}
-  className="mySwiper"
-  allowTouchMove={isHovered}
-  grabCursor={isHovered}
->
-  {serviceItems.map((item, index) => (
-    <SwiperSlide key={index} className="flex justify-center py-4">
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="glass-card w-[300px] md:w-[320px] lg:w-[350px] h-96 rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 group relative"
-      >
-        {/* Background Image - Hidden by default, shown on hover */}
-        <div className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <img 
-            src={item.image} 
-            alt={item.title}
-            className="w-full h-full object-cover"
-          />
-          {/* Dark overlay to ensure text and button are visible over any image */}
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        </div>
-        
-        {/* Content visible when not hovered */}
-        <div className="p-6 flex flex-col justify-between h-full relative z-10 group-hover:opacity-0 transition-opacity duration-500">
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">{item.title}</h3>
-            <p className="text-gray-600 mb-4">{item.description}</p>
+      ref={swiperRef}
+      slidesPerView={1}
+      spaceBetween={30}
+      breakpoints={{
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }}
+      loop={true}
+      speed={1000}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      }}
+      modules={[Autoplay, Navigation]}
+      className="mySwiper"
+      allowTouchMove={isHovered}
+      grabCursor={isHovered}
+    >
+      {serviceItems.map((item, index) => (
+        <SwiperSlide key={index} className="flex justify-center py-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="card-with-glazing w-[300px] md:w-[320px] lg:w-[350px] h-96 rounded-xl overflow-hidden bg-white shadow-5xl hover:shadow-2xl transition-all duration-500 group relative"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            {/* Background Image - Hidden by default, shown on hover */}
+            <div className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover"
+              />
+              {/* Dark overlay to ensure text and button are visible over any image */}
+              <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+            </div>
             
-            {/* Features with bullet points */}
-            <ul className="space-y-1">
-              {item.features.map((feature, idx) => (
-                <li key={idx} className="text-gray-700 text-sm flex items-start">
-                  <span className="text-gray-900 mr-2">•</span>
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Hover Content - Title and Learn More Button */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 p-6">
-          <h3 className="text-2xl font-bold text-white mb-auto mt-6">{item.title}</h3>
+            {/* Content visible when not hovered */}
+            <div className="p-6 flex flex-col justify-between h-full relative z-10 group-hover:opacity-0 transition-opacity duration-500">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-gray-600 mb-4 font-bold">{item.description}</p>
+                <p className="text-gray-600 mb-4">{item.desc1}</p>
+                
+                {/* Features with bullet points */}
+                <ul className="space-y-1">
+                  {item.features.map((feature, idx) => (
+                    <li key={idx} className="text-gray-700 text-sm flex items-start">
+                      <span className="text-gray-900 mr-2">•</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           
-          <div className="mb-6 mt-auto">
-          <button
-  className="flex items-center justify-center px-6 py-3 bg-gray-500 hover:bg-gray-600 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 group"
-  onClick={() => handleNavigateToService(item.path)}
->
-  Learn More
-  <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-</button>
-
-          </div>
-        </div>
-      </motion.div>
-    </SwiperSlide>
-  ))}
-</Swiper>
+            {/* Hover Content - Title and Learn More Button */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 p-6">
+              <h3 className="text-2xl font-bold text-white mb-auto mt-6">{item.title}</h3>
+              
+              <div className="mb-6 mt-auto">
+                <button
+                  className="relative flex items-center justify-center px-6 py-3 bg-gradient-to-r from-black via-gray-800 to-gray-500 hover:from-gray-900 hover:to-gray-400 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+                  onClick={() => handleNavigateToService(item.path)}
+                >
+                  {/* Glossy overlay */}
+                  <span className="absolute inset-0 bg-white opacity-5 rounded-xl pointer-events-none" />
+                  
+                  {/* Button text & icon */}
+                  <span className="relative z-10 flex items-center">
+                    Learn More
+                    <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   </div>
 </div>
 

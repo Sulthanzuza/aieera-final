@@ -2,13 +2,31 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import {  BarChart2, RefreshCcw, Compass, ArrowRight,Activity } from 'lucide-react';
-
+import AnimatedWords from '../components/AnimatedWords';
+import Img1 from '../assets/services/ppc2.jpeg'
+import Img2 from '../assets/services/ppc3.jpeg'
+import Img3 from '../assets/services/ppcbg.jpeg'
+import Img4 from '../assets/services/geo4.jpeg'
+import Bg from '../assets/ppc.jpeg' 
+const images = [Img1, Img2, Img4,Img3];
 const PaidAds = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-
+  const animatedWords = [
+    "performance",
+    "precision",
+    "ROI",
+    "targeting",
+    "optimization",
+    "automation",
+    "reach",
+    "efficiency",
+    "clicks",
+    "conversions"
+  ];
+  
   const features = [
     {
       icon: <RefreshCcw className="w-8 h-8" />,
@@ -36,8 +54,10 @@ const PaidAds = () => {
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
       {/* Hero Section with Animated Background */}
       <div className="relative min-h-screen">
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg')] bg-cover bg-center opacity-10" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/80 to-[#0A0A0A]" />
+      <div
+  className="absolute inset-0 bg-cover bg-center opacity-10"
+  style={{ backgroundImage: `url(${Bg})` }}
+/> <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/80 to-[#0A0A0A]" />
   
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,17 +76,20 @@ const PaidAds = () => {
                 Smarter Ad Campaigns
               </motion.div>
   
-              <motion.h1
+              <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="text-5xl lg:text-7xl font-bold leading-tight mb-6"
+                className="mb-6"
               >
+                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                 AI-Powered
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">
-                  PPC / Paid Ads
-                </span>
-              </motion.h1>
+                </h1>
+                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                PPC / Paid Ads is
+                </h1>
+                <AnimatedWords words={animatedWords} interval={3000} />
+              </motion.div>
   
               <motion.p
                 initial={{ opacity: 0 }}
@@ -87,7 +110,7 @@ const PaidAds = () => {
               <div className="relative w-full aspect-square max-w-lg mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-3xl opacity-20 animate-pulse" />
                 <img
-                  src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg"
+                  src={Bg}
                   alt="AI Paid Ads"
                   className="relative z-10 rounded-2xl object-cover w-full h-full"
                 />
@@ -137,11 +160,11 @@ const PaidAds = () => {
                   </div>
                 </div>
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
-                  <img
-                    src={`https://images.pexels.com/photos/${3861958 + index}/pexels-photo-${3861958 + index}.jpeg`}
-                    alt={feature.title}
-                    className="rounded-2xl shadow-2xl"
-                  />
+                <img 
+  src={images[index]}
+  alt={feature.title}
+  className="rounded-2xl shadow-2xl"
+/>
                 </div>
               </motion.div>
             ))}

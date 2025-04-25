@@ -17,10 +17,11 @@ import ContentMarketing from "./servicepage/ContentMarketing";
 import Custom from './servicepage/Custom';
 import EmailAuto from './servicepage/EmailAuto';
 import SMM from './servicepage/Smm';
-
+import ErrorPage from "./pages/Error"
 import Webdev from './servicepage/WebDevelopment'
 import WebDesign from './servicepage/WebDesigning'
 import PaidAds from "./servicepage/PPC"
+import Whatsapp from "./components/WhatsappFloatButton"
 function App() {
   return (
     <BrowserRouter>
@@ -46,8 +47,9 @@ function App() {
   <Route path="/about" element={<About />} />
   <Route path="/future" element={<Future />} />
   <Route path="/contact" element={<Contact />} />
+   <Route path="*" element={<ErrorPage />} />
 </Routes>
-
+<Whatsapp />
         </main>
         <Footer />
       </div>

@@ -191,7 +191,7 @@ const Services = () => {
   });
 
   return (
-    <div className="relative">
+    <div className="in-h-screen pt-16 relative overflow-hidden">
       <div id="services" className="pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <motion.div
