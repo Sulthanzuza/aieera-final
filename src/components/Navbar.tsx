@@ -29,12 +29,12 @@ const Navbar = () => {
 
   const navLinks = ['Home', 'About', 'Services', 'Future', 'Contact'];
   
-  // Dynamically set the background color based on scroll position
-  const navbarBgClass = scrolled ? "bg-stone-200/95" : "bg-white/80";
+  
+  const navbarBgClass = scrolled ? "bg-stone-200/10" : "bg-white/80";
   const textColorClass = scrolled ? "text-gray-900" : "text-gray-700";
   const hoverTextColorClass = scrolled ? "hover:text-gray-200" : "hover:text-gray-900";
-  const mobileBgClass = scrolled ? "bg-stone-200/95" : "bg-white/90";
-  const borderClass = scrolled ? "bg-stone-200/95" : "border-gray-200/20";
+  const mobileBgClass = scrolled ? "bg-stone-200/10" : "bg-white/90";
+  const borderClass = scrolled ? "bg-stone-200/10" : "border-gray-200/20";
 
   return (
     <nav className={`fixed w-full z-50 ${navbarBgClass} backdrop-blur-md border-b ${borderClass} transition-colors duration-300`}>
