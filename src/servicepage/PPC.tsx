@@ -6,8 +6,14 @@ import AnimatedWords from '../components/AnimatedWords';
 import Img1 from '../assets/services/ppc2.jpeg'
 import Img2 from '../assets/services/ppc3.jpeg'
 import Img3 from '../assets/services/ppcbg.jpeg'
-import Img4 from '../assets/services/geo4.jpeg'
+import Img4 from '../assets/services/Latest PPC Trends in 2022_ Need To Be Follow.jpeg'
 import Bg from '../assets/ppc.jpeg' 
+import Main from '../assets/services/best digital marketing company in Chennai.jpeg'
+import Helmet from 'react-helmet'
+
+
+
+
 const images = [Img1, Img2, Img4,Img3];
 const PaidAds = () => {
   const [ref, inView] = useInView({
@@ -52,7 +58,24 @@ const PaidAds = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-      {/* Hero Section with Animated Background */}
+     <Helmet>
+              
+              <title>PPC Agency Dubai | Google Ads Management Experts</title>
+              <meta name="description" content="Partner with a top PPC agency in Dubai. Expert Google Ads management and PPC services tailored to maximize your ROI and drive targeted traffic" />
+              <meta name="keywords" content="ppc agency dubai, google ads agency in dubai, ppc management dubai" />
+              <meta property="og:title" content="PPC Agency Dubai | Google Ads Management Experts" />
+              <meta property="og:description" content="Partner with a top PPC agency in Dubai. Expert Google Ads management and PPC services tailored to maximize your ROI and drive targeted traffic" />
+              <meta property="og:url" content={window.location.href} />
+              <meta property="og:type" content="website" />
+              <meta property="og:site_name" content="aieera" />
+              <meta name="robots" content="index, follow" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <meta name="author" content="aieera" />
+              <meta name="language" content="English" />
+              
+              
+              <link rel="canonical" href={window.location.href} />
+            </Helmet>
       <div className="relative min-h-screen">
       <div
   className="absolute inset-0 bg-cover bg-center opacity-10"
@@ -110,7 +133,7 @@ const PaidAds = () => {
               <div className="relative w-full aspect-square max-w-lg mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-3xl opacity-20 animate-pulse" />
                 <img
-                  src={Bg}
+                  src={Main}
                   alt="AI Paid Ads"
                   className="relative z-10 rounded-2xl object-cover w-full h-full"
                 />

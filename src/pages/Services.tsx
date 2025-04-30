@@ -19,14 +19,14 @@ import Seo from "../assets/seo.jpeg"
 import Content from "../assets/content creation.jpeg"
 import Strategy from "../assets/strategy.jpeg"
 import Web from "../assets/we b design.jpeg"
-import PPC from "../assets/ppc.jpeg"
+import PPC from "../assets/services/Latest PPC Trends in 2022_ Need To Be Follow.jpeg"
 import Smm from "../assets/smm.jpeg"
 import Camp from "../assets/campaign.jpeg"
 import Email from "../assets/email.jpeg"
 import Webdev from "../assets/web development.jpeg"
 import Geo from "../assets/geo.jpeg"
 import Branding from "../assets/branding.jpeg"
-
+import {Helmet } from 'react-helmet'
 const serviceItems = [
   {
     icon: <Brain className="w-12 h-12" />,
@@ -192,7 +192,25 @@ const Services = () => {
 
   return (
     <div className="in-h-screen pt-16 relative overflow-hidden">
-      <div id="services" className="pt-20">
+     <Helmet>
+              
+              <title>Digital Marketing Services Tailored for Growth | AI-Powered Campaigns</title>
+              <meta name="description" content="Get expert digital marketing services using advanced AI tools. From SEO to social media, we create customized campaigns that drive measurable results." />
+              <meta name="keywords" content="digital marketing services" />
+              <meta property="og:title" content="Digital Marketing Services Tailored for Growth | AI-Powered Campaigns" />
+              <meta property="og:description" content="Get expert digital marketing services using advanced AI tools. From SEO to social media, we create customized campaigns that drive measurable results." />
+              <meta property="og:url" content={window.location.href} />
+              <meta property="og:type" content="website" />
+              <meta property="og:site_name" content="aieera" />
+              <meta name="robots" content="index, follow" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <meta name="author" content="aieera" />
+              <meta name="language" content="English" />
+              
+              
+              <link rel="canonical" href={window.location.href} />
+            </Helmet> 
+                 <div id="services" className="pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

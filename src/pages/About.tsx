@@ -1,11 +1,29 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
-import Logo from "../assets/logo.png"; 
+import { Helmet } from 'react-helmet'; 
+import Logo from "../assets/Logo large single.png"; 
 
 const About = () => {
   return (
     <div className="min-h-screen pt-16 relative">
+      <Helmet>
+              
+              <title> AI Digital Marketing Solutions | Automate Online Growth with AI</title>
+              <meta name="description" content="We are a leading AI-powered digital marketing agency in Dubai, offering intelligent online marketing solutions to help your brand grow smarter and faster." />
+              <meta name="keywords" content="digital marketing agency in dubai, online marketing agency, ai digital marketing agency." />
+              <meta property="og:title" content=" AI Digital Marketing Solutions | Automate Online Growth with AI" />
+              <meta property="og:description" content="We are a leading AI-powered digital marketing agency in Dubai, offering intelligent online marketing solutions to help your brand grow smarter and faster" />
+              <meta property="og:url" content={window.location.href} />
+              <meta property="og:type" content="website" />
+              <meta property="og:site_name" content="aieera" />
+              <meta name="robots" content="index, follow" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <meta name="author" content="aieera" />
+              <meta name="language" content="English" />
+              
+              
+              <link rel="canonical" href={window.location.href} />
+            </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           initial={{ opacity: 0, y: -50 }}

@@ -1,9 +1,10 @@
-import { React, useState, useRef } from 'react';
+import { React, useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Brain, BarChart as ChartBar, Target } from 'lucide-react';
 import { Bot, Megaphone, Zap, LineChart, SlidersHorizontal, Code, Pen, ArrowRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
+import { Helmet } from 'react-helmet'; 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -18,20 +19,18 @@ import Email from "../assets/email.jpeg"
 import Webdev from "../assets/web development.jpeg"
 import Geo from "../assets/geo.jpeg"
 import Branding from "../assets/branding1.png"
-import { useNavigate,Link } from 'react-router-dom'; // Import useNavigate hook
+import { useNavigate, Link } from 'react-router-dom';
 import { desc } from 'framer-motion/client';
-
-
 
 // Service items with added image URLs and slugs for navigation
 const serviceItems = [
   {
     icon: <Brain className="w-8 h-8" />,
-    title: "AI-Powered SEO",
+    title: "AI Guided SEO",
     description: "Smarter search rankings, effortlessly.",
     path: "/services/seo-service", // Added path for navigation
     image: Seo,
-    desc1:"We use AI to delve deep into search patterns, understand your competitors, and discover what your customers is really looking for. Then we make your site so you can steps into the ranks and stay there.",
+    desc1:"Stay ahead of the competition with AI guided SEO that analyzes live trends, keywords, and competitor agendas to boost your search performance. Our digital marketing services learn in real time to improve market changes.",
     features: [
       "Live analysis of search trends",
       "Smart keyword suggestions using pattern recognitions",
@@ -58,7 +57,7 @@ const serviceItems = [
     description: "More clicks, less guesswork",
     path: "/services/paid-ads", // Added path for navigation
     image: PPC,
-    desc1:"Our AI make ad system fine tunes your campaigns as they run adjusting bids, targeting high intent users, and tweaking ads for better results",
+    desc1:"We specialized in digital marketing services that intelligently adjust ad bids and targeting for highest outcomes.",
     features: [
       "Fully Automated campaign management with machine learning",
       " Ongoing A/B testing that improves your ads on the run",
@@ -72,7 +71,7 @@ const serviceItems = [
     description: "Turn followers into fans",
     path: "/services/socialmedia-marketing", // Added path for navigation
     image: Smm,
-    desc1:"Let AI with our specialist prompt engineer make your social media game more attention than ever. We analyze what’s trending, how your audience behaves, and what content hits home then we make posts that truly connect.",
+    desc1:"Deliver the right content at the right time with strategies from our digital marketing services suite.",
     features: [
       "Acute audience targeting based on behavior and interests",
       "Content recommendations powered by engagement insights",
@@ -86,7 +85,7 @@ const serviceItems = [
     description: "Emails that feel personal sent automatically",
     path: "/services/email-automation", 
     image: Email,
-    desc1:"We blend creativity with AI insights to plan and write content that ranks converts all while reinforcing your brand’s voice.",
+    desc1:"Increase open rates and conversions using email automatize tools from our digital marketing services.",
     features: [
       "AI helping content creation that saves time",
       "Spot on topic and keyword suggestions",
@@ -113,7 +112,7 @@ const serviceItems = [
     description: "Create smarter content that gets results.",
     path: "/services/content-marketing", // Added path for navigation
     image: Content,
-    desc1:"We blend creativity with AI insights to plan and write content that ranks converts all while reinforcing your brand’s voice.",
+    desc1:"Create engaging blogs, articles, and multimedia content efficiently with latest AI make writing and design possibilities",
     features: [
       "AI helping content creation that saves time",
       "Spot on topic and keyword suggestions",
@@ -127,7 +126,7 @@ const serviceItems = [
     description: "Instant connections, Instant leads",
     path: "/services/chat-bots", // Added path for navigation
     image: Camp,
-    desc1:"Our smart chatbots are always online, guiding your visitors, answering questions, and turning casual clicks into sales leads.",
+    desc1:"Delivering and responding human like support and create leads at scale with smart AI chatbots that never rest",
     features: [
       "Deliver and respond human like supportive ",
       "Chatbots that understand context and intent",
@@ -138,10 +137,10 @@ const serviceItems = [
   {
     icon: <SlidersHorizontal className="w-8 h-8" />,
     title: "Customization & Strategy",
-    description: "Marketing that’s built around you",
+    description: "Marketing that's built around you",
     path: "/services/customization", // Added path for navigation
     image: Strategy,
-    desc1:"No all in one here. We don’t just listen your requirements we fulfill it, study your industry, and build a strategy that’s adapt, data backed, and designed to scale",
+    desc1:"Achieve better results with marketing strategies made by AI to match your goals and how your clients actually behave.",
     features: [
       "In depth competitor and market research",
       "Strategic marketing plans aligned with your goals",
@@ -169,7 +168,7 @@ const serviceItems = [
     description: "Designs that captivate and convert.",
     path: "/services/web-designing", // Added path for navigation
     image: Web,
-    desc1:"We make visually stunning, instinctual websites that reflect your brand’s personality and guide users exactly where you want them to go.",
+    desc1:"We make visually stunning, instinctual websites that reflect your brand's personality and guide users exactly where you want them to go.",
     features: [
       "latest, user first designs",
       "Responsive layouts that look great on any devices",
@@ -204,8 +203,103 @@ const Home = () => {
     navigate(path);
   };
 
+  // Function to generate JSON-LD structured data
+  const generateSchemaMarkup = () => {
+    // Organization schema
+    const organizationSchema = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "aieera",
+      "description": "Explore the future of digital marketing with AI. We deliver powerful AI-driven strategies that boost engagement, conversions, and business growth.",
+      "url": window.location.origin,
+      "logo": `${window.location.origin}/logo.png`, 
+      "sameAs": [
+        "https://www.facebook.com/aieerafm",
+        "https://www.linkedin.com/company/aieera",
+        "https://www.instagram.com/aieerafm"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+971 545458167", 
+        "contactType": "customer service",
+        "email": "hello@aieera.com" 
+      }
+    };
+
+    // Service schema
+    const serviceSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Digital Marketing",
+      "provider": {
+        "@type": "Organization",
+        "name": "aieera"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI Digital Marketing Services",
+        "itemListElement": serviceItems.map((service, index) => ({
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": service.title,
+            "description": service.description,
+            "url": `${window.location.origin}${service.path}`
+          },
+          "position": index + 1
+        }))
+      }
+    };
+
+    // WebPage schema
+    const webPageSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "AI-Powered Digital Marketing Services | aieera",
+      "description": "Explore the future of digital marketing with AI. We deliver powerful AI-driven strategies that boost engagement, conversions, and business growth.",
+      "url": window.location.href,
+      "mainEntity": {
+        "@type": "WebSite",
+        "name": "aieera - AI Digital Marketing Agency",
+        "url": window.location.origin
+      }
+    };
+
+    return [organizationSchema, serviceSchema, webPageSchema];
+  };
+
   return (
     <div className="min-h-screen pt-16 relative">
+      
+      <Helmet>
+        
+        <title> AI Digital Marketing Solutions | Automate Online Growth with AI</title>
+        <meta name="description" content="Explore the future of digital marketing with AI. We deliver powerful AI-driven strategies that boost engagement, conversions, and business growth." />
+        <meta name="keywords" content="digital marketing with ai, ai digital marketing, ai for digital marketing, ai in digital marketing" />
+        
+        
+        <meta property="og:title" content="AI Digital Marketing Solutions | Automate Online Growth with AI" />
+        <meta property="og:description" content="Explore the future of digital marketing with AI. We deliver powerful AI-driven strategies that boost engagement, conversions, and business growth." />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="aieera" />
+        
+
+        
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="aieera" />
+        <meta name="language" content="English" />
+        
+        
+        <link rel="canonical" href={window.location.href} />
+        
+        
+        <script type="application/ld+json">
+          {JSON.stringify(generateSchemaMarkup())}
+        </script>
+      </Helmet>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -251,9 +345,9 @@ const Home = () => {
     transition={{ duration: 0.8 }}
     className="text-center mb-20"
   >
-    <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
+    <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
       Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-gray-900">Services</span>
-    </h1>
+    </h2>
     <motion.p
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -326,13 +420,21 @@ const Home = () => {
             className="card-with-glazing w-[300px] md:w-[320px] lg:w-[350px] h-96 rounded-xl overflow-hidden bg-white shadow-5xl hover:shadow-2xl transition-all duration-500 group relative"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            itemScope
+            itemType="https://schema.org/Service"
           >
+            {/* Microdata attributes for individual services */}
+            <meta itemProp="name" content={item.title} />
+            <meta itemProp="description" content={item.description} />
+            <meta itemProp="url" content={`${window.location.origin}${item.path}`} />
+            
             {/* Background Image - Hidden by default, shown on hover */}
             <div className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
               <img
                 src={item.image}
                 alt={item.title}
                 className="w-full h-full object-cover"
+                itemProp="image"
               />
               {/* Dark overlay to ensure text and button are visible over any image */}
               <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -341,16 +443,16 @@ const Home = () => {
             {/* Content visible when not hovered */}
             <div className="p-6 flex flex-col justify-between h-full relative z-10 group-hover:opacity-0 transition-opacity duration-500">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 mb-4 font-bold">{item.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2" itemProp="name">{item.title}</h3>
+                <p className="text-gray-600 mb-4 font-bold" itemProp="description">{item.description}</p>
                 <p className="text-gray-600 mb-4">{item.desc1}</p>
                 
                 {/* Features with bullet points */}
-                <ul className="space-y-1">
+                <ul className="space-y-1" itemProp="hasOfferCatalog" itemScope itemType="https://schema.org/OfferCatalog">
                   {item.features.map((feature, idx) => (
-                    <li key={idx} className="text-gray-700 text-sm flex items-start">
+                    <li key={idx} className="text-gray-700 text-sm flex items-start" itemProp="itemListElement" itemScope itemType="https://schema.org/OfferCatalogItem">
                       <span className="text-gray-900 mr-2">•</span>
-                      {feature}
+                      <span itemProp="itemOffered">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -365,6 +467,7 @@ const Home = () => {
                 <button
                   className="relative flex items-center justify-center px-6 py-3 bg-gradient-to-r from-black via-gray-800 to-gray-500 hover:from-gray-900 hover:to-gray-400 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
                   onClick={() => handleNavigateToService(item.path)}
+                  aria-label={`Learn more about ${item.title}`}
                 >
                   {/* Glossy overlay */}
                   <span className="absolute inset-0 bg-white opacity-5 rounded-xl pointer-events-none" />
@@ -385,7 +488,12 @@ const Home = () => {
 </div>
 
 
-<div className="relative w-full min-h-screen overflow-hidden">
+<div className="relative w-full min-h-screen overflow-hidden" itemScope itemType="https://schema.org/Organization">
+      {/* Hidden Schema.org metadata */}
+      <meta itemProp="name" content="aieera" />
+      <meta itemProp="description" content="AI-powered digital marketing agency specializing in SEO, PPC, content marketing, and web development services." />
+      <meta itemProp="url" content={window.location.origin} />
+      
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
@@ -402,15 +510,14 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="w-full md:w-1/2 text-center md:text-left"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-700 leading-tight mb-6">
-            Make Your Business{" "}
-            <span className="text-slate-400">Stand Out</span> with Our Digital
-            Marketing Experts
-          </h1>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-700 leading-tight mb-6" itemProp="slogan">
+          Upgrade Your Brand with{" "}
+            <span className="text-slate-400" itemProp="name">aieera</span> AI Automated Marketing
+          </h2>
 
-          <p className="text-gray-700 text-base sm:text-lg md:text-xl mb-8 max-w-lg mx-auto md:mx-0">
-            We help brands thrive in the digital landscape through data-driven
-            strategies and creative innovation.
+          <p className="text-gray-700 text-base sm:text-lg md:text-xl mb-8 max-w-lg mx-auto md:mx-0" itemProp="description">
+          We help brands thrive in the digital landscape through data-driven
+          strategies and creative innovation.
           </p>
         </motion.div>
 
@@ -428,6 +535,7 @@ const Home = () => {
                 src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 alt="Digital Marketing Team"
                 className="w-full h-auto"
+                itemProp="image"
               />
             </div>
           </div>

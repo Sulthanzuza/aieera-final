@@ -3,12 +3,13 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { TrendingUp, Search, Code, ArrowRight,Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
-import Img1 from '../assets/services/ssm1.jpeg'
+import Img1 from '../assets/services/smm1.jpeg'
 import Img2 from '../assets/services/smm2.jpeg'
 import Img3 from '../assets/services/smm3.jpeg'
-import Img4 from '../assets/services/ssmbg.jpeg'
+import Img4 from '../assets/services/Social Media Management Strategies.jpeg'
+import Helmet from 'react-helmet'
 import Main from '../assets/services/ssmmain.jpeg'
-import Bg from '../assets/smm.jpeg' 
+import Bg from '../assets/services/ssmbg.jpeg' 
 const images = [Img1, Img2, Img4,Img3];
 const SMM = () => {
   const [ref, inView] = useInView({
@@ -53,7 +54,24 @@ const SMM = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-      {/* Hero Section with Animated Background */}
+      <Helmet>
+              
+              <title>Social Media Marketing Agency Dubai | SMM Company UAE </title>
+              <meta name="description" content=" Leading social media management company in Dubai. Grow your brand online with powerful strategies crafted by a top social media marketing agency" />
+              <meta name="keywords" content="social media management company dubai, social media marketing agency dubai " />
+              <meta property="og:title" content="Social Media Marketing Agency Dubai | SMM Company UAE" />
+              <meta property="og:description" content=" Leading social media management company in Dubai. Grow your brand online with powerful strategies crafted by a top social media marketing agency" />
+              <meta property="og:url" content={window.location.href} />
+              <meta property="og:type" content="website" />
+              <meta property="og:site_name" content="aieera" />
+              <meta name="robots" content="index, follow" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <meta name="author" content="aieera" />
+              <meta name="language" content="English" />
+              
+              
+              <link rel="canonical" href={window.location.href} />
+            </Helmet>
       <div className="relative min-h-screen">
       <div
   className="absolute inset-0 bg-cover bg-center opacity-10"

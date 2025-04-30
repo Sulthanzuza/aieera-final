@@ -7,6 +7,7 @@ import Img1 from '../assets/services/content 1.jpeg'
 import Img2 from '../assets/services/content2.jpeg'
 import Img3 from '../assets/services/content3.jpeg'
 import Img4 from '../assets/services/content2.jpeg'
+import Helmet from 'react-helmet'
 import Main from '../assets/services/content main.jpeg'
 import Bg from '../assets/services/contentbg.jpeg' 
 const images = [Img1, Img2, Img4,Img3];
@@ -53,7 +54,24 @@ const Content = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-      {/* Hero Section with Animated Background */}
+     <Helmet>
+              
+              <title> Content Creation Agency Dubai | Performance Marketing Experts</title>
+              <meta name="description" content="Create powerful content that converts. Our content creation agency in Dubai specializes in performance marketing to grow your brand faster and smarter." />
+              <meta name="keywords" content="content creation agency dubai, performance marketing agency in dubai" />
+              <meta property="og:title" content=" Content Creation Agency Dubai | Performance Marketing Experts" />
+              <meta property="og:description" content="Create powerful content that converts. Our content creation agency in Dubai specializes in performance marketing to grow your brand faster and smarter." />
+              <meta property="og:url" content={window.location.href} />
+              <meta property="og:type" content="website" />
+              <meta property="og:site_name" content="aieera" />
+              <meta name="robots" content="index, follow" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <meta name="author" content="aieera" />
+              <meta name="language" content="English" />
+              
+              
+              <link rel="canonical" href={window.location.href} />
+            </Helmet>
       <div className="relative min-h-screen">
       <div
   className="absolute inset-0 bg-cover bg-center opacity-10"

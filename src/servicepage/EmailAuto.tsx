@@ -8,6 +8,7 @@ import Img2 from '../assets/services/email2.jpeg'
 import Img3 from '../assets/services/email1.jpeg'
 import Img4 from '../assets/services/img4.jpeg'
 import Main from '../assets/services/emailmain.jpeg'
+import Helmet from 'react-helmet'
 import Bg from '../assets/services/emailbg.jpeg' 
 const images = [Img1, Img2, Img4,Img3];
 const EmailAuto = () => {
@@ -53,7 +54,24 @@ const EmailAuto = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-      {/* Hero Section with Animated Background */}
+     <Helmet>
+              
+              <title>Email Marketing Services in Dubai | Boost Customer Engagement</title>
+              <meta name="description" content="Enhance your outreach with professional email marketing services in Dubai. We create personalized campaigns that increase engagement and drive conversions." />
+              <meta name="keywords" content="email marketing services in dubai" />
+              <meta property="og:title" content="Email Marketing Services in Dubai | Boost Customer Engagement" />
+              <meta property="og:description" content="Enhance your outreach with professional email marketing services in Dubai. We create personalized campaigns that increase engagement and drive conversions." />
+              <meta property="og:url" content={window.location.href} />
+              <meta property="og:type" content="website" />
+              <meta property="og:site_name" content="aieera" />
+              <meta name="robots" content="index, follow" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <meta name="author" content="aieera" />
+              <meta name="language" content="English" />
+              
+              
+              <link rel="canonical" href={window.location.href} />
+            </Helmet>
       <div className="relative min-h-screen">
       <div
   className="absolute inset-0 bg-cover bg-center opacity-10"

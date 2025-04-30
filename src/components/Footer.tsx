@@ -3,11 +3,10 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaTwitter,
-  FaTiktok,
+
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import FooterLogo from "../assets/footer logo.png";
+import FooterLogo from "../assets/Logo with name large.png";
 
 interface SocialLink {
   name: string;
@@ -25,28 +24,18 @@ const Footer: FC = () => {
     {
       name: "Facebook",
       icon: <FaFacebookF size={18} />,
-      url: "https://facebook.com/yourpage",
+      url: "https://www.facebook.com/aieerafm",
     },
     {
       name: "Instagram",
       icon: <FaInstagram size={18} />,
-      url: "https://instagram.com/anishadm",
+      url: "https://www.instagram.com/aieerafm",
     },
     {
       name: "LinkedIn",
       icon: <FaLinkedinIn size={18} />,
-      url: "https://linkedin.com/company/anishadm",
-    },
-    {
-      name: "Twitter",
-      icon: <FaTwitter size={18} />,
-      url: "https://twitter.com/anishadm",
-    },
-    {
-      name: "TikTok",
-      icon: <FaTiktok size={18} />,
-      url: "https://tiktok.com/@anishadm",
-    },
+      url: "https://www.linkedin.com/company/aieera",
+    }
   ];
 
   const usefulLinks: UsefulLink[] = [
@@ -65,10 +54,10 @@ const Footer: FC = () => {
             <img
               src={FooterLogo}
               alt="Aieera Digital Marketing Logo"
-              className="h-14 w-auto filter invert"
+              className="h-40 w-auto filter invert"
             />
-            <p className="text-xl text-gray-300 mt-2">
-              Digital Marketing Company
+            <p className="text-xl text-gray-300 mt-2 ">
+              Future Marketing Company
             </p>
           </div>
 

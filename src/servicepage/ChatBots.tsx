@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { TrendingUp, Search, Code, ArrowRight,Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
-
+import Helmet from 'react-helmet'
 import Img1 from '../assets/services/chatbot1.jpeg'
 import Img2 from '../assets/services/chatbot2.jpeg'
 import Img3 from '../assets/services/chatbot3.jpeg'
@@ -56,7 +56,24 @@ const ChatBots = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-      {/* Hero Section with Animated Background */}
+     <Helmet>
+              
+              <title>:Lead Generation Chatbots | Top Lead Generation Company Dubai</title>
+              <meta name="description" content="Capture more leads with smart chatbots. As a leading lead generation company in Dubai, we help you automate, qualify, and grow your customer base efficiently." />
+              <meta name="keywords" content="lead generation chatbots, lead generation companies in dubai" />
+              <meta property="og:title" content=":Lead Generation Chatbots | Top Lead Generation Company Dubai" />
+              <meta property="og:description" content="Capture more leads with smart chatbots. As a leading lead generation company in Dubai, we help you automate, qualify, and grow your customer base efficiently." />
+              <meta property="og:url" content={window.location.href} />
+              <meta property="og:type" content="website" />
+              <meta property="og:site_name" content="aieera" />
+              <meta name="robots" content="index, follow" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <meta name="author" content="aieera" />
+              <meta name="language" content="English" />
+              
+              
+              <link rel="canonical" href={window.location.href} />
+            </Helmet>
       <div className="relative min-h-screen">
       <div
   className="absolute inset-0 bg-cover bg-center opacity-10"

@@ -5,10 +5,10 @@ import { TrendingUp, Search, Code, ArrowRight, Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
 import Img1 from '../assets/services/brandding1.jpg'
 import Img2 from '../assets/services/branding2.webp'
-import Img3 from '../assets/services/branding 1.jpg'
-import Img4 from '../assets/services/web devbg.jpeg'
+import Img3 from '../assets/services/pexels-sliceisop-2460434.jpg'
+import Img4 from '../assets/services/pexels-eva-bronzini-7661590.jpg'
 import BG from '../assets/services/branding 1.jpg'
-
+import Helmet from 'react-helmet'
 const images = [Img1, Img2, Img4, Img3];
 
 const Branding = () => {
@@ -49,7 +49,24 @@ const Branding = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-      {/* Hero Section with Animated Background */}
+        <Helmet>
+              
+              <title>Top Branding Agency in Dubai | Creative Branding Solutions</title>
+              <meta name="description" content="Looking for the best branding agency in Dubai? Our creative agency delivers powerful branding strategies that elevate your business identity and market presence" />
+              <meta name="keywords" content="branding agency dubai, creative agency dubai" />
+              <meta property="og:title" content="Top Branding Agency in Dubai | Creative Branding Solutions" />
+              <meta property="og:description" content="Looking for the best branding agency in Dubai? Our creative agency delivers powerful branding strategies that elevate your business identity and market presence" />
+              <meta property="og:url" content={window.location.href} />
+              <meta property="og:type" content="website" />
+              <meta property="og:site_name" content="aieera" />
+              <meta name="robots" content="index, follow" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <meta name="author" content="aieera" />
+              <meta name="language" content="English" />
+              
+              
+              <link rel="canonical" href={window.location.href} />
+            </Helmet>
       <div className="relative min-h-screen">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10"
@@ -148,13 +165,10 @@ const Branding = () => {
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-2xl opacity-20" />
                     <div className="relative bg-gray-900 p-8 rounded-2xl border border-white/10">
-                      <div className="text-purple-500 mb-6">{feature.icon}</div>
+                   
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
-                      <button className="mt-6 text-purple-400 flex items-center group">
-                        Learn more
-                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </button>
+                      
                     </div>
                   </div>
                 </div>

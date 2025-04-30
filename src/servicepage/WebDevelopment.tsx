@@ -9,6 +9,7 @@ import Img3 from '../assets/services/webdev3.jpeg'
 import Img4 from '../assets/services/web devbg.jpeg'
 import BG from '../assets/services/web devbg.jpeg'
 import Main from "../assets/web development.jpeg"
+import Helmet from 'react-helmet'
 const images = [Img1, Img2, Img4, Img3];
 const Webdev = () => {
   const [ref, inView] = useInView({
@@ -54,7 +55,24 @@ const Webdev = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-      {/* Hero Section with Animated Background */}
+      <Helmet>
+              
+              <title>Web Development Company in UAE | Website Design Dubai </title>
+              <meta name="description" content="Professional web development company in UAE offering website design and development services in Dubai. Build stunning, high-performing websites with us today" />
+              <meta name="keywords" content="web development company in uae, website development company dubai, website design company dubai" />
+              <meta property="og:title" content="Web Development Company in UAE | Website Design Dubai" />
+              <meta property="og:description" content="Professional web development company in UAE offering website design and development services in Dubai. Build stunning, high-performing websites with us today" />
+              <meta property="og:url" content={window.location.href} />
+              <meta property="og:type" content="website" />
+              <meta property="og:site_name" content="aieera" />
+              <meta name="robots" content="index, follow" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <meta name="author" content="aieera" />
+              <meta name="language" content="English" />
+              
+              
+              <link rel="canonical" href={window.location.href} />
+            </Helmet>
       <div className="relative min-h-screen">
       <div
           className="absolute inset-0 bg-cover bg-center opacity-10"

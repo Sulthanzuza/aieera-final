@@ -9,6 +9,7 @@ import Img2 from '../assets/services/seo3.jpeg'
 import Img3 from '../assets/services/seo1.jpeg'
 import Img4 from '../assets/services/seo4.jpeg' 
 import Seo from '../assets/seo.jpeg'
+import Helmet from 'react-helmet'
 const images = [Img1, Img2, Img4,Img3];
 const SEOService = () => {
   const [ref, inView] = useInView({
@@ -53,7 +54,24 @@ const SEOService = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-      {/* Hero Section with Animated Background */}
+           <Helmet>
+              
+              <title>SEO Agency in Dubai | Boost Rankings with AI SEO Tools</title>
+              <meta name="description" content="Maximize your visibility with our Dubai-based SEO agency. We combine AI SEO tools with proven strategies to rank higher and grow your online presence" />
+              <meta name="keywords" content="seo dubai, seo with ai, ai tools for seo, seo ai tools, seo agency in dubai, search engine optimization agency" />
+              <meta property="og:title" content="SEO Agency in Dubai | Boost Rankings with AI SEO Tools" />
+              <meta property="og:description" content="Maximize your visibility with our Dubai-based SEO agency. We combine AI SEO tools with proven strategies to rank higher and grow your online presence" />
+              <meta property="og:url" content={window.location.href} />
+              <meta property="og:type" content="website" />
+              <meta property="og:site_name" content="aieera" />
+              <meta name="robots" content="index, follow" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <meta name="author" content="aieera" />
+              <meta name="language" content="English" />
+              
+              
+              <link rel="canonical" href={window.location.href} />
+            </Helmet> 
       <div className="relative min-h-screen">
       <div
   className="absolute inset-0 bg-cover bg-center opacity-10"
