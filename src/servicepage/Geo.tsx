@@ -31,26 +31,43 @@ const GEOService = () => {
 
   const features = [
     {
-      icon: <Bot className="w-8 h-8" />,
-      title: "AI-First Optimization",
-      description: "Structure your content to ensure it’s easily interpreted by AI assistants and large language models (LLMs)"
+      title: "Why Choose GEO?",
+      heading: "Generative Engine Optimization is the Future",
+      description:
+        "Generative Engine Optimization (GEO) is the future of digital visibility. Unlike traditional SEO, which depends on keywords and backlinks, GEO is designed for AI-first search and recommendation systems such as ChatGPT, Perplexity, and Google's Search Generative Experience (SGE)."
     },
     {
-      icon: <Database className="w-8 h-8" />,
+      title: "AI First Content Structuring",
+      heading: "Structure it for AI, and Let Relevance Lead the Way",
+      description:
+        "We design content that speaks AI natively—structured for how large language models ingest, interpret, and determine relevance. Our approach ensures that headlines, paragraphs, and lists are crafted not just for humans, but for machines that prioritize clarity, hierarchy, and semantic cues.\n\nWith GEO, your message becomes instantly digestible by AI systems, increasing visibility and improving how your content is surfaced in AI-generated responses."
+    },
+    {
       title: "Structured Data Markup",
-      description: "Use schema markup and metadata to structure your content, enabling AI systems to better interpret and display your information."
+      heading: "Talk to AI in Its Own Language",
+      description:
+        "We embed intelligent schema and rich metadata into your content so that AI systems can understand not just what your content says but what it means. From article and product schema to FAQ and how-to markup, our structured data approach makes your site machine-readable at every level.\n\nThis helps AI agents like ChatGPT or search engines like Google better represent and trust your content."
     },
     {
-      icon: <Brain className="w-8 h-8" />,
       title: "Semantic Content Tuning",
-      description: "Define your language, tone, and phrasing to align with how NLP systems process and respond to queries."
+      heading: "Where Your Message Meets Machine Understanding",
+      description:
+        "Modern AI doesn’t just look for keywords—it searches for intent, context, and depth. Our semantic tuning process refines your content to align with how AI models process language.\n\nWe uncover the hidden meanings and nuances behind user queries, ensuring your messaging aligns perfectly with what people and machines are truly looking for."
     },
     {
-      icon: <MessageSquare className="w-8 h-8" />,
-      title: "Context-Aware LLM Optimization",
-      description: "Make content with contextual understanding in mind so it resonates across various AI ecosystems."
+      title: "Context Aware LLM Optimization",
+      heading: "Keep the Context. Own the Conversation",
+      description:
+        "Generative AI platforms don’t interact in single queries—they maintain ongoing conversations. That’s why we optimize your content to remain contextually relevant throughout an evolving dialogue.\n\nWhether it’s the first question or the tenth follow-up, we make sure your content stays coherent, trusted, and at the forefront of AI-generated conversations across ChatGPT, Gemini, Claude, and beyond."
+    },
+    {
+      title: "Speak AI Fluently",
+      heading: "Be the Answer AI Finds First",
+      description:
+        "The search box is being replaced by chat windows. AI agents are becoming the new gatekeepers to content discovery. At GEO, we help your brand become the authoritative voice these models quote, recommend, and return.\n\nFrom technical structure to conversational tone, we make sure your content is what AI agents trust and share."
     }
   ];
+  
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
@@ -184,9 +201,10 @@ const GEOService = () => {
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-2xl opacity-20" />
-                    <div className="relative bg-gray-900 p-8 rounded-2xl border border-white/10">
+                    <div className="relative bg-gray-900/30 p-8 rounded-2xl border border-white/10">
                      
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                      <h6 className="text-xl mb-4">{feature.heading}</h6>
                       <p className="text-gray-300">{feature.description}</p>
                       
                     </div>

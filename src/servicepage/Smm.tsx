@@ -31,26 +31,33 @@ const SMM = () => {
   
   const features = [
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Predictive SEO Intelligence",
-      description: "Leverage machine learning to anticipate search trends before they go mainstream."
+      title: "Wider Reach",
+      heading: "Connect with the World",
+      description:
+        "Platforms like Facebook, Instagram, LinkedIn, and TikTok host billions of users daily. Whether you're aiming globally or targeting a niche demographic, social media gives you unmatched power to reach the right people at the right time—helping you build brand awareness and stay competitive in a digital-first world."
     },
     {
-      icon: <Search className="w-8 h-8" />,
-      title: "AI-Driven Keyword Mapping",
-      description: "Intelligently map keywords to user intent and content clusters using real-time data."
+      title: "Targeted Advertising",
+      heading: "Reach Who Matters Most",
+      description:
+        "Social platforms offer advanced targeting tools that let you reach people based on age, location, interests, behaviors, and more. This precision ensures your content connects with those most likely to engage, improving campaign performance and maximizing ROI by cutting wasteful ad spend."
     },
     {
-      icon: <Code className="w-8 h-8" />,
-      title: "Automated Meta Optimization",
-      description: "Craft dynamic meta tags and descriptions tailored for engagement and discoverability."
+      title: "Boosts Website Traffic and SEO",
+      heading: "Turn Shares into Searches",
+      description:
+        "By sharing direct links to your site, social media channels become a consistent traffic source. Increased engagement through likes, shares, and comments also enhances your visibility, contributing to higher SEO rankings and more backlinks—fueling both brand discovery and organic growth."
     },
     {
-      icon: <Activity className="w-8 h-8" />,
-      title: "Live Data Content Strategy",
-      description: "Adapt your content strategy instantly based on user behavior, SERP shifts, and competitor movement."
+      title: "Brand Awareness & Loyalty",
+      heading: "Familiar Faces Build Trusted Brands",
+      description:
+        "Frequent, value-driven posts build brand recognition, while meaningful engagement shows you care. By responding to comments and feedback, you create emotional connections that foster loyalty—turning followers into advocates and customers into community members."
     }
   ];
+  
+
+  
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
@@ -152,9 +159,9 @@ const SMM = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Choose SEO?</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Choose Social Media Marketing?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our AI doesn’t just optimize—it forecasts. Get ahead of competitors with predictive SEO strategies. </p>
+            Social media marketing is essential for modern businesses and brands because it offers unique advantages that traditional marketing channels can't match.</p>
           </motion.div>
 
           <div className="mt-20 space-y-20">
@@ -169,9 +176,10 @@ const SMM = () => {
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-2xl opacity-20" />
-                    <div className="relative bg-gray-900 p-8 rounded-2xl border border-white/10">
+                    <div className="relative bg-gray-900/30 p-8 rounded-2xl border border-white/10">
                       
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                      <h6 className="text-xl mb-4">{feature.heading}</h6>
                       <p className="text-gray-300">{feature.description}</p>
                       
                     </div>

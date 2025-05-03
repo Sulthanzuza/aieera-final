@@ -32,26 +32,43 @@ const Customization = () => {
   
   const features = [
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Predictive SEO Intelligence",
-      description: "Leverage machine learning to anticipate search trends before they go mainstream."
+      title: "Tailored Solutions for Unique Goals",
+      heading: "Your business isn’t generic, your strategy shouldn’t be either.",
+      description:
+        "Every brand has different goals, audiences, and challenges. Customization allows your strategies—whether for marketing, UX, or product delivery—to align specifically with what matters most to your business. This ensures higher relevance, better performance, and more efficient resource use."
     },
     {
-      icon: <Search className="w-8 h-8" />,
-      title: "AI-Driven Keyword Mapping",
-      description: "Intelligently map keywords to user intent and content clusters using real-time data."
+      title: "Competitive Advantage Through Personalization",
+      heading: "Stand out by being made-to-fit",
+      description:
+        "Customized strategies help you break through the noise and differentiate from competitors. By aligning your message, offerings, and touchpoints with your unique audience, you create a stronger connection that generic approaches simply can’t match."
     },
     {
-      icon: <Code className="w-8 h-8" />,
-      title: "Automated Meta Optimization",
-      description: "Craft dynamic meta tags and descriptions tailored for engagement and discoverability."
+      title: "Better ROI from Strategic Precision",
+      heading: "Invest smarter with results that reflect your reality.",
+      description:
+        "A well-defined strategy ensures that every move is intentional and optimized for return. Whether it’s choosing the right platforms, timing, content formats, or offers, a customized approach reduces guesswork, eliminates waste, and drives measurable ROI."
     },
     {
-      icon: <Activity className="w-8 h-8" />,
-      title: "Live Data Content Strategy",
-      description: "Adapt your content strategy instantly based on user behavior, SERP shifts, and competitor movement."
+      title: "Agility & Scalability Built In",
+      heading: "Grow fast and smart with adaptable strategies.",
+      description:
+        "Custom strategies are designed with your specific growth trajectory in mind. They can scale and evolve as your business does, enabling you to pivot quickly in response to market changes or internal shifts without starting from scratch."
+    },
+    {
+      title: "Customer Centric Experience",
+      heading: "Built around them, delivered by you.",
+      description:
+        "When your strategy is built on real customer insights, behaviour data, and personalization, every touchpoint becomes more relevant and engaging. This leads to better customer satisfaction, higher retention, and stronger brand loyalty."
+    },
+    {
+      title: "Data made Decision Making",
+      heading: "Less guesswork. More growth.",
+      description:
+        "Custom strategies leverage your unique performance data to make informed decisions. By analysing what works and what doesn’t for your specific audience and business context, you stay ahead with continuous optimization and clear direction."
     }
   ];
+  
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
@@ -153,9 +170,10 @@ const Customization = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Choose SEO?</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Choose Customization & Strategy?
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our AI doesn’t just optimize—it forecasts. Get ahead of competitors with predictive SEO strategies. </p>
+            Because all in one solutions don’t work in a world where every business and every customer are different. </p>
           </motion.div>
 
           <div className="mt-20 space-y-20">
@@ -173,6 +191,7 @@ const Customization = () => {
                     <div className="relative bg-gray-900 p-8 rounded-2xl border border-white/10">
                      
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                      <h6 className="text-xl  mb-4">{feature.heading}</h6>
                       <p className="text-gray-300">{feature.description}</p>
                       
                     </div>

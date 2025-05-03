@@ -30,26 +30,32 @@ const Webdesign = () => {
   
   const features = [
     {
-      icon: <LayoutTemplate className="w-8 h-8" />,
-      title: "Conversion-Driven UI",
-      description: "Designs crafted to not just attract—but convert visitors into leads and customers.",
+      title: "Conversion Driven UI",
+      heading: "Designs that Convert, Not Just Impress",
+      description:
+        "We don’t design for vanity—we design for action. Our user interfaces are crafted to guide visitors through a seamless journey from landing to conversion. Every element—from button placement and color psychology to layout hierarchy and micro-interactions—is intentionally built to increase conversions."
     },
     {
-      icon: <Eye className="w-8 h-8" />,
-      title: "User-Centric UX",
-      description: "Seamless user experiences built on intuitive navigation and behavior psychology.",
+      title: "Made to Feel Effortless",
+      heading: "UX Grounded in Human Behavior",
+      description:
+        "We design with empathy, usability, and natural flow at the core. By leveraging behavioral psychology and user research, we create intuitive paths aligned with how real people think, browse, and decide. Every touchpoint is thoughtfully structured to eliminate friction and enhance flow."
     },
     {
-      icon: <Code2 className="w-8 h-8" />,
       title: "Responsive by Default",
-      description: "Your website will look and feel amazing on any screen size or device.",
+      heading: "Flawless Experience on Any Device",
+      description:
+        "Responsiveness is never an afterthought—it’s built from the start. Using fluid grids, adaptive components, and mobile-first principles, we ensure your site looks and feels amazing on every screen size—smartphone, tablet, or desktop."
     },
     {
-      icon: <Sparkles className="w-8 h-8" />,
       title: "Built for Visual Impact",
-      description: "We combine motion, color, and typography to leave lasting impressions.",
+      heading: "Motion, Color, and Typography That Captivate",
+      description:
+        "We blend bold aesthetics with strategic creativity to make your brand stand out. Through animation, color theory, and expressive typography, we craft an experience that resonates emotionally and visually—creating a lasting impression from the first glance."
     }
   ];
+  
+  
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
@@ -134,8 +140,7 @@ const Webdesign = () => {
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Our Web Designs Work</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Beyond aesthetics—our designs are rooted in psychology, interactivity, and clarity to convert casual visits into lasting connections.
-            </p>
+            Beyond aesthetics our designs are rooted in psychology, interactive, and clarity to convert casual visits into long connections. </p>
           </motion.div>
   
           <div className="mt-20 space-y-20">
@@ -150,9 +155,10 @@ const Webdesign = () => {
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-2xl opacity-20" />
-                    <div className="relative bg-gray-900 p-8 rounded-2xl border border-white/10">
+                    <div className="relative bg-gray-900/30 p-8 rounded-2xl border border-white/10">
                       
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                      <h6 className="text-xl mb-4">{feature.heading}</h6>
                       <p className="text-gray-300">{feature.description}</p>
                       
                     </div>

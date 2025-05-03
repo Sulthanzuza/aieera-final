@@ -35,26 +35,31 @@ const PaidAds = () => {
   
   const features = [
     {
-      icon: <RefreshCcw className="w-8 h-8" />,
       title: "Automated Campaign Management",
-      description: "Launch, optimize, and scale campaigns with AI that continuously adapts in real-time.",
+      heading: "Launch fast, optimize smarter, scale effortlessly with AI.",
+      description:
+        "Automated Campaign Management uses AI to launch, optimize, and scale marketing efforts. It sets up campaigns, targets the right audience, writes ad copy, and allocates budgets intelligently. In real-time, it adjusts bids, tests creatives, refines targeting, and improves content based on performance. As results grow, it scales successful strategies to new audiences or regions, maximizing ROI with minimal manual effort."
     },
     {
-      icon: <BarChart2 className="w-8 h-8" />,
       title: "Smart A/B Testing",
-      description: "AI monitors test performance and shifts budget to winning ads without manual input.",
+      heading: "Test smarter, spend wiser, let AI pick the winners.",
+      description:
+        "Smart A/B Testing uses AI to automatically test and optimize ad variations (headlines, images, CTAs, and more) by tracking performance in real-time. It shifts budget to top-performing ads, cuts underperformers, and continuously learns what drives results. This speeds up decision-making, reduces wasted spend, and ensures every marketing dollar is used effectively."
     },
     {
-      icon: <Compass className="w-8 h-8" />,
       title: "Customer Journey Intelligence",
-      description: "Track and understand every step your customer takes before they click ‘buy’.",
+      heading: "See the whole journey, turn insights into action.",
+      description:
+        "Customer Journey Intelligence is the process of tracking, analyzing, and understanding every interaction a customer has with your brand before making a purchase. It provides a complete view of the path customers take from discovering your business to exploring your offerings and finally deciding to buy."
     },
     {
-      icon: <Activity className="w-8 h-8" />,
       title: "Real-Time Performance Insights",
-      description: "Get instant, actionable insights to boost ROI and eliminate wasted ad spend.",
+      heading: "Smarter Decisions. Better ROI. Instantly.",
+      description:
+        "Unlock advanced data with immediate, actionable insights into your ad campaigns. Our advanced analytics platform monitors every click, impression, and conversion in real-time, giving you the clarity you need to make smarter decisions, faster. Identify high-performing channels, uncover underperforming segments, and adjust strategies instantly."
     }
   ];
+  
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
@@ -154,9 +159,12 @@ const PaidAds = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Choose AI-Powered PPC?</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Choose AI Powered PPC?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Maximize ROI, reduce waste, and scale smarter. Our AI dynamically adapts to performance data and intent signals—no guesswork, just growth.
+            Smarter ads. Better results. Powered by AI.
+ <br />
+ Let AI take the guesswork out of your campaigns. Boost ROI, eliminate ad spend waste, and unlock scalable growth with data driven precision.
+ 
             </p>
           </motion.div>
   
@@ -172,9 +180,10 @@ const PaidAds = () => {
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-2xl opacity-20" />
-                    <div className="relative bg-gray-900 p-8 rounded-2xl border border-white/10">
+                    <div className="relative bg-gray-900/30 p-8 rounded-2xl border border-white/10">
                     
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                      <h6 className="text-xl  mb-4">{feature.heading}</h6>
                       <p className="text-gray-300">{feature.description}</p>
                       
                     </div>

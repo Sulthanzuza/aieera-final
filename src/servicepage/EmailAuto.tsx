@@ -31,26 +31,32 @@ const EmailAuto = () => {
   
   const features = [
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Predictive SEO Intelligence",
-      description: "Leverage machine learning to anticipate search trends before they go mainstream."
+      title: "Smart Audience Segmentation & Targeting",
+      heading: "Smarter Segments. Better Results",
+      description:
+        "Our AI engine automatically analyzes customer data such as demographics, behaviors, and purchase history to segment your audience into highly targeted groups. This ensures your emails are always relevant and timely, increasing engagement and reducing unsubscribe rates. Say goodbye to one-size-fits-all campaigns."
     },
     {
-      icon: <Search className="w-8 h-8" />,
-      title: "AI-Driven Keyword Mapping",
-      description: "Intelligently map keywords to user intent and content clusters using real-time data."
+      title: "Personalized Email Content with AI",
+      heading: "Boost Engagement with Content That Connects",
+      description:
+        "No more generic emails. Our system crafts personalized content for each recipient, learning from their preferences, past interactions, and interests. From subject lines to product recommendations, every element is tailored to lead to higher open rates, click-throughs, and conversions."
     },
     {
-      icon: <Code className="w-8 h-8" />,
-      title: "Automated Meta Optimization",
-      description: "Craft dynamic meta tags and descriptions tailored for engagement and discoverability."
+      title: "Optimized Send Times for Better Open Rates",
+      heading: "Send at the Right Time, Every Time",
+      description:
+        "Timing matters. Our platform uses machine learning to analyze when each contact is most likely to check their inbox and schedules sends accordingly. This ensures your emails land at the perfect time, increasing visibility and engagement."
     },
     {
-      icon: <Activity className="w-8 h-8" />,
-      title: "Live Data Content Strategy",
-      description: "Adapt your content strategy instantly based on user behavior, SERP shifts, and competitor movement."
+      title: "Live Performance Analytics",
+      heading: "See What Works. Fix What Doesn’t Live",
+      description:
+        "Gain deep insights into how your campaigns are performing. Our real-time dashboard tracks opens, clicks, conversions, and more, allowing you to make data-driven decisions on the fly. Easily A/B test content, monitor trends, and continuously optimize your strategy."
     }
   ];
+  
+  
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
@@ -117,7 +123,7 @@ const EmailAuto = () => {
                 transition={{ delay: 0.7 }}
                 className="text-xl text-gray-300 mb-8 max-w-2xl"
               >
-             "What if SEO could predict trends before they happen?"</motion.p>
+             "Take your email marketing to the next level with our AI-powered automation solutions"</motion.p>
               
 
             </div>
@@ -152,9 +158,11 @@ const EmailAuto = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Choose SEO?</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Choose Email Marketing Automation?            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our AI doesn’t just optimize—it forecasts. Get ahead of competitors with predictive SEO strategies. </p>
+            Engage smarter, automate, personalize, and convert. <br />
+Email automation streamlines your communication by sending the right message to the right person at the right time without manual effort. It nurtures leads, boosts engagement.
+ </p>
           </motion.div>
 
           <div className="mt-20 space-y-20">
@@ -169,9 +177,10 @@ const EmailAuto = () => {
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-2xl opacity-20" />
-                    <div className="relative bg-gray-900 p-8 rounded-2xl border border-white/10">
+                    <div className="relative bg-gray-900/30 p-8 rounded-2xl border border-white/10">
                      
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                      <h6 className="text-xl  mb-4">{feature.heading}</h6>
                       <p className="text-gray-300">{feature.description}</p>
                       
                     </div>

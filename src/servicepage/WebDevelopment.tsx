@@ -32,26 +32,32 @@ const Webdev = () => {
   
   const features = [
     {
-      icon: <LayoutDashboard className="w-8 h-8" />,
-      title: "Marketing-First Architecture",
-      description: "Web builds structured to drive conversions, not just look pretty."
+      title: "Responsive Web Design",
+      heading: "Flawless Performance Across All Devices",
+      description:
+        "In a mobile-driven world, your website must perform flawlessly across all devices. We design and develop responsive websites that automatically adapt to screen size and orientation, ensuring your visitors enjoy a seamless experience whether they’re on desktop, tablet, or mobile."
     },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Modern Frontend Frameworks",
-      description: "React, Vue, or Angular—whatever your stack, we make it fast, fluid, and user-friendly."
-    },
-    {
-      icon: <Server className="w-8 h-8" />,
-      title: "Scalable Backend Engineering",
-      description: "Built on Node.js, Express, or Python to grow with your business."
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
       title: "SEO & Performance Optimized",
-      description: "Every line of code is Core Web Vitals-ready and search-engine friendly by default."
+      heading: "Every Line of Code is Core Web Vitals",
+      description:
+        "We build with speed, structure, and search visibility in mind right from the first line of code. No bloated themes. No unnecessary scripts. Just clean, efficient, and modern development that meets—and often exceeds—Google’s Core Web Vitals standards.\n\nOur sites load fast, interact smoothly, and maintain visual stability, delivering a better user experience while improving your SEO rankings."
+    },
+    {
+      title: "Marketing First Architecture",
+      heading: "Web Builds Structured to Drive Conversions, Not Just Look Pretty",
+      description:
+        "We design and develop websites with one goal in mind: growth. A beautiful website is great, but beauty without purpose doesn’t drive results.\n\nThat’s why every element we build—from layout to functionality—is grounded in proven marketing strategies that guide visitors toward conversion."
+    },
+    {
+      title: "Modern Frontend Frameworks",
+      heading: "React, Vue, or Angular — We Make It Fast, Fluid, and User Friendly",
+      description:
+        "We specialize in building snappy, responsive interfaces using today’s most powerful frontend frameworks.\n\nWhether you prefer React for its component-driven efficiency, Vue for its flexibility, or Angular for its enterprise-level structure, we deliver a seamless user experience tailored to your needs and stack."
     }
   ];
+  
+  
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
@@ -152,10 +158,9 @@ const Webdev = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Build With Us?</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why build with us?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From conversion-focused landing pages to lightning-fast full-stack apps, our builds are made to perform—and scale.
-            </p>
+            In today’s digital first world, your website is often the first interaction a customer has with your brand. At Aieera, we build powerful, elegant, and user-focused websites that elevate your brand and drive real results. Whether you're a startup or an established business, our web development solutions are designed to help you grow and scale online. </p>
           </motion.div>
   
           <div className="mt-20 space-y-20">
@@ -170,9 +175,10 @@ const Webdev = () => {
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-2xl opacity-20" />
-                    <div className="relative bg-gray-900 p-8 rounded-2xl border border-white/10">
+                    <div className="relative bg-gray-900/30 p-8 rounded-2xl border border-white/10">
                     
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                      <h6 className="text-xl mb-4">{feature.heading}</h6>
                       <p className="text-gray-300">{feature.description}</p>
                       
                     </div>

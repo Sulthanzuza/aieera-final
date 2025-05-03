@@ -31,26 +31,37 @@ const SEOService = () => {
   
   const features = [
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Predictive SEO Intelligence",
-      description: "Leverage machine learning to anticipate search trends before they go mainstream."
+      title: "Predictive SEO Analysis",
+      heading: "Rank Before the Rush",
+      description:
+        "Predictive SEO analysis uses AI and data modeling to forecast what users will search for before they search for it. We analyze emerging trends, keyword trajectories, and shifting user intent to identify opportunities ahead of the curve.\n\nThis means you can create content that ranks first when the trend breaks—not after it’s already saturated. It’s proactive SEO that keeps you in front, always."
     },
     {
-      icon: <Search className="w-8 h-8" />,
-      title: "AI-Driven Keyword Mapping",
-      description: "Intelligently map keywords to user intent and content clusters using real-time data."
+      title: "On-Page SEO",
+      heading: "Optimize with Foresight, Not Hindsight",
+      description:
+        "On-page SEO is about optimizing your content for both users and search engines. It ensures that every page is clear, relevant, and aligned with evolving search intent.\n\nAt aieera, we offer in-depth keyword research with predictive forecasting, SEO-friendly content creation and topic clustering, optimized meta titles, descriptions, and headers, and strategic internal linking to build page authority. We also include image optimization using proper alt tags."
     },
     {
-      icon: <Code className="w-8 h-8" />,
-      title: "Automated Meta Optimization",
-      description: "Craft dynamic meta tags and descriptions tailored for engagement and discoverability."
+      title: "Off-Page SEO",
+      heading: "Build Authority Before the Spotlight Hits",
+      description:
+        "Off-page SEO focuses on building your site’s reputation and digital authority. It’s about trust, relevance, and visibility beyond your own domain.\n\nOur services include smart backlink building from authoritative, relevant sources, AI-assisted outreach to rising influencers, social signal and engagement tracking, and promotion on trending content platforms to keep your brand top-of-mind across the web."
     },
     {
-      icon: <Activity className="w-8 h-8" />,
-      title: "Live Data Content Strategy",
-      description: "Adapt your content strategy instantly based on user behavior, SERP shifts, and competitor movement."
+      title: "Technical SEO",
+      heading: "Strong Foundations. Seamless Performance.",
+      description:
+        "Technical SEO forms the foundation of your website’s performance, security, and indexability. We deliver predictive site health monitoring and performance audits to catch issues before they arise.\n\nOur services include mobile optimization, responsive design improvements, structured data implementation, and real-time page speed enhancements for a smooth, high-performing user experience."
+    },
+    {
+      title: "Local SEO",
+      heading: "Be Found Before They Ask",
+      description:
+        "Local SEO converts high-intent traffic into real-world action by enhancing your visibility in map results, voice searches, and nearby queries.\n\nWe provide comprehensive Google Business Profile optimization, local keyword targeting with area-specific trend forecasting, and predictive analysis of local events and seasonal behaviors. Our services include online reputation management, review response strategies, and citation building to ensure your brand stands out in local searches."
     }
   ];
+  
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
@@ -118,7 +129,8 @@ const SEOService = () => {
                 transition={{ delay: 0.7 }}
                 className="text-xl text-gray-300 mb-8 max-w-2xl"
               >
-             "What if SEO could predict trends before they happen?"</motion.p>
+             What if your SEO strategy could predict trends before they happen?
+            </motion.p>
               
 
             </div>
@@ -153,9 +165,13 @@ const SEOService = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Choose SEO?</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Choose Predictive SEO?</h2>
+            <h6 className="text-4xl lg:text-2xl mb-6">Be visible. Be trusted. Be chosen</h6>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our AI doesn’t just optimize—it forecasts. Get ahead of competitors with predictive SEO strategies. </p>
+            At aieera, we don’t just optimize websites we empower them to anticipate.
+Our AI-driven predictive SEO uses advanced algorithms, search data modelling, and machine learning to identify emerging keywords, rising topics, and shifting user intent before they peak. This means your content gets positioned before your competitors even notice the trend.
+
+            </p>
           </motion.div>
 
           <div className="mt-20 space-y-20">
@@ -170,9 +186,10 @@ const SEOService = () => {
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-2xl opacity-20" />
-                    <div className="relative bg-gray-900 p-8 rounded-2xl border border-white/10">
+                    <div className="relative bg-gray-900/30 p-8 rounded-2xl border border-white/10">
                      
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                      <h6 className="text-2xl mb-4">{feature.heading}</h6>
                       <p className="text-gray-300">{feature.description}</p>
                      
                     </div>

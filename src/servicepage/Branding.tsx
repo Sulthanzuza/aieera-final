@@ -26,26 +26,31 @@ const Branding = () => {
 
   const features = [
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Predictive SEO Intelligence",
-      description: "Leverage machine learning to anticipate search trends before they go mainstream."
+      title: "Builds Trust and Credibility",
+      heading: "Consistency Builds Confidence",
+      description:
+        "A well-defined brand helps establish trust with your audience. When your visuals, messaging, and tone are consistent across every touchpoint—from your website to social media—it shows professionalism.\n\nPeople are more likely to trust and engage with a brand that appears polished and cohesive."
     },
     {
-      icon: <Search className="w-8 h-8" />,
-      title: "AI-Driven Keyword Mapping",
-      description: "Intelligently map keywords to user intent and content clusters using real-time data."
+      title: "Differentiates You from Competitors",
+      heading: "Stand Out by Being Unmistakably You",
+      description:
+        "Branding allows you to highlight what makes you unique. In a crowded market, your brand identity sets you apart.\n\nIt’s not just your logo or tagline—it’s your story, your values, your mission, and how you communicate. A strong brand tells people why they should choose you over anyone else."
     },
     {
-      icon: <Code className="w-8 h-8" />,
-      title: "Automated Meta Optimization",
-      description: "Craft dynamic meta tags and descriptions tailored for engagement and discoverability."
+      title: "Creates Emotional Connection",
+      heading: "Win Hearts, Not Just Wallets",
+      description:
+        "People connect with brands on an emotional level. Great branding goes beyond rational benefits; it evokes feelings—trust, excitement, comfort, or aspiration.\n\nThese emotional triggers drive loyalty and long-term engagement, turning casual customers into brand advocates."
     },
     {
-      icon: <Activity className="w-8 h-8" />,
-      title: "Live Data Content Strategy",
-      description: "Adapt your content strategy instantly based on user behavior, SERP shifts, and competitor movement."
+      title: "Supports Marketing and Sales",
+      heading: "A Strong Brand Supercharges Your Growth",
+      description:
+        "Your brand acts as the foundation for all marketing efforts. Every campaign—from digital ads to email newsletters—relies on a consistent and compelling brand voice.\n\nA unified brand message improves visibility, boosts conversions, and gives people a reason to care and act."
     }
   ];
+  
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
@@ -163,9 +168,9 @@ const Branding = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Choose SEO?</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Choose Branding?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI doesn’t just optimize—it forecasts. Get ahead of competitors with predictive SEO strategies. </p>
+            In today’s crowded marketplace, branding is more than just a logo it’s the story, emotion, and experience behind your business. It shapes how people perceive you, influences their decisions, and plays a crucial role in your overall growth. Here’s why investing in branding is essential for long term success.</p>
           </motion.div>
 
           <div className="mt-20 space-y-20">
@@ -175,14 +180,15 @@ const Branding = () => {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="flex flex-col lg:flex-row items-center gap-12 relative"
+                className="flex flex-col lg:flex-row items-center gap-12 relative "
               >
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-2xl opacity-20" />
-                    <div className="relative bg-gray-900 p-8 rounded-2xl border border-white/10">
+                    <div className="relative bg-gray-900/30 p-8 rounded-2xl border border-white/10 ">
                    
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                      <h6 className="text-xl mb-4">{feature.heading}</h6>
                       <p className="text-gray-300">{feature.description}</p>
                       
                     </div>

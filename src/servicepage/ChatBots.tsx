@@ -33,26 +33,31 @@ const ChatBots = () => {
 
   const features = [
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Predictive SEO Intelligence",
-      description: "Leverage machine learning to anticipate search trends before they go mainstream."
+      title: "24/7 Instant Customer Engagement",
+      heading: "Never miss a lead even while you sleep.",
+      description:
+        "AI chatbots are available around the clock, ensuring your website or platform is always ready to engage. Whether a visitor has a question at 2 p.m. or 2 a.m., the chatbot responds instantly—answering FAQs, offering help, or guiding them toward the next step. This availability boosts customer satisfaction and captures leads even outside business hours."
     },
     {
-      icon: <Search className="w-8 h-8" />,
-      title: "AI-Driven Keyword Mapping",
-      description: "Intelligently map keywords to user intent and content clusters using real-time data."
+      title: "Qualify Leads Automatically",
+      heading: "Filter the noise and focus on ready-to-buy customers.",
+      description:
+        "Using predefined logic and AI-based decision trees, chatbots ask relevant questions to understand a user’s intent, budget, needs, and timeline. This data allows the system to qualify leads in real time and pass hot prospects directly to your sales team—saving valuable time and improving close rates."
     },
     {
-      icon: <Code className="w-8 h-8" />,
-      title: "Automated Meta Optimization",
-      description: "Craft dynamic meta tags and descriptions tailored for engagement and discoverability."
+      title: "Personalized Conversations at Scale",
+      heading: "1-on-1 conversations delivered to thousands.",
+      description:
+        "AI chatbots use contextual data such as user behaviour, geolocation, past purchases, and time on site to craft tailored interactions. Each visitor feels seen and understood—even if there are hundreds of them online simultaneously. This level of personalization drives better engagement and brand affinity."
     },
     {
-      icon: <Activity className="w-8 h-8" />,
-      title: "Live Data Content Strategy",
-      description: "Adapt your content strategy instantly based on user behavior, SERP shifts, and competitor movement."
+      title: "Increase Conversion Rates",
+      heading: "From browsers to buyers instantly.",
+      description:
+        "Chatbots help remove friction at critical points in the customer journey. Whether it's providing quick answers, helping choose a product, or offering a limited-time deal, bots turn passive visitors into active buyers. Timely nudges and intelligent support increase both conversion and retention."
     }
   ];
+  
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
@@ -154,9 +159,12 @@ const ChatBots = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Choose SEO?</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Choose AI Chatbots & Lead Generation?
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our AI doesn’t just optimize—it forecasts. Get ahead of competitors with predictive SEO strategies. </p>
+            Connect Smarter. Convert Faster. <br />
+Smarter conversations, faster responses, and more qualified leads AI chatbots redefine how businesses connect and convert.
+</p>
           </motion.div>
 
           <div className="mt-20 space-y-20">
@@ -174,6 +182,7 @@ const ChatBots = () => {
                     <div className="relative bg-gray-900 p-8 rounded-2xl border border-white/10">
                       
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                      <h6 className="text-xl  mb-4">{feature.heading}</h6>
                       <p className="text-gray-300">{feature.description}</p>
                      
                     </div>
