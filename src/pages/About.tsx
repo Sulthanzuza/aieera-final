@@ -24,12 +24,12 @@ const About = () => {
               
               <link rel="canonical" href={window.location.href} />
             </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 ">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, type: "spring" }}
-          className="text-center mb-16"
+          className="text-center mb-16 "
         >
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8">
             Unlock New Possibilities

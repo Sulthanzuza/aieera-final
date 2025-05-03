@@ -70,6 +70,7 @@ const Branding = () => {
       <div className="relative min-h-screen">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10"
+         
           style={{ backgroundImage: `url(${BG})` }}
         />
 
@@ -118,21 +119,36 @@ const Branding = () => {
 
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5 }}
-              className="flex-1 relative"
-            >
-              <div className="relative w-full aspect-square max-w-lg mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-3xl opacity-20 animate-pulse" />
-                <img
-                  src={BG}
-                  alt="AI Visualization"
-                  className="relative z-10 rounded-2xl object-cover w-full h-full"
-                />
-              </div>
-            </motion.div>
+  <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 0.5 }}
+      className="flex-1 relative"
+    >
+      <div className="relative w-full aspect-square max-w-lg mx-auto">
+        {/* Background gradient glow effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-3xl opacity-20 animate-pulse" />
+        
+        {/* Container for the image with clip-path animation */}
+        <motion.div
+          className="relative z-10 w-full h-full rounded-2xl overflow-hidden"
+          initial={{ clipPath: 'inset(0 0 100% 0)' }}  
+          animate={{ clipPath: 'inset(0 0 0% 0)' }}
+          transition={{
+            duration: 3.2,
+            delay: 0.7,
+            ease: [0.25, 1, 0.5, 1]
+          }}
+        >
+          <img
+            src={BG}
+             loading="lazy"
+            alt="AI Visualization"
+            className="object-cover w-full h-full"
+          />
+        </motion.div>
+      </div>
+    </motion.div>
           </div>
         </motion.div>
       </div>
@@ -177,6 +193,7 @@ const Branding = () => {
   src={images[index]}
   alt={feature.title}
   className="rounded-2xl shadow-2xl"
+   loading="lazy"
 />
                 </div>
               </motion.div>

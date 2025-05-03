@@ -228,11 +228,12 @@ const Services = () => {
           </motion.div>
         </div>
 
-        {/* Service Items */}
+        
         {serviceItems.map((service, index) => (
           <div key={index} className="mb-8">
             <ServiceSection service={service} index={index} />
             <div className="mt-6 text-center">
+              
   <Link 
     to={service.path}
     className="inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold shadow-md hover:from-purple-700 hover:to-pink-600 transition-all duration-300 group"

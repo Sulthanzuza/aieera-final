@@ -55,7 +55,7 @@ body {
   animation: fade-in 0.6s ease-out forwards;
 }
 
-/* Create a subtle silver glazing effect with pseudo-element */
+
 .card-with-glazing {
   position: relative;
   overflow: hidden;
@@ -99,3 +99,5 @@ body {
 .card-with-glazing:hover::before {
   animation-duration: 4s;
 }
+
+

@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { Helmet } from 'react-helmet'; 
 import 'swiper/css';
+import BackgroundVideo from '../assets/1851190-uhd_3840_2160_25fps.mp4'
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Seo from "../assets/seo.jpeg"
@@ -20,7 +21,7 @@ import Webdev from "../assets/web development.jpeg"
 import Geo from "../assets/geo.jpeg"
 import Branding from "../assets/branding1.png"
 import { useNavigate, Link } from 'react-router-dom';
-import { desc } from 'framer-motion/client';
+import GridMotion from '../components/GridMotion';
 
 // Service items with added image URLs and slugs for navigation
 const serviceItems = [
@@ -178,6 +179,52 @@ const serviceItems = [
   }
 ];
 
+const items = [
+  'AI Guided SEO',
+  <div key='jsx-item-1'>Smarter search rankings, effortlessly.</div>,
+  
+
+  'AI-Powered PPC / Paid Ads',
+  <div key='jsx-item-3'>More clicks, less guesswork.</div>,
+
+  'Next Gen Social Media Marketing',
+  <div key='jsx-item-4'>Turn followers into fans.</div>,
+
+  'Automated Email Engagement',
+  <div key='jsx-item-5'>Emails that feel personal sent automatically.</div>,
+
+  'Generative Engine Optimization',
+  <div key='jsx-item-2'>Optimize your content for the future of AI-driven discovery.</div>,
+
+  'Branding',
+  <div key='jsx-item-6'>Build a brand that speaks, resonates, and scales—powered by AI intelligence.</div>,
+
+ 
+  'AI Chatbots & Lead Generation',
+  <div key='jsx-item-8'>Instant connections, Instant leads.</div>,
+
+  'Customization & Strategy',
+  <div key='jsx-item-9'>Marketing that's built around you.</div>,
+
+  'Web Development',
+  <div key='jsx-item-10'>A Strong foundation for your digital growth.</div>,
+
+  'Web Designing',
+  <div key='jsx-item-11'>Designs that captivate and convert.</div>,
+
+  'Generative Engine Optimization',
+  <div key='jsx-item-12'>Optimize your content for the future of AI-driven discovery.</div>,
+
+  'Automated Email Engagement',
+  <div key='jsx-item-15'>Emails that feel personal sent automatically.</div>,
+
+  'Content Marketing with AI tools',
+  <div key='jsx-item-17'>Create smarter content that gets results.</div>,
+
+];
+
+
+
 const Home = () => {
   const [isHovered, setIsHovered] = useState(false);
   const swiperRef = useRef(null);
@@ -272,11 +319,9 @@ const Home = () => {
     <div className="min-h-screen pt-16 relative">
       
       <Helmet>
-        
-        <title> AI Digital Marketing Solutions | Automate Online Growth with AI</title>
+        <title>AI Digital Marketing Solutions | Automate Online Growth with AI</title>
         <meta name="description" content="Explore the future of digital marketing with AI. We deliver powerful AI-driven strategies that boost engagement, conversions, and business growth." />
         <meta name="keywords" content="digital marketing with ai, ai digital marketing, ai for digital marketing, ai in digital marketing" />
-        
         
         <meta property="og:title" content="AI Digital Marketing Solutions | Automate Online Growth with AI" />
         <meta property="og:description" content="Explore the future of digital marketing with AI. We deliver powerful AI-driven strategies that boost engagement, conversions, and business growth." />
@@ -284,280 +329,299 @@ const Home = () => {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="aieera" />
         
-
-        
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="aieera" />
         <meta name="language" content="English" />
         
-        
         <link rel="canonical" href={window.location.href} />
-        
         
         <script type="application/ld+json">
           {JSON.stringify(generateSchemaMarkup())}
         </script>
       </Helmet>
 
+     
+      <div className="relative">
+       
+        <div className="absolute inset-0 w-full h-full overflow-hidden z-0 ">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="object-cover w-full h-full"
+          >
+            <source src={BackgroundVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          
+          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        </div>
+
+       
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0 }}
+            className="text-center mb-20"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+               Welcome to the 
+              </span>
+              <br />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+                ERA of Digital Marketing with <span className="animated-gradient bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-600 to-white">
+                  AI
+                </span>,
+              </span>
+              <br />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+                Built for You
+              </span>
+            </h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="text-xl text-gray-100 mb-12 max-w-5xl mx-auto" 
+            >
+              Harness the complete power of your brand through AI digital marketing. Achieve results through intelligent automation, precision-targeted campaigns, and real-time data insights designed for your success
+            </motion.p>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-900 text-white rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={() => navigate('/services')}
+            >
+              Get Started
+            </motion.button>
+          </motion.div>
+        </div>
+        <motion.div
+          className="absolute bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 z-10"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
+        >
+          <div className="w-8 h-12 rounded-full border-2 border-white/50 flex justify-center pt-2">
+            <motion.div
+              className="w-1.5 h-1.5 rounded-full bg-white"
+              animate={{ y: [0, 16, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+            />
+          </div>
+        </motion.div>
+      </div>
+
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8">
-            Welcome to the 
-            <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-gray-900">
-              ERA of Digital Marketing with <span className="animated-gradient bg-clip-text text-transparent bg-gradient-to-r from-gray-700 via-gray-600 to-gray-900">
-                AI
-              </span>,
-            </span>
-            <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-500 to-gray-900">
-              Built for You
-            </span>
-          </h1>
+          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
+            Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-gray-900">Services</span>
+          </h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-xl text-gray-600 mb-12 max-w-5xl mx-auto" 
+            className="text-xl text-gray-600 mb-12 max-w-4xl mx-auto"
           >
-            Harness the complete power of your brand through AI digital marketing. Achieve results through intelligent automation, precision-targeted campaigns, and real-time data insights designed for your success
+            Explore our suite of AI-powered services designed to supercharge your digital marketing strategy.
           </motion.p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-900 text-white rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-            onClick={() => navigate('/services')}
-          >
-            Get Started
-          </motion.button>
         </motion.div>
-      </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-  <motion.div
-    initial={{ opacity: 0, y: -50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8 }}
-    className="text-center mb-20"
-  >
-    <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
-      Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-gray-900">Services</span>
-    </h2>
-    <motion.p
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.3, duration: 0.8 }}
-      className="text-xl text-gray-600 mb-12 max-w-4xl mx-auto"
-    >
-      Explore our suite of AI-powered services designed to supercharge your digital marketing strategy.
-    </motion.p>
-  </motion.div>
 
-  {/* Enhanced Service Slider */}
-  <div 
-    className="py-10 relative"
-    onMouseEnter={handleMouseEnter}
-    onMouseLeave={handleMouseLeave}
-  >
-    {/* Side arrow navigation controls */}
-    {isHovered && (
-      <>
-        {/* Left arrow */}
-        <button 
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-800 hover:to-gray-950 text-white p-3 rounded-full transition-colors duration-300 shadow-md"
-          onClick={() => swiperRef.current.swiper.slidePrev()}
-          aria-label="Previous slide"
+        {/* Enhanced Service Slider */}
+        <div 
+          className="py-10 relative"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        
-        {/* Right arrow */}
-        <button 
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-800 hover:to-gray-950 text-white p-3 rounded-full transition-colors duration-300 shadow-md"
-          onClick={() => swiperRef.current.swiper.slideNext()}
-          aria-label="Next slide"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </>
-    )}
-
-<Swiper
-      ref={swiperRef}
-      slidesPerView={1}
-      spaceBetween={30}
-      breakpoints={{
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-      }}
-      loop={true}
-      speed={1000}
-      autoplay={{
-        delay: 3000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      }}
-      modules={[Autoplay, Navigation]}
-      className="mySwiper"
-      allowTouchMove={isHovered}
-      grabCursor={isHovered}
-    >
-      {serviceItems.map((item, index) => (
-        <SwiperSlide key={index} className="flex justify-center py-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="card-with-glazing w-[300px] md:w-[320px] lg:w-[350px] h-96 rounded-xl overflow-hidden bg-white shadow-5xl hover:shadow-2xl transition-all duration-500 group relative"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            itemScope
-            itemType="https://schema.org/Service"
-          >
-            {/* Microdata attributes for individual services */}
-            <meta itemProp="name" content={item.title} />
-            <meta itemProp="description" content={item.description} />
-            <meta itemProp="url" content={`${window.location.origin}${item.path}`} />
-            
-            {/* Background Image - Hidden by default, shown on hover */}
-            <div className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-full object-cover"
-                itemProp="image"
-              />
-              {/* Dark overlay to ensure text and button are visible over any image */}
-              <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-            </div>
-            
-            {/* Content visible when not hovered */}
-            <div className="p-6 flex flex-col justify-between h-full relative z-10 group-hover:opacity-0 transition-opacity duration-500">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2" itemProp="name">{item.title}</h3>
-                <p className="text-gray-600 mb-4 font-bold" itemProp="description">{item.description}</p>
-                <p className="text-gray-600 mb-4">{item.desc1}</p>
-                
-                {/* Features with bullet points */}
-                <ul className="space-y-1" itemProp="hasOfferCatalog" itemScope itemType="https://schema.org/OfferCatalog">
-                  {item.features.map((feature, idx) => (
-                    <li key={idx} className="text-gray-700 text-sm flex items-start" itemProp="itemListElement" itemScope itemType="https://schema.org/OfferCatalogItem">
-                      <span className="text-gray-900 mr-2">•</span>
-                      <span itemProp="itemOffered">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          
-            {/* Hover Content - Title and Learn More Button */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 p-6">
-              <h3 className="text-2xl font-bold text-white mb-auto mt-6">{item.title}</h3>
+          {/* Side arrow navigation controls */}
+          {isHovered && (
+            <>
+              {/* Left arrow */}
+              <button 
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-800 hover:to-gray-950 text-white p-3 rounded-full transition-colors duration-300 shadow-md"
+                onClick={() => swiperRef.current.swiper.slidePrev()}
+                aria-label="Previous slide"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
               
-              <div className="mb-6 mt-auto">
-                <button
-                  className="relative flex items-center justify-center px-6 py-3 bg-gradient-to-r from-black via-gray-800 to-gray-500 hover:from-gray-900 hover:to-gray-400 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
-                  onClick={() => handleNavigateToService(item.path)}
-                  aria-label={`Learn more about ${item.title}`}
+              {/* Right arrow */}
+              <button 
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-800 hover:to-gray-950 text-white p-3 rounded-full transition-colors duration-300 shadow-md"
+                onClick={() => swiperRef.current.swiper.slideNext()}
+                aria-label="Next slide"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </>
+          )}
+
+          <Swiper
+            ref={swiperRef}
+            slidesPerView={1}
+            spaceBetween={30}
+            breakpoints={{
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            loop={true}
+            speed={1000}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            modules={[Autoplay, Navigation]}
+            className="mySwiper"
+            allowTouchMove={isHovered}
+            grabCursor={isHovered}
+          >
+            {serviceItems.map((item, index) => (
+              <SwiperSlide key={index} className="flex justify-center py-4">
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  className="card-with-glazing w-[300px] md:w-[320px] lg:w-[350px] h-96 rounded-xl overflow-hidden bg-white shadow-5xl hover:shadow-2xl transition-all duration-500 group relative"
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  itemScope
+                  itemType="https://schema.org/Service"
                 >
-                  {/* Glossy overlay */}
-                  <span className="absolute inset-0 bg-white opacity-5 rounded-xl pointer-events-none" />
+                  {/* Microdata attributes for individual services */}
+                  <meta itemProp="name" content={item.title} />
+                  <meta itemProp="description" content={item.description} />
+                  <meta itemProp="url" content={`${window.location.origin}${item.path}`} />
                   
-                  {/* Button text & icon */}
-                  <span className="relative z-10 flex items-center">
-                    Learn More
-                    <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-                  </span>
-                </button>
+                  {/* Background Image - Hidden by default, shown on hover */}
+                  <div className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                      itemProp="image"
+                    />
+                    {/* Dark overlay to ensure text and button are visible over any image */}
+                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                  </div>
+                  
+                  {/* Content visible when not hovered */}
+                  <div className="p-6 flex flex-col justify-between h-full relative z-10 group-hover:opacity-0 transition-opacity duration-500">
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2" itemProp="name">{item.title}</h3>
+                      <p className="text-gray-600 mb-4 font-bold" itemProp="description">{item.description}</p>
+                      <p className="text-gray-600 mb-4">{item.desc1}</p>
+                      
+                      {/* Features with bullet points */}
+                      <ul className="space-y-1" itemProp="hasOfferCatalog" itemScope itemType="https://schema.org/OfferCatalog">
+                        {item.features.map((feature, idx) => (
+                          <li key={idx} className="text-gray-700 text-sm flex items-start" itemProp="itemListElement" itemScope itemType="https://schema.org/OfferCatalogItem">
+                            <span className="text-gray-900 mr-2">•</span>
+                            <span itemProp="itemOffered">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                
+                  {/* Hover Content - Title and Learn More Button */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 p-6">
+                    <h3 className="text-2xl font-bold text-white mb-auto mt-6">{item.title}</h3>
+                    
+                    <div className="mb-6 mt-auto">
+                      <button
+                        className="relative flex items-center justify-center px-6 py-3 bg-gradient-to-r from-black via-gray-800 to-gray-500 hover:from-gray-900 hover:to-gray-400 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+                        onClick={() => handleNavigateToService(item.path)}
+                        aria-label={`Learn more about ${item.title}`}
+                      >
+                        {/* Glossy overlay */}
+                        <span className="absolute inset-0 bg-white opacity-5 rounded-xl pointer-events-none" />
+                        
+                        {/* Button text & icon */}
+                        <span className="relative z-10 flex items-center">
+                          Learn More
+                          <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+
+      <div className="relative w-full min-h-screen overflow-hidden" itemScope itemType="https://schema.org/Organization">
+      
+        <meta itemProp="name" content="aieera" />
+        <meta itemProp="description" content="AI-powered digital marketing agency specializing in SEO, PPC, content marketing, and web development services." />
+        <meta itemProp="url" content={window.location.origin} />
+        
+        
+        <div className="absolute inset-0 bg-cover bg-center z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/60 "></div>
+          <GridMotion items={items} />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-center min-h-screen w-full px-4 md:px-12 gap-10 pt-20 md:pt-0">
+          {/* Text Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="w-full md:w-1/2 text-center md:text-left"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-700 leading-tight mb-6" itemProp="slogan">
+              Upgrade Your Brand with{" "}
+              <span className="text-slate-400" itemProp="name">aieera</span> AI Automated Marketing
+            </h2>
+
+            <p className="text-gray-700 text-base sm:text-lg md:text-xl mb-8 max-w-lg mx-auto md:mx-0" itemProp="description">
+              We help brands thrive in the digital landscape through data-driven
+              strategies and creative innovation.
+            </p>
+          </motion.div>
+
+          {/* Image Section */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="w-full md:w-1/2 px-4 hidden md:block"
+          >
+            <div className="relative">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-accent-400 to-primary-400 rounded-2xl blur opacity-50"></div>
+              <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt="Digital Marketing Team"
+                  className="w-full h-auto"
+                  itemProp="image"
+                />
               </div>
             </div>
           </motion.div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </div>
-</div>
-
-
-<div className="relative w-full min-h-screen overflow-hidden" itemScope itemType="https://schema.org/Organization">
-      {/* Hidden Schema.org metadata */}
-      <meta itemProp="name" content="aieera" />
-      <meta itemProp="description" content="AI-powered digital marketing agency specializing in SEO, PPC, content marketing, and web development services." />
-      <meta itemProp="url" content={window.location.origin} />
-      
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center z-0"
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/60"></div>
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-center min-h-screen w-full px-4 md:px-12 gap-10 pt-20 md:pt-0">
-        {/* Text Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="w-full md:w-1/2 text-center md:text-left"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-700 leading-tight mb-6" itemProp="slogan">
-          Upgrade Your Brand with{" "}
-            <span className="text-slate-400" itemProp="name">aieera</span> AI Automated Marketing
-          </h2>
-
-          <p className="text-gray-700 text-base sm:text-lg md:text-xl mb-8 max-w-lg mx-auto md:mx-0" itemProp="description">
-          We help brands thrive in the digital landscape through data-driven
-          strategies and creative innovation.
-          </p>
-        </motion.div>
-
-        {/* Image Section */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="w-full md:w-1/2 px-4 hidden md:block"
-        >
-          <div className="relative">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-accent-400 to-primary-400 rounded-2xl blur opacity-50"></div>
-            <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="Digital Marketing Team"
-                className="w-full h-auto"
-                itemProp="image"
-              />
-            </div>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 z-10"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 1.5 }}
-      >
-        <div className="w-8 h-12 rounded-full border-2 border-white/50 flex justify-center pt-2">
-          <motion.div
-            className="w-1.5 h-1.5 rounded-full bg-white"
-            animate={{ y: [0, 16, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-          />
         </div>
-      </motion.div>
-    </div>
-      
+
+    
+       
+      </div>
     </div>
   );
 };

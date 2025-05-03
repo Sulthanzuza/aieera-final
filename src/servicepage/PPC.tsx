@@ -134,6 +134,7 @@ const PaidAds = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-3xl opacity-20 animate-pulse" />
                 <img
                   src={Main}
+                    loading="lazy"
                   alt="AI Paid Ads"
                   className="relative z-10 rounded-2xl object-cover w-full h-full"
                 />
@@ -172,13 +173,10 @@ const PaidAds = () => {
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-2xl opacity-20" />
                     <div className="relative bg-gray-900 p-8 rounded-2xl border border-white/10">
-                      <div className="text-purple-500 mb-6">{feature.icon}</div>
+                    
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
-                      <button className="mt-6 text-purple-400 flex items-center group">
-                        Learn more
-                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </button>
+                      
                     </div>
                   </div>
                 </div>
@@ -187,6 +185,7 @@ const PaidAds = () => {
   src={images[index]}
   alt={feature.title}
   className="rounded-2xl shadow-2xl"
+    loading="lazy"
 />
                 </div>
               </motion.div>
