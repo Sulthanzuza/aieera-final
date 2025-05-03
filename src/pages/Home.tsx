@@ -573,14 +573,11 @@ const Home = () => {
         <meta itemProp="url" content={window.location.origin} />
         
         
-        <div className="absolute inset-0 bg-cover bg-center z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/60 "></div>
-          <GridMotion items={items} />
-        </div>
+        
 
-        {/* Content */}
+        
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-center min-h-screen w-full px-4 md:px-12 gap-10 pt-20 md:pt-0">
-          {/* Text Section */}
+          
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
