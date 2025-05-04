@@ -40,7 +40,7 @@ const serviceItems = [
     "Enhanced discoverability in generative search engines",
     "Future-proof SEO aligned with AI language models"
     ],
-    bgColor: "from-zinc-50 to-stone-50"
+    bgColor: "black"
   },
   {
     icon: <Brain className="w-12 h-12" />,
@@ -54,7 +54,7 @@ const serviceItems = [
       "Predictive modeling for content strategy",
       "Automated reporting with actionable insights"
     ],
-    bgColor: "from-zinc-50 to-stone-50"
+    bgColor: "black"
   },
   {
     icon: <Brain className="w-12 h-12" />,
@@ -68,7 +68,7 @@ const serviceItems = [
       "Tone of voice & messaging frameworks",
       "Consistent cross-platform branding assets"
     ],
-    bgColor: "from-zinc-50 to-stone-50"
+    bgColor: "black"
   },  
   {
     icon: <Code className="w-12 h-12" />,
@@ -82,7 +82,7 @@ const serviceItems = [
       "Performance optimization",
       "SEO-friendly structure and implementation"
     ],
-    bgColor: "from-zinc-50 to-stone-50"
+    bgColor: "black"
   },
   {
     icon: <Pen className="w-12 h-12" />,
@@ -96,7 +96,7 @@ const serviceItems = [
       "Brand-aligned visual language",
       "Conversion-optimized interfaces"
     ],
-    bgColor: "from-zinc-50 to-stone-50"
+    bgColor: "black"
   },
   {
     icon: <Bot className="w-12 h-12" />,
@@ -110,7 +110,7 @@ const serviceItems = [
       "Customer journey mapping for targeted messaging",
       "Real-time performance tracking and optimization"
     ],
-    bgColor: "from-zinc-50 to-stone-50"
+    bgColor: "black"
   },
   {
     icon: <Target className="w-12 h-12" />,
@@ -124,7 +124,7 @@ const serviceItems = [
       "Custom audience building and expansion",
       "Look-alike modeling for new audience discovery"
     ],
-    bgColor: "from-zinc-50 to-stone-50"
+    bgColor: "black"
   },
   {
     icon: <Megaphone className="w-12 h-12" />,
@@ -138,7 +138,7 @@ const serviceItems = [
       "Predictive analytics for optimal send times",
       "Conversion path optimization"
     ],
-    bgColor: "from-zinc-50 to-stone-50"
+    bgColor: "black"
   },
   {
     icon: <LineChart className="w-12 h-12" />,
@@ -152,7 +152,7 @@ const serviceItems = [
       "Content performance prediction",
       "Automated content distribution"
     ],
-    bgColor: "from-zinc-50 to-stone-50"
+    bgColor: "black"
   },
   {
     icon: <Zap className="w-12 h-12" />,
@@ -166,7 +166,7 @@ const serviceItems = [
       "Seamless handoff to human agents when needed",
       "Continuous learning from interactions"
     ],
-    bgColor: "from-zinc-50 to-stone-50"
+    bgColor: "black"
   },
   {
     icon: <SlidersHorizontal className="w-12 h-12" />,
@@ -180,7 +180,7 @@ const serviceItems = [
       "Custom KPI setting and tracking",
       "Ongoing optimization based on performance"
     ],
-    bgColor: "from-zinc-50 to-stone-50"
+    bgColor: "black"
   }
 ];
 
@@ -191,7 +191,7 @@ const Services = () => {
   });
 
   return (
-    <div className="in-h-screen pt-16 relative overflow-hidden">
+    <div className="in-h-screen pt-16 bg-black overflow-hidden">
      <Helmet>
               
               <title>Digital Marketing Services Tailored for Growth | AI-Powered Campaigns</title>
@@ -211,7 +211,7 @@ const Services = () => {
               <link rel="canonical" href={window.location.href} />
             </Helmet> 
                  <div id="services" className="pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -219,36 +219,35 @@ const Services = () => {
             viewport={{ once: true, margin: "-100px" }}
             className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">
               Our Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Discover how our specialized services can help you achieve your business goals through innovative, data-driven approaches.
             </p>
           </motion.div>
         </div>
 
-        
+        {/* Service Items */}
         {serviceItems.map((service, index) => (
           <div key={index} className="mb-8">
             <ServiceSection service={service} index={index} />
             <div className="mt-6 text-center">
-              
-  <Link 
-    to={service.path}
-    className="inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold shadow-md hover:from-purple-700 hover:to-pink-600 transition-all duration-300 group"
-  >
-    Learn More
-    <svg
-      className="ml-2 w-4 h-4 transform transition-transform group-hover:translate-x-1"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
+            <Link
+      to={service.path}
+      className=" relative inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-to-r from-gray-400 to-silver-400 text-gray-100 font-semibold shadow-[0_0_8px_2px_rgba(255,255,255,0.4)] hover:shadow-[0_0_12px_4px_rgba(255,255,255,0.6)] transition-all duration-300 group"
     >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-    </svg>
-  </Link>
+      Learn More
+      <svg
+        className="ml-2 w-4 h-4 transform transition-transform group-hover:translate-x-1"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+      </svg>
+    </Link>
 </div>
 
           </div>

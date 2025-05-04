@@ -110,7 +110,7 @@ const imageVariants = {
 
 const Future = () => {
   return (
-    <div className="min-h-screen pt-16 relative overflow-hidden">
+    <div className="min-h-screen pt-16 bg-black overflow-hidden">
       {/* Animated background elements */}
       <motion.div 
         initial={{ opacity: 0 }}
@@ -154,7 +154,7 @@ const Future = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 1 }}
-            className="text-5xl md:text-7xl font-bold text-gray-900 mb-8"
+            className="text-5xl md:text-7xl font-bold text-gray-300 mb-8"
           >
             The Future of
             <br />
@@ -167,7 +167,7 @@ const Future = () => {
                 repeat: Infinity,
                 ease: "linear"
               }}
-              className="bg-clip-text text-transparent bg-gradient-to-r from-gray-500 via-gray-700 to-gray-900 bg-[length:200%_200%]"
+              className="bg-clip-text text-transparent bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 bg-[length:200%_200%]"
             >
               AI Marketing
             </motion.span>
@@ -177,7 +177,7 @@ const Future = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto mb-16"
+            className="text-xl text-gray-300 max-w-3xl mx-auto mb-16"
           >
             At aieera, we don't just follow trends we set them. Our vision is to reshape how businesses approach SEO, advertising, and user's engagement through latest AI technologies.
           </motion.p>
@@ -219,7 +219,7 @@ const Future = () => {
                 {/* Content Card */}
                 <motion.div 
                   whileHover={{ y: -5 }}
-                  className={`relative rounded-2xl p-6 max-w-lg shadow-xl backdrop-blur-sm ${index % 2 === 0 ? 'mr-8' : 'ml-8'} bg-white/90`}
+                  className={`relative rounded-2xl p-6 max-w-lg shadow-xl backdrop-blur-sm ${index % 2 === 0 ? 'mr-8' : 'ml-8'} bg-gray-950/20`}
                   style={{
                     boxShadow: `0 10px 30px -5px rgba(0, 0, 0, 0.1)`
                   }}
@@ -231,7 +231,7 @@ const Future = () => {
                       {item.title}
                     </span>
                   </h3>
-                  <p className="text-gray-600 text-justify mb-4">{item.description}</p>
+                  <p className="text-gray-200 text-justify mb-4">{item.description}</p>
                   
                   <motion.div
                     variants={imageVariants}

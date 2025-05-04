@@ -6,11 +6,12 @@ import AnimatedWords from '../components/AnimatedWords';
 import Img1 from '../assets/services/content 1.jpeg'
 import Img2 from '../assets/services/content2.jpeg'
 import Img3 from '../assets/services/content3.jpeg'
-import Img4 from '../assets/services/content2.jpeg'
+import Img4 from '../assets/services/content4.jpeg'
+import Img5 from '../assets/services/content5.jpeg'
 import Helmet from 'react-helmet'
 import Main from '../assets/services/content main.jpeg'
 import Bg from '../assets/services/contentbg.jpeg' 
-const images = [Img1, Img2, Img4,Img3];
+const images = [Img1, Img2, Img4,Img3,Img5];
 const Content = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -140,7 +141,7 @@ const Content = () => {
               className="flex-1 relative"
             >
               <div className="relative w-full aspect-square max-w-lg mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-3xl opacity-20 animate-pulse" />
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-stone-100 rounded-full blur-3xl opacity-20 animate-pulse" />
                 <img 
                   src={Main}
                     loading="lazy"
@@ -154,7 +155,7 @@ const Content = () => {
       </div>
 
       {/* Features Section */}
-      <section ref={ref} className="py-20 relative">
+      <section ref={ref} className="py-20">
         <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 to-transparent" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -179,7 +180,7 @@ const Content = () => {
               >
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-2xl opacity-20" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-stone-100 rounded-2xl blur-2xl opacity-20" />
                     <div className="relative bg-gray-400/10 p-8 rounded-2xl border border-white/10">
                       
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>

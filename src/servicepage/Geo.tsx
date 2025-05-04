@@ -7,8 +7,9 @@ import Img1 from '../assets/services/geo1.jpeg'
 import Img2 from '../assets/services/geo2.jpeg'
 import Img3 from '../assets/services/geo3.jpeg'
 import Img4 from '../assets/services/geo4.jpeg' 
+import Img5 from '../assets/services/geo 5.jpeg'
 import Helmet from 'react-helmet';
-const images = [Img1, Img2, Img4,Img3];
+const images = [Img1, Img2, Img4,Img3, Img5];
 
 const GEOService = () => {
   const [ref, inView] = useInView({
@@ -59,12 +60,6 @@ const GEOService = () => {
       heading: "Keep the Context. Own the Conversation",
       description:
         "Generative AI platforms don’t interact in single queries—they maintain ongoing conversations. That’s why we optimize your content to remain contextually relevant throughout an evolving dialogue.\n\nWhether it’s the first question or the tenth follow-up, we make sure your content stays coherent, trusted, and at the forefront of AI-generated conversations across ChatGPT, Gemini, Claude, and beyond."
-    },
-    {
-      title: "Speak AI Fluently",
-      heading: "Be the Answer AI Finds First",
-      description:
-        "The search box is being replaced by chat windows. AI agents are becoming the new gatekeepers to content discovery. At GEO, we help your brand become the authoritative voice these models quote, recommend, and return.\n\nFrom technical structure to conversational tone, we make sure your content is what AI agents trust and share."
     }
   ];
   
@@ -146,9 +141,9 @@ const GEOService = () => {
     >
       <div className="relative w-full aspect-square max-w-lg mx-auto">
         {/* Background gradient glow effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-3xl opacity-20 animate-pulse" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-stone-100 rounded-full blur-3xl opacity-20 animate-pulse" />
         
-        {/* Container for the image with clip-path animation */}
+        
         <motion.div
           className="relative z-10 w-full h-full rounded-2xl overflow-hidden"
           initial={{ clipPath: 'inset(0 0 100% 0)' }}  
@@ -173,7 +168,7 @@ const GEOService = () => {
       </div>
 
       {/* Features Section */}
-      <section ref={ref} className="py-20 relative">
+      <section ref={ref} className="py-20 ">
         <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 to-transparent" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -200,7 +195,7 @@ const GEOService = () => {
               >
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-2xl opacity-20" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-stone-100 rounded-2xl blur-2xl opacity-20" />
                     <div className="relative bg-gray-900/30 p-8 rounded-2xl border border-white/10">
                      
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>

@@ -21,7 +21,7 @@ import Webdev from "../assets/web development.jpeg"
 import Geo from "../assets/geo.jpeg"
 import Branding from "../assets/branding1.png"
 import { useNavigate, Link } from 'react-router-dom';
-import GridMotion from '../components/GridMotion';
+
 
 // Service items with added image URLs and slugs for navigation
 const serviceItems = [
@@ -179,49 +179,7 @@ const serviceItems = [
   }
 ];
 
-const items = [
-  'AI Guided SEO',
-  <div key='jsx-item-1'>Smarter search rankings, effortlessly.</div>,
-  
 
-  'AI-Powered PPC / Paid Ads',
-  <div key='jsx-item-3'>More clicks, less guesswork.</div>,
-
-  'Next Gen Social Media Marketing',
-  <div key='jsx-item-4'>Turn followers into fans.</div>,
-
-  'Automated Email Engagement',
-  <div key='jsx-item-5'>Emails that feel personal sent automatically.</div>,
-
-  'Generative Engine Optimization',
-  <div key='jsx-item-2'>Optimize your content for the future of AI-driven discovery.</div>,
-
-  'Branding',
-  <div key='jsx-item-6'>Build a brand that speaks, resonates, and scales—powered by AI intelligence.</div>,
-
- 
-  'AI Chatbots & Lead Generation',
-  <div key='jsx-item-8'>Instant connections, Instant leads.</div>,
-
-  'Customization & Strategy',
-  <div key='jsx-item-9'>Marketing that's built around you.</div>,
-
-  'Web Development',
-  <div key='jsx-item-10'>A Strong foundation for your digital growth.</div>,
-
-  'Web Designing',
-  <div key='jsx-item-11'>Designs that captivate and convert.</div>,
-
-  'Generative Engine Optimization',
-  <div key='jsx-item-12'>Optimize your content for the future of AI-driven discovery.</div>,
-
-  'Automated Email Engagement',
-  <div key='jsx-item-15'>Emails that feel personal sent automatically.</div>,
-
-  'Content Marketing with AI tools',
-  <div key='jsx-item-17'>Create smarter content that gets results.</div>,
-
-];
 
 
 
@@ -316,7 +274,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen pt-16 relative">
+    <div className="min-h-screen pt-16 bg-black">
       
       <Helmet>
         <title>AI Digital Marketing Solutions | Automate Online Growth with AI</title>
@@ -344,7 +302,7 @@ const Home = () => {
      
       <div className="relative">
        
-        <div className="absolute inset-0 w-full h-full overflow-hidden z-0 ">
+        <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
           <video
             autoPlay
             loop
@@ -356,7 +314,7 @@ const Home = () => {
             Your browser does not support the video tag.
           </video>
           
-          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-80"></div>
         </div>
 
        
@@ -368,17 +326,17 @@ const Home = () => {
             className="text-center mb-20"
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
                Welcome to the 
               </span>
               <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
-                ERA of Digital Marketing with <span className="animated-gradient bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-600 to-white">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                ERA of Digital Marketing with <span className="animated-gradient bg-clip-text text-transparent bg-gradient-to-r from-white via-silver to-gray-300">
                   AI
                 </span>,
               </span>
               <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
                 Built for You
               </span>
             </h1>
@@ -386,18 +344,30 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-xl text-gray-100 mb-12 max-w-5xl mx-auto" 
+              className="text-xl text-gray-300 mb-12 max-w-5xl mx-auto" 
             >
               Harness the complete power of your brand through AI digital marketing. Achieve results through intelligent automation, precision-targeted campaigns, and real-time data insights designed for your success
             </motion.p>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-900 text-white rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-              onClick={() => navigate('/services')}
-            >
-              Get Started
-            </motion.button>
+  whileHover={{ 
+    scale: 1.05,
+    boxShadow: "0 0 15px 2px rgba(192, 192, 192, 0.7), 0 0 30px 5px rgba(192, 192, 192, 0.5)"
+  }}
+  whileTap={{ scale: 0.95 }}
+  className="relative px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-900 text-white rounded-full text-lg font-semibold transition-all duration-300 border border-gray-400 shadow-lg group overflow-hidden"
+  onClick={() => navigate('/services')}
+>
+  {/* Silver glow overlay */}
+  <div className="absolute top-0 left-0 right-0 bottom-0 rounded-full pointer-events-none">
+    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-gray-300 to-gray-100 opacity-10 group-hover:opacity-20 transition-opacity duration-300"></div>
+    <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-gray-300 to-silver opacity-30 blur-sm group-hover:opacity-60 group-hover:blur-md transition-all duration-300"></div>
+  </div>
+  
+  {/* Button text */}
+  <span className="relative z-10 bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-gray-100 group-hover:to-white transition-all duration-300">
+    Get Started
+  </span>
+</motion.button>
           </motion.div>
         </div>
         <motion.div
@@ -405,9 +375,9 @@ const Home = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
         >
-          <div className="w-8 h-12 rounded-full border-2 border-white/50 flex justify-center pt-2">
+          <div className="w-8 h-12 rounded-full border-2 border-gray-400 flex justify-center pt-2">
             <motion.div
-              className="w-1.5 h-1.5 rounded-full bg-white"
+              className="w-1.5 h-1.5 rounded-full bg-gray-300"
               animate={{ y: [0, 16, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
             />
@@ -416,7 +386,7 @@ const Home = () => {
       </div>
 
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-black">
       
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -424,14 +394,14 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
-            Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-gray-900">Services</span>
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+            Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-400 to-gray-100">Services</span>
           </h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-xl text-gray-600 mb-12 max-w-4xl mx-auto"
+            className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto"
           >
             Explore our suite of AI-powered services designed to supercharge your digital marketing strategy.
           </motion.p>
@@ -448,7 +418,7 @@ const Home = () => {
             <>
               {/* Left arrow */}
               <button 
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-800 hover:to-gray-950 text-white p-3 rounded-full transition-colors duration-300 shadow-md"
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 text-white p-3 rounded-full transition-colors duration-300 shadow-md border border-gray-700"
                 onClick={() => swiperRef.current.swiper.slidePrev()}
                 aria-label="Previous slide"
               >
@@ -459,7 +429,7 @@ const Home = () => {
               
               {/* Right arrow */}
               <button 
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-800 hover:to-gray-950 text-white p-3 rounded-full transition-colors duration-300 shadow-md"
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 text-white p-3 rounded-full transition-colors duration-300 shadow-md border border-gray-700"
                 onClick={() => swiperRef.current.swiper.slideNext()}
                 aria-label="Next slide"
               >
@@ -496,7 +466,7 @@ const Home = () => {
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="card-with-glazing w-[300px] md:w-[320px] lg:w-[350px] h-96 rounded-xl overflow-hidden bg-white shadow-5xl hover:shadow-2xl transition-all duration-500 group relative"
+                  className="card-with-glazing w-[300px] md:w-[320px] lg:w-[350px] h-96 rounded-xl overflow-hidden bg-black shadow-5xl hover:shadow-2xl transition-all duration-500 group relative border border-gray-800"
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                   itemScope
@@ -516,21 +486,21 @@ const Home = () => {
                       itemProp="image"
                     />
                     {/* Dark overlay to ensure text and button are visible over any image */}
-                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                    <div className="absolute inset-0 bg-black bg-opacity-70"></div>
                   </div>
                   
                   {/* Content visible when not hovered */}
                   <div className="p-6 flex flex-col justify-between h-full relative z-10 group-hover:opacity-0 transition-opacity duration-500">
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2" itemProp="name">{item.title}</h3>
-                      <p className="text-gray-600 mb-4 font-bold" itemProp="description">{item.description}</p>
-                      <p className="text-gray-600 mb-4">{item.desc1}</p>
+                      <h3 className="text-2xl font-bold text-gray-200 mb-2" itemProp="name">{item.title}</h3>
+                      <p className="text-gray-400 mb-4 font-bold" itemProp="description">{item.description}</p>
+                      <p className="text-gray-400 mb-4">{item.desc1}</p>
                       
                       {/* Features with bullet points */}
                       <ul className="space-y-1" itemProp="hasOfferCatalog" itemScope itemType="https://schema.org/OfferCatalog">
                         {item.features.map((feature, idx) => (
-                          <li key={idx} className="text-gray-700 text-sm flex items-start" itemProp="itemListElement" itemScope itemType="https://schema.org/OfferCatalogItem">
-                            <span className="text-gray-900 mr-2">•</span>
+                          <li key={idx} className="text-gray-300 text-sm flex items-start" itemProp="itemListElement" itemScope itemType="https://schema.org/OfferCatalogItem">
+                            <span className="text-gray-400 mr-2">•</span>
                             <span itemProp="itemOffered">{feature}</span>
                           </li>
                         ))}
@@ -540,16 +510,16 @@ const Home = () => {
                 
                   {/* Hover Content - Title and Learn More Button */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 p-6">
-                    <h3 className="text-2xl font-bold text-white mb-auto mt-6">{item.title}</h3>
+                    <h3 className="text-2xl font-bold text-gray-100 mb-auto mt-6">{item.title}</h3>
                     
                     <div className="mb-6 mt-auto">
                       <button
-                        className="relative flex items-center justify-center px-6 py-3 bg-gradient-to-r from-black via-gray-800 to-gray-500 hover:from-gray-900 hover:to-gray-400 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+                        className="relative flex items-center justify-center px-6 py-3 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 hover:from-gray-800 hover:to-gray-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group border border-gray-600"
                         onClick={() => handleNavigateToService(item.path)}
                         aria-label={`Learn more about ${item.title}`}
                       >
                         {/* Glossy overlay */}
-                        <span className="absolute inset-0 bg-white opacity-5 rounded-xl pointer-events-none" />
+                        <span className="absolute inset-0 bg-white opacity-10 rounded-xl pointer-events-none" />
                         
                         {/* Button text & icon */}
                         <span className="relative z-10 flex items-center">
@@ -566,15 +536,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="relative w-full min-h-screen overflow-hidden" itemScope itemType="https://schema.org/Organization">
+      <div className=" w-full min-h-screen overflow-hidden bg-black" itemScope itemType="https://schema.org/Organization">
       
         <meta itemProp="name" content="aieera" />
         <meta itemProp="description" content="AI-powered digital marketing agency specializing in SEO, PPC, content marketing, and web development services." />
         <meta itemProp="url" content={window.location.origin} />
         
-        
-        
-
         
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-center min-h-screen w-full px-4 md:px-12 gap-10 pt-20 md:pt-0">
           
@@ -584,14 +551,13 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="w-full md:w-1/2 text-center md:text-left"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-700 leading-tight mb-6" itemProp="slogan">
-              Upgrade Your Brand with{" "}
-              <span className="text-slate-400" itemProp="name">aieera</span> AI Automated Marketing
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-200 leading-tight mb-6" itemProp="slogan">
+            Upgrade Your Brand with{" "}
+              <span className="text-gray-400" itemProp="name">aieera</span> AI Automated Marketing
             </h2>
 
-            <p className="text-gray-700 text-base sm:text-lg md:text-xl mb-8 max-w-lg mx-auto md:mx-0" itemProp="description">
-              We help brands thrive in the digital landscape through data-driven
-              strategies and creative innovation.
+            <p className="text-gray-300 text-base sm:text-lg md:text-xl mb-8 max-w-lg mx-auto md:mx-0" itemProp="description">
+            Our team drives growth through targeted research data data effective strategies, creative innovation, and a deep understanding of the brand marketing.
             </p>
           </motion.div>
 
@@ -603,20 +569,18 @@ const Home = () => {
             className="w-full md:w-1/2 px-4 hidden md:block"
           >
             <div className="relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-accent-400 to-primary-400 rounded-2xl blur opacity-50"></div>
-              <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-gray-500 to-gray-700 rounded-2xl blur opacity-50"></div>
+              <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
                 <img
                   src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt="Digital Marketing Team"
-                  className="w-full h-auto"
+                  className="w-full h-auto opacity-90"
                   itemProp="image"
                 />
               </div>
             </div>
           </motion.div>
         </div>
-
-    
        
       </div>
     </div>

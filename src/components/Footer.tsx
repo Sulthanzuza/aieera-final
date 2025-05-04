@@ -46,7 +46,7 @@ const Footer: FC = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-zinc-800 to-gray-900 text-white px-6 py-12">
+    <footer className="bg-gradient-to-b from-black to-zinc-900 text-white px-6 py-12 border-white">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand & Social */}
         <div className="space-y-4">
@@ -79,7 +79,7 @@ const Footer: FC = () => {
 
         {/* Useful Links */}
         <div className="space-y-4">
-          <h3 className="text-xl font-semibold text-zinc-200 relative after:content-[''] after:absolute after:w-16 after:h-1 after:bg-blue-500 after:-bottom-2 after:left-0">
+          <h3 className="text-xl font-semibold text-zinc-200 relative after:content-[''] after:absolute after:w-16 after:h-1 after:bg-gray-500 after:-bottom-2 after:left-0">
             Useful Links
           </h3>
           <ul className="space-y-3 pt-4">
@@ -87,9 +87,9 @@ const Footer: FC = () => {
               <li key={link.name}>
                 <Link
                   to={link.url}
-                  className="text-gray-300 hover:text-white hover:underline decoration-blue-400 underline-offset-4 transition-all duration-300 flex items-center cursor-pointer"
+                  className="text-gray-300 hover:text-white hover:underline decoration-gray-400 underline-offset-4 transition-all duration-300 flex items-center cursor-pointer"
                 >
-                  <span className="text-blue-400 mr-2">›</span>
+                  <span className="text-gray-400 mr-2">›</span>
                   {link.name}
                 </Link>
               </li>
@@ -99,24 +99,24 @@ const Footer: FC = () => {
 
         {/* Contact */}
         <div className="space-y-4">
-          <h3 className="text-xl font-semibold text-zinc-200 relative after:content-[''] after:absolute after:w-16 after:h-1 after:bg-blue-500 after:-bottom-2 after:left-0">
+          <h3 className="text-xl font-semibold text-zinc-200 relative after:content-[''] after:absolute after:w-16 after:h-1 after:bg-gray-500 after:-bottom-2 after:left-0">
             Contact Us
           </h3>
           <address className="not-italic text-gray-300 space-y-3 pt-4">
             <p className="flex items-center">
-              <span className="text-blue-400 mr-2">•</span>
+              <span className="text-gray-400 mr-2">•</span>
               <a
                 href="mailto:hello@aieera.com"
-                className="hover:text-white hover:underline decoration-blue-400 underline-offset-4 transition-all duration-300 cursor-pointer"
+                className="hover:text-white hover:underline decoration-gray-400 underline-offset-4 transition-all duration-300 cursor-pointer"
               >
                 hello@aieera.com
               </a>
             </p>
             <p className="flex items-center">
-              <span className="text-blue-400 mr-2">•</span>
+              <span className="text-gray-400 mr-2">•</span>
               <a
                 href="tel:+971543060098"
-                className="hover:text-white hover:underline decoration-blue-400 underline-offset-4 transition-all duration-300 cursor-pointer"
+                className="hover:text-white hover:underline decoration-gray-400 underline-offset-4 transition-all duration-300 cursor-pointer"
               >
                 +971 54 306 0098
               </a>

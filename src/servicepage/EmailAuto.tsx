@@ -135,7 +135,7 @@ const EmailAuto = () => {
               className="flex-1 relative"
             >
               <div className="relative w-full aspect-square max-w-lg mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-3xl opacity-20 animate-pulse" />
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-stone-100 rounded-full blur-3xl opacity-20 animate-pulse" />
                 <img 
                   src={Main}
                     loading="lazy"
@@ -149,7 +149,7 @@ const EmailAuto = () => {
       </div>
 
       {/* Features Section */}
-      <section ref={ref} className="py-20 relative">
+      <section ref={ref} className="py-20">
         <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 to-transparent" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -176,7 +176,7 @@ Email automation streamlines your communication by sending the right message to 
               >
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-2xl opacity-20" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-stone-100 rounded-2xl blur-2xl opacity-20" />
                     <div className="relative bg-gray-900/30 p-8 rounded-2xl border border-white/10">
                      
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>

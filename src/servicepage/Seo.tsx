@@ -8,9 +8,10 @@ import Img1 from '../assets/services/seo2.jpeg'
 import Img2 from '../assets/services/seo3.jpeg'
 import Img3 from '../assets/services/seo1.jpeg'
 import Img4 from '../assets/services/seo4.jpeg' 
+import Img5 from '../assets/services/seo 5.jpeg'
 import Seo from '../assets/seo.jpeg'
 import Helmet from 'react-helmet'
-const images = [Img1, Img2, Img4,Img3];
+const images = [Img1, Img2, Img4,Img3,Img5];
 const SEOService = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -142,7 +143,7 @@ const SEOService = () => {
               className="flex-1 relative"
             >
               <div className="relative w-full aspect-square max-w-lg mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-3xl opacity-20 animate-pulse" />
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-stone-100 rounded-full blur-3xl opacity-20 animate-pulse" />
                 <img 
                   src={Seo}
                     loading="lazy"
@@ -156,7 +157,7 @@ const SEOService = () => {
       </div>
 
       {/* Features Section */}
-      <section ref={ref} className="py-20 relative">
+      <section ref={ref} className="py-20">
         <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 to-transparent" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -185,7 +186,7 @@ Our AI-driven predictive SEO uses advanced algorithms, search data modelling, an
               >
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-2xl opacity-20" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-stone-100 rounded-2xl blur-2xl opacity-20" />
                     <div className="relative bg-gray-900/30 p-8 rounded-2xl border border-white/10">
                      
                       <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>

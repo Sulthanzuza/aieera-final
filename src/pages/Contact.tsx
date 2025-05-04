@@ -133,7 +133,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen pt-16 relative">
+    <div className="min-h-screen pt-16 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -141,10 +141,10 @@ const Contact = () => {
           transition={{ duration: 1, type: "spring" }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8">
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-300 mb-8">
             Get in
             <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-500 to-gray-900">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-gray-400">
               Touch
             </span>
           </h1>
@@ -152,7 +152,7 @@ const Contact = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
             Connect with us to discover how our AI solutions can transform your digital marketing strategy.
           </motion.p>
@@ -167,23 +167,23 @@ const Contact = () => {
               transition={{ delay: index * 0.2, duration: 0.5 }}
               className="glass-card rounded-xl p-6 text-center"
             >
-              <div className="bg-gradient-to-r from-gray-700 to-gray-900 p-3 rounded-full inline-block text-white mb-4">
+              <div className="bg-gradient-to-r from-gray-500 to-gray-300 p-3 rounded-full inline-block text-white mb-4">
                 {method.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{method.title}</h3>
+              <h3 className="text-xl font-semibold text-gray-300 mb-2">{method.title}</h3>
               {method.link ? (
                 <a
                   href={method.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-900 font-medium mb-1 block hover:underline"
+                  className="text-gray-400 font-medium mb-1 block hover:underline"
                 >
                   {method.details}
                 </a>
               ) : (
-                <p className="text-gray-900 font-medium mb-1">{method.details}</p>
+                <p className="text-gray-200 font-medium mb-1">{method.details}</p>
               )}
-              <p className="text-gray-600">{method.description}</p>
+              <p className="text-gray-300">{method.description}</p>
             </motion.div>
           ))}
         </div>
@@ -225,7 +225,7 @@ const Contact = () => {
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-800 mb-2">
+                    <label className="block text-sm font-medium text-gray-200 mb-2">
                       First Name
                     </label>
                     <input
@@ -234,11 +234,11 @@ const Contact = () => {
                       required
                       value={formData.firstName}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border bg-gray-700  border-gray-700 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-800 mb-2">
+                    <label className="block text-sm font-medium text-gray-200 mb-2">
                       Last Name
                     </label>
                     <input
@@ -247,12 +247,12 @@ const Contact = () => {
                       required
                       value={formData.lastName}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border bg-gray-700 border-gray-700 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-800 mb-2">
+                  <label className="block text-sm font-medium text-gray-200 mb-2">
                     Email
                   </label>
                   <input
@@ -261,11 +261,11 @@ const Contact = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border bg-gray-700 border-gray-700 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-800 mb-2">
+                  <label className="block text-sm font-medium text-gray-200 mb-2">
                     Message
                   </label>
                   <textarea
@@ -274,18 +274,19 @@ const Contact = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border bg-gray-700 border-gray-700 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
                   />
                 </div>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-black to-gray-800 text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-70"
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </motion.button>
+  whileHover={{ scale: 1.03 }}
+  whileTap={{ scale: 0.97 }}
+  type="submit"
+  disabled={isSubmitting}
+  className="w-full bg-gradient-to-r from-gray-500 to-gray-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 hover:from-gray-700 hover:to-stone-800 hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed"
+>
+  {isSubmitting ? 'Sending...' : 'Send Message'}
+</motion.button>
+
               </motion.form>
             )}
           </AnimatePresence>
