@@ -117,10 +117,10 @@ const Footer: FC = () => {
             <p className="flex items-center">
               <span className="text-gray-400 mr-2">•</span>
               <a
-                href="tel:+971543060098"
+                href="tel:+971545458167"
                 className="hover:text-white hover:underline decoration-gray-400 underline-offset-4 transition-all duration-300 cursor-pointer"
               >
-                +971 54 306 0098
+                +971 54 545 8167
               </a>
             </p>
           </address>
