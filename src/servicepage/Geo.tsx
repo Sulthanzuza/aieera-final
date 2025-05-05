@@ -3,12 +3,14 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Bot, Brain, Database, LineChart, MessageSquare, Search, ArrowRight } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
-import Img1 from '../assets/services/geo1.jpeg'
-import Img2 from '../assets/services/geo2.jpeg'
-import Img3 from '../assets/services/geo3.jpeg'
-import Img4 from '../assets/services/geo4.jpeg' 
-import Img5 from '../assets/services/geo 5.jpeg'
+import Img1 from '../assets/services/geo1.webp'
+import Img2 from '../assets/services/geo2.webp'
+import Img3 from '../assets/services/geo3.webp'
+import Img4 from '../assets/services/geo4.webp' 
+import Img5 from '../assets/services/geo 5.webp'
 import Helmet from 'react-helmet';
+import bg from '../assets/pexels-pixabay-373543.webp'
+import main from '../assets/pexels-tara-winstead-8386440.webp'
 const images = [Img1, Img2, Img4,Img3, Img5];
 
 const GEOService = () => {
@@ -86,7 +88,10 @@ const GEOService = () => {
               <link rel="canonical" href={window.location.href} />
             </Helmet> 
       <div className="relative min-h-screen">
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg')] bg-cover bg-center opacity-10" />
+      <div
+  className="absolute inset-0 bg-cover bg-center opacity-10"
+  style={{ backgroundImage: `url(${bg})` }}
+/> 
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/80 to-[#0A0A0A]" />
         
         <motion.div 
@@ -155,7 +160,7 @@ const GEOService = () => {
           }}
         >
           <img
-            src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg"
+            src={main}
             alt="AI Visualization"
               loading="lazy"
             className="object-cover w-full h-full"

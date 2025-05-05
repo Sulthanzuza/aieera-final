@@ -4,12 +4,12 @@ import { useInView } from 'react-intersection-observer';
 import { TrendingUp, Search, Code, ArrowRight,Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
 import Helmet from 'react-helmet'
-import Img1 from '../assets/services/chatbot1.jpeg'
-import Img2 from '../assets/services/chatbot2.jpeg'
-import Img3 from '../assets/services/chatbot3.jpeg'
-import Img4 from '../assets/services/lead.jpeg'
-import Main from '../assets/services/chatbotmain.jpeg'
-import Bg from '../assets/services/chatbotbg.jpeg' 
+import Img1 from '../assets/services/chatbot1.webp'
+import Img2 from '../assets/services/chatbot2.webp'
+import Img3 from '../assets/services/chatbot3.webp'
+import Img4 from '../assets/services/lead.webp'
+import Main from '../assets/services/chatbotmain.webp'
+import Bg from '../assets/services/chatbotbg.webp' 
 const images = [Img1, Img2, Img4,Img3];
 
 const ChatBots = () => {

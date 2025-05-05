@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { TrendingUp, Search, Code, ArrowRight,Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
-import BG from "../assets/services/seo1.jpeg"
-import Img1 from '../assets/services/seo2.jpeg'
-import Img2 from '../assets/services/seo3.jpeg'
-import Img3 from '../assets/services/seo1.jpeg'
-import Img4 from '../assets/services/seo4.jpeg' 
-import Img5 from '../assets/services/seo 5.jpeg'
-import Seo from '../assets/seo.jpeg'
+import BG from "../assets/services/seo1.webp"
+import Img1 from '../assets/services/seo2.webp'
+import Img2 from '../assets/services/seo3.webp'
+import Img3 from '../assets/services/seo1.webp'
+import Img4 from '../assets/services/seo4.webp' 
+import Img5 from '../assets/services/seo 5.webp'
+import Seo from '../assets/seo.webp'
 import Helmet from 'react-helmet'
 const images = [Img1, Img2, Img4,Img3,Img5];
 const SEOService = () => {

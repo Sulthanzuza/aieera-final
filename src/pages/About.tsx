@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet'; 
-import Logo from "../assets/Logo large single.png"; 
+import Logo from "../assets/Logo large single.webp"; 
 
 const About = () => {
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
   return (
     <div className="min-h-screen pt-16 bg-black">
       <Helmet>
@@ -13,7 +14,7 @@ const About = () => {
               <meta name="keywords" content="digital marketing agency in dubai, online marketing agency, ai digital marketing agency." />
               <meta property="og:title" content=" AI Digital Marketing Solutions | Automate Online Growth with AI" />
               <meta property="og:description" content="We are a leading AI-powered digital marketing agency in Dubai, offering intelligent online marketing solutions to help your brand grow smarter and faster" />
-              <meta property="og:url" content={window.location.href} />
+              <meta property="og:url" content={currentUrl} />
               <meta property="og:type" content="website" />
               <meta property="og:site_name" content="aieera" />
               <meta name="robots" content="index, follow" />
@@ -22,7 +23,7 @@ const About = () => {
               <meta name="language" content="English" />
               
               
-              <link rel="canonical" href={window.location.href} />
+              <link rel="canonical" href={currentUrl} />
             </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative ">
         <motion.div
@@ -86,7 +87,7 @@ const About = () => {
             transition={{ duration: 1 }}
             className="relative lg:sticky lg:top-24"
           >
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-790 to-gray-900 rounded-full opacity-20 blur-3xl" />  <div className="relative flex justify-center items-center">
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-700 to-gray-900 rounded-full opacity-20 blur-3xl" />  <div className="relative flex justify-center items-center">
               <motion.div
                 animate={{
                   scale: [1, 1.05, 1],
@@ -99,7 +100,7 @@ const About = () => {
                 }}
                 className="w-full max-w-md aspect-square relative"
               >
-                <img src={Logo} alt="logo" className="w-full h-full object-contain brightness-10 " />
+                <img src={Logo} alt="logo"  loading="lazy" className="w-full h-full object-contain brightness-10 " />
                 <motion.div
                   animate={{
                     scale: [1, 1.1, 1],

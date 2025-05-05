@@ -46,12 +46,14 @@ const Footer: FC = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-black to-zinc-900 text-white px-6 py-12 border-white">
+    <footer className="bg-gradient-to-b from-black to-zinc-500 text-white px-6 py-12 border-white">
+
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand & Social */}
         <div className="space-y-4">
           <div>
             <img
+             loading="lazy"
               src={FooterLogo}
               alt="Aieera Digital Marketing Logo"
               className="h-40 w-auto filter invert"
@@ -145,8 +147,11 @@ const Footer: FC = () => {
 
       <div className="border-t border-gray-700 mt-12 pt-8 text-center text-sm text-gray-400">
         <p>
-          Copyright © {new Date().getFullYear()} Aieera Digital Marketing.
-          <span className="block sm:inline sm:ml-1">All rights reserved.</span>
+          Copyright ©  {new Date().getFullYear()}<span className="relative inline-block cursor-pointer group">
+  Aieera Digital Marketing.
+  <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+</span>
+
         </p>
       </div>
     </footer>

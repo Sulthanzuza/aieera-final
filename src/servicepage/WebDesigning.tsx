@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Pen, LayoutTemplate, Eye, Code2, Sparkles ,ArrowRight } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
-import Img1 from '../assets/services/web des1.jpeg'
-import Img2 from '../assets/services/geo2.jpeg'
-import Img3 from '../assets/services/geo3.jpeg'
-import Img4 from '../assets/services/geo4.jpeg' 
-import BG from '../assets/services/webdesbg.jpeg'
+import Img1 from '../assets/services/web des1.webp'
+import Img2 from '../assets/services/geo2.webp'
+import Img3 from '../assets/services/geo3.webp'
+import Img4 from '../assets/services/geo4.webp' 
+import BG from '../assets/services/webdesbg.webp'
 const images = [Img1, Img2, Img4,Img3];
 const Webdesign = () => {
   const [ref, inView] = useInView({
@@ -120,6 +120,7 @@ const Webdesign = () => {
                 <img
                   src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg"
                   alt="Web Design Illustration"
+                   loading="lazy"
                   className="relative z-10 rounded-2xl object-cover w-full h-full"
                 />
               </div>
@@ -169,6 +170,7 @@ const Webdesign = () => {
                     src={`https://images.pexels.com/photos/${3861958 + index}/pexels-photo-${3861958 + index}.jpeg`}
                     alt={feature.title}
                     className="rounded-2xl shadow-2xl"
+                     loading="lazy"
                   />
                 </div>
               </motion.div>

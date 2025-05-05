@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { TrendingUp, Search, Code, ArrowRight,Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
-import Img1 from '../assets/services/custom1.jpeg'
-import Img2 from '../assets/services/custom main.jpeg'
-import Img3 from '../assets/services/custom3.jpeg'
-import Img4 from '../assets/services/custom4.jpeg'
-import Main from '../assets/services/custommain.jpeg'
-import Img5 from '../assets/services/custom5.jpeg'
-import Img6 from '../assets/services/custom6.jpeg'
-import Bg from '../assets/services/custombg.jpeg' 
+import Img1 from '../assets/services/custom1.webp'
+import Img2 from '../assets/services/custom main.webp'
+import Img3 from '../assets/services/custom3.webp'
+import Img4 from '../assets/services/custom4.webp'
+import Main from '../assets/services/custommain.webp'
+import Img5 from '../assets/services/custom5.webp'
+import Img6 from '../assets/services/custom6.webp'
+import Bg from '../assets/services/custombg.webp' 
 import Helmet from 'react-helmet'
 const images = [Img1, Img2, Img4,Img3,Img6,Img5];
 

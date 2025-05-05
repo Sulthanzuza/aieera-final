@@ -1,37 +1,38 @@
-import { React, useState, useRef, useEffect } from 'react';
+import { React, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Brain, BarChart as ChartBar, Target } from 'lucide-react';
-import { Bot, Megaphone, Zap, LineChart, SlidersHorizontal, Code, Pen, ArrowRight } from 'lucide-react';
+import {  ArrowRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
-import { Helmet } from 'react-helmet'; 
+import { Helmet } from 'react-helmet';
+import BackgroundVideo from "../components/BackgroundVideo";
 import 'swiper/css';
-import BackgroundVideo from '../assets/1851190-uhd_3840_2160_25fps.mp4'
+import BackgroundVide from '../assets/1851190-uhd_3840_2160_25fps.mp4'
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import Seo from "../assets/seo.jpeg"
-import Content from "../assets/content creation.jpeg"
-import Strategy from "../assets/strategy.jpeg"
-import Web from "../assets/we b design.jpeg"
-import PPC from "../assets/ppc.jpeg"
-import Smm from "../assets/smm.jpeg"
-import Camp from "../assets/campaign.jpeg"
-import Email from "../assets/email.jpeg"
-import Webdev from "../assets/web development.jpeg"
-import Geo from "../assets/geo.jpeg"
+import teamwork from '../assets/pexels-photo-7688336.webp'
+import Seo from "../assets/seo.webp"
+import BgPoster from '../assets/1851190-uhd_3840_2160_25fps-0.webp'
+import Content from "../assets/content creation.webp"
+import Strategy from "../assets/strategy.webp"
+import Web from "../assets/we b design.webp"
+import PPC from "../assets/ppc.webp"
+import Smm from "../assets/smm.webp"
+import Camp from "../assets/campaign.webp"
+import Email from "../assets/email.webp"
+import Webdev from "../assets/web development.webp"
+import Geo from "../assets/geo.webp"
 import Branding from "../assets/branding1.png"
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 
 // Service items with added image URLs and slugs for navigation
 const serviceItems = [
   {
-    icon: <Brain className="w-8 h-8" />,
     title: "AI Guided SEO",
     description: "Smarter search rankings, effortlessly.",
     path: "/services/seo-service", // Added path for navigation
     image: Seo,
-    desc1:"Stay ahead of the competition with AI guided SEO that analyzes live trends, keywords, and competitor agendas to boost your search performance. Our digital marketing services learn in real time to improve market changes.",
+    desc1: "Stay ahead of the competition with AI guided SEO that analyzes live trends, keywords, and competitor agendas to boost your search performance. Our digital marketing services learn in real time to improve market changes.",
     features: [
       "Live analysis of search trends",
       "Smart keyword suggestions using pattern recognitions",
@@ -40,7 +41,7 @@ const serviceItems = [
     ]
   },
   {
-    icon: <Brain className="w-8 h-8" />,
+
     title: "Generative Engine Optimization",
     description: "Optimize your content for the future of AI-driven discovery",
     path: "/services/geo-service", // Added path for navigation
@@ -53,12 +54,12 @@ const serviceItems = [
     ]
   },
   {
-    icon: <Bot className="w-8 h-8" />,
+
     title: "AI-Powered PPC / Paid Ads",
     description: "More clicks, less guesswork",
     path: "/services/paid-ads", // Added path for navigation
     image: PPC,
-    desc1:"We specialized in digital marketing services that intelligently adjust ad bids and targeting for highest outcomes.",
+    desc1: "We specialized in digital marketing services that intelligently adjust ad bids and targeting for highest outcomes.",
     features: [
       "Fully Automated campaign management with machine learning",
       " Ongoing A/B testing that improves your ads on the run",
@@ -67,12 +68,12 @@ const serviceItems = [
     ]
   },
   {
-    icon: <Target className="w-8 h-8" />,
+
     title: "Next Gen Social Media Marketing",
     description: "Turn followers into fans",
     path: "/services/socialmedia-marketing", // Added path for navigation
     image: Smm,
-    desc1:"Deliver the right content at the right time with strategies from our digital marketing services suite.",
+    desc1: "Deliver the right content at the right time with strategies from our digital marketing services suite.",
     features: [
       "Acute audience targeting based on behavior and interests",
       "Content recommendations powered by engagement insights",
@@ -81,12 +82,12 @@ const serviceItems = [
     ]
   },
   {
-    icon: <Megaphone className="w-8 h-8" />,
+ 
     title: "Automated Email Engagement",
     description: "Emails that feel personal sent automatically",
-    path: "/services/email-automation", 
+    path: "/services/email-automation",
     image: Email,
-    desc1:"Increase open rates and conversions using email automatize tools from our digital marketing services.",
+    desc1: "Increase open rates and conversions using email automatize tools from our digital marketing services.",
     features: [
       "AI helping content creation that saves time",
       "Spot on topic and keyword suggestions",
@@ -95,7 +96,7 @@ const serviceItems = [
     ]
   },
   {
-    icon: <Brain className="w-8 h-8" />,
+
     title: "Branding",
     description: "Build a brand that speaks, resonates, and scales—powered by AI intelligence.",
     path: "/services/branding", // Updated path
@@ -106,14 +107,14 @@ const serviceItems = [
       "Omnichannel consistency across digital, print, and social",
       "Reputation tracking and real-time sentiment analysis"
     ]
-  },  
+  },
   {
-    icon: <LineChart className="w-8 h-8" />,
+ 
     title: "Content Marketing with AI tools",
     description: "Create smarter content that gets results.",
     path: "/services/content-marketing", // Added path for navigation
     image: Content,
-    desc1:"Create engaging blogs, articles, and multimedia content efficiently with latest AI make writing and design possibilities",
+    desc1: "Create engaging blogs, articles, and multimedia content efficiently with latest AI make writing and design possibilities",
     features: [
       "AI helping content creation that saves time",
       "Spot on topic and keyword suggestions",
@@ -122,12 +123,12 @@ const serviceItems = [
     ]
   },
   {
-    icon: <Zap className="w-8 h-8" />,
+    
     title: "AI Chatbots & Lead Generation",
     description: "Instant connections, Instant leads",
     path: "/services/chat-bots", // Added path for navigation
     image: Camp,
-    desc1:"Delivering and responding human like support and create leads at scale with smart AI chatbots that never rest",
+    desc1: "Delivering and responding human like support and create leads at scale with smart AI chatbots that never rest",
     features: [
       "Deliver and respond human like supportive ",
       "Chatbots that understand context and intent",
@@ -136,12 +137,12 @@ const serviceItems = [
     ]
   },
   {
-    icon: <SlidersHorizontal className="w-8 h-8" />,
+  
     title: "Customization & Strategy",
     description: "Marketing that's built around you",
     path: "/services/customization", // Added path for navigation
     image: Strategy,
-    desc1:"Achieve better results with marketing strategies made by AI to match your goals and how your clients actually behave.",
+    desc1: "Achieve better results with marketing strategies made by AI to match your goals and how your clients actually behave.",
     features: [
       "In depth competitor and market research",
       "Strategic marketing plans aligned with your goals",
@@ -150,12 +151,12 @@ const serviceItems = [
     ]
   },
   {
-    icon: <Code className="w-8 h-8" />,
+
     title: "Web Development",
     description: "A Strong foundation for your digital growth",
     path: "/services/web-development", // Added path for navigation
     image: Webdev,
-    desc1:"From fast loading pages to scalable backends, we build websites that are beautiful, secure, and ready for anything effective for both users and search engines.",
+    desc1: "From fast loading pages to scalable backends, we build websites that are beautiful, secure, and ready for anything effective for both users and search engines.",
     features: [
       "Built with modern tech (React, Vue, Angular)",
       "Secure and scalable backend architecture",
@@ -164,12 +165,12 @@ const serviceItems = [
     ]
   },
   {
-    icon: <Pen className="w-8 h-8" />,
+
     title: "Web Designing",
     description: "Designs that captivate and convert.",
     path: "/services/web-designing", // Added path for navigation
     image: Web,
-    desc1:"We make visually stunning, instinctual websites that reflect your brand's personality and guide users exactly where you want them to go.",
+    desc1: "We make visually stunning, instinctual websites that reflect your brand's personality and guide users exactly where you want them to go.",
     features: [
       "latest, user first designs",
       "Responsive layouts that look great on any devices",
@@ -208,7 +209,8 @@ const Home = () => {
     navigate(path);
   };
 
-  // Function to generate JSON-LD structured data
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
+
   const generateSchemaMarkup = () => {
     // Organization schema
     const organizationSchema = {
@@ -217,7 +219,7 @@ const Home = () => {
       "name": "aieera",
       "description": "Explore the future of digital marketing with AI. We deliver powerful AI-driven strategies that boost engagement, conversions, and business growth.",
       "url": window.location.origin,
-      "logo": `${window.location.origin}/logo.png`, 
+      "logo": `${window.location.origin}/logo.png`,
       "sameAs": [
         "https://www.facebook.com/aieerafm",
         "https://www.linkedin.com/company/aieera",
@@ -225,9 +227,9 @@ const Home = () => {
       ],
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+971 545458167", 
+        "telephone": "+971 545458167",
         "contactType": "customer service",
-        "email": "hello@aieera.com" 
+        "email": "hello@aieera.com"
       }
     };
 
@@ -262,7 +264,7 @@ const Home = () => {
       "@type": "WebPage",
       "name": "AI-Powered Digital Marketing Services | aieera",
       "description": "Explore the future of digital marketing with AI. We deliver powerful AI-driven strategies that boost engagement, conversions, and business growth.",
-      "url": window.location.href,
+      "url": currentUrl,
       "mainEntity": {
         "@type": "WebSite",
         "name": "aieera - AI Digital Marketing Agency",
@@ -275,49 +277,44 @@ const Home = () => {
 
   return (
     <div className="min-h-screen pt-16 bg-black">
-      
+
       <Helmet>
         <title>AI Digital Marketing Solutions | Automate Online Growth with AI</title>
         <meta name="description" content="Explore the future of digital marketing with AI. We deliver powerful AI-driven strategies that boost engagement, conversions, and business growth." />
         <meta name="keywords" content="digital marketing with ai, ai digital marketing, ai for digital marketing, ai in digital marketing" />
-        
+
         <meta property="og:title" content="AI Digital Marketing Solutions | Automate Online Growth with AI" />
         <meta property="og:description" content="Explore the future of digital marketing with AI. We deliver powerful AI-driven strategies that boost engagement, conversions, and business growth." />
-        <meta property="og:url" content={window.location.href} />
+        <meta property="og:url" content={currentUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="aieera" />
-        
+
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="aieera" />
         <meta name="language" content="English" />
-        
-        <link rel="canonical" href={window.location.href} />
-        
+
+        <link rel="canonical" href={currentUrl} />
+
         <script type="application/ld+json">
           {JSON.stringify(generateSchemaMarkup())}
         </script>
       </Helmet>
 
-     
+
       <div className="relative">
-       
+
         <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="object-cover w-full h-full"
-          >
-            <source src={BackgroundVideo} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          
+        <BackgroundVideo
+  videoSrc={BackgroundVide}
+  posterSrc={BgPoster}
+  className="min-h-screen"
+/>
+
           <div className="absolute inset-0 bg-black bg-opacity-80"></div>
         </div>
 
-       
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: -50 }}
@@ -326,8 +323,8 @@ const Home = () => {
             className="text-center mb-20"
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-               Welcome to the 
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                Welcome to the
               </span>
               <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
@@ -344,50 +341,38 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-xl text-gray-300 mb-12 max-w-5xl mx-auto" 
+              className="text-xl text-gray-300 mb-12 max-w-5xl mx-auto"
             >
               Harness the complete power of your brand through AI digital marketing. Achieve results through intelligent automation, precision-targeted campaigns, and real-time data insights designed for your success
             </motion.p>
             <motion.button
-  whileHover={{ 
-    scale: 1.05,
-    boxShadow: "0 0 15px 2px rgba(192, 192, 192, 0.7), 0 0 30px 5px rgba(192, 192, 192, 0.5)"
-  }}
-  whileTap={{ scale: 0.95 }}
-  className="relative px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-900 text-white rounded-full text-lg font-semibold transition-all duration-300 border border-gray-400 shadow-lg group overflow-hidden"
-  onClick={() => navigate('/services')}
->
-  {/* Silver glow overlay */}
-  <div className="absolute top-0 left-0 right-0 bottom-0 rounded-full pointer-events-none">
-    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-gray-300 to-gray-100 opacity-10 group-hover:opacity-20 transition-opacity duration-300"></div>
-    <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-gray-300 to-silver opacity-30 blur-sm group-hover:opacity-60 group-hover:blur-md transition-all duration-300"></div>
-  </div>
-  
-  {/* Button text */}
-  <span className="relative z-10 bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-gray-100 group-hover:to-white transition-all duration-300">
-    Get Started
-  </span>
-</motion.button>
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 15px 2px rgba(192, 192, 192, 0.7), 0 0 30px 5px rgba(192, 192, 192, 0.5)"
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="relative px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-900 text-white rounded-full text-lg font-semibold transition-all duration-300 border border-gray-400 shadow-lg group overflow-hidden"
+              onClick={() => navigate('/services')}
+            >
+              {/* Silver glow overlay */}
+              <div className="absolute top-0 left-0 right-0 bottom-0 rounded-full pointer-events-none">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-gray-300 to-gray-100 opacity-10 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-gray-300 to-silver opacity-30 blur-sm group-hover:opacity-60 group-hover:blur-md transition-all duration-300"></div>
+              </div>
+
+              {/* Button text */}
+              <span className="relative z-10 bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-gray-100 group-hover:to-white transition-all duration-300">
+                Get Started
+              </span>
+            </motion.button>
           </motion.div>
         </div>
-        <motion.div
-          className="absolute bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 z-10"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
-        >
-          <div className="w-8 h-12 rounded-full border-2 border-gray-400 flex justify-center pt-2">
-            <motion.div
-              className="w-1.5 h-1.5 rounded-full bg-gray-300"
-              animate={{ y: [0, 16, 0] }}
-              transition={{ repeat: Infinity, duration: 1.5 }}
-            />
-          </div>
-        </motion.div>
+
       </div>
 
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-black">
-      
+
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -408,7 +393,7 @@ const Home = () => {
         </motion.div>
 
         {/* Enhanced Service Slider */}
-        <div 
+        <div
           className="py-10 relative"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -417,7 +402,7 @@ const Home = () => {
           {isHovered && (
             <>
               {/* Left arrow */}
-              <button 
+              <button
                 className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 text-white p-3 rounded-full transition-colors duration-300 shadow-md border border-gray-700"
                 onClick={() => swiperRef.current.swiper.slidePrev()}
                 aria-label="Previous slide"
@@ -426,9 +411,9 @@ const Home = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-              
+
               {/* Right arrow */}
-              <button 
+              <button
                 className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 text-white p-3 rounded-full transition-colors duration-300 shadow-md border border-gray-700"
                 onClick={() => swiperRef.current.swiper.slideNext()}
                 aria-label="Next slide"
@@ -476,7 +461,7 @@ const Home = () => {
                   <meta itemProp="name" content={item.title} />
                   <meta itemProp="description" content={item.description} />
                   <meta itemProp="url" content={`${window.location.origin}${item.path}`} />
-                  
+
                   {/* Background Image - Hidden by default, shown on hover */}
                   <div className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <img
@@ -484,18 +469,19 @@ const Home = () => {
                       alt={item.title}
                       className="w-full h-full object-cover"
                       itemProp="image"
+                      loading="lazy"
                     />
                     {/* Dark overlay to ensure text and button are visible over any image */}
                     <div className="absolute inset-0 bg-black bg-opacity-70"></div>
                   </div>
-                  
+
                   {/* Content visible when not hovered */}
                   <div className="p-6 flex flex-col justify-between h-full relative z-10 group-hover:opacity-0 transition-opacity duration-500">
                     <div>
                       <h3 className="text-2xl font-bold text-gray-200 mb-2" itemProp="name">{item.title}</h3>
                       <p className="text-gray-400 mb-4 font-bold" itemProp="description">{item.description}</p>
                       <p className="text-gray-400 mb-4">{item.desc1}</p>
-                      
+
                       {/* Features with bullet points */}
                       <ul className="space-y-1" itemProp="hasOfferCatalog" itemScope itemType="https://schema.org/OfferCatalog">
                         {item.features.map((feature, idx) => (
@@ -507,11 +493,11 @@ const Home = () => {
                       </ul>
                     </div>
                   </div>
-                
+
                   {/* Hover Content - Title and Learn More Button */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 p-6">
                     <h3 className="text-2xl font-bold text-gray-100 mb-auto mt-6">{item.title}</h3>
-                    
+
                     <div className="mb-6 mt-auto">
                       <button
                         className="relative flex items-center justify-center px-6 py-3 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 hover:from-gray-800 hover:to-gray-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group border border-gray-600"
@@ -520,7 +506,7 @@ const Home = () => {
                       >
                         {/* Glossy overlay */}
                         <span className="absolute inset-0 bg-white opacity-10 rounded-xl pointer-events-none" />
-                        
+
                         {/* Button text & icon */}
                         <span className="relative z-10 flex items-center">
                           Learn More
@@ -537,14 +523,14 @@ const Home = () => {
       </div>
 
       <div className=" w-full min-h-screen overflow-hidden bg-black" itemScope itemType="https://schema.org/Organization">
-      
+
         <meta itemProp="name" content="aieera" />
         <meta itemProp="description" content="AI-powered digital marketing agency specializing in SEO, PPC, content marketing, and web development services." />
         <meta itemProp="url" content={window.location.origin} />
-        
-        
+
+
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-center min-h-screen w-full px-4 md:px-12 gap-10 pt-20 md:pt-0">
-          
+
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -552,12 +538,12 @@ const Home = () => {
             className="w-full md:w-1/2 text-center md:text-left"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-200 leading-tight mb-6" itemProp="slogan">
-            Upgrade Your Brand with{" "}
+              Upgrade Your Brand with{" "}
               <span className="text-gray-400" itemProp="name">aieera</span> AI Automated Marketing
             </h2>
 
             <p className="text-gray-300 text-base sm:text-lg md:text-xl mb-8 max-w-lg mx-auto md:mx-0" itemProp="description">
-            Our team drives growth through targeted research data data effective strategies, creative innovation, and a deep understanding of the brand marketing.
+              Our team drives growth through targeted research data data effective strategies, creative innovation, and a deep understanding of the brand marketing.
             </p>
           </motion.div>
 
@@ -572,16 +558,17 @@ const Home = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-gray-500 to-gray-700 rounded-2xl blur opacity-50"></div>
               <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
                 <img
-                  src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  src={teamwork}
                   alt="Digital Marketing Team"
                   className="w-full h-auto opacity-90"
                   itemProp="image"
+                  loading="lazy"
                 />
               </div>
             </div>
           </motion.div>
         </div>
-       
+
       </div>
     </div>
   );

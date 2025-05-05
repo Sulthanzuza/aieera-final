@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {  Menu, X } from 'lucide-react';
-import LogoName from "../assets/Asset_6-removebg-preview.png";
-import Logo from "../assets/Logo large single.png";
+import LogoName from "../assets/Asset_6-removebg-preview.webp";
+import Logo from "../assets/Logo large single.webp";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,8 +18,9 @@ const Navbar = () => {
         
           <motion.div whileHover={{ scale: 1.05 }} className="flex-shrink-0 flex items-center">
   <Link to="/" className="flex items-center space-x-2">
-  <img src={Logo} alt="logo icon" className="h-12 object-contain white" />
-    <img src={LogoName} alt="logo icon" className="h-8 object-contain white " />
+  <img src={Logo} alt="logo icon"  loading="lazy" className="h-12 object-contain filter invert" />
+<img src={LogoName} alt="logo icon"  loading="lazy" className="h-8 object-contain filter invert" />
+
     
     
   

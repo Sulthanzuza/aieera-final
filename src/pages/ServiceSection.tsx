@@ -44,6 +44,7 @@ const ServiceSection: React.FC<ServiceProps> = ({ service, index }) => {
   <img 
     src={service.image} 
     alt={service.title} 
+     loading="lazy"
     className="w-full h-full object-cover"
   />
   <div className="absolute inset-0 bg-indigo-600 opacity-30 mix-blend-multiply pointer-events-none" />
@@ -63,7 +64,11 @@ const ServiceSection: React.FC<ServiceProps> = ({ service, index }) => {
             <div className="flex flex-col items-start">
               
               
-              <h3 className="text-3xl font-bold text-gray-200 mb-4">{service.title}</h3>
+            <h3 className="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#dcdcdc] via-[#c0c0c0] to-[#a9a9a9] drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
+  {service.title}
+</h3>
+
+
               
               <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                 {service.description}

@@ -2,152 +2,132 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { 
-  Brain, 
-  Bot, 
-  Megaphone, 
-  Target, 
-  Zap, 
-  LineChart, 
-  SlidersHorizontal, 
-  Code, 
-  Pen,
-  ChevronDown
-} from 'lucide-react';
 import ServiceSection from './ServiceSection';
-import Seo from "../assets/seo.jpeg"
-import Content from "../assets/content creation.jpeg"
-import Strategy from "../assets/strategy.jpeg"
-import Web from "../assets/we b design.jpeg"
-import PPC from "../assets/services/Latest PPC Trends in 2022_ Need To Be Follow.jpeg"
-import Smm from "../assets/smm.jpeg"
-import Camp from "../assets/campaign.jpeg"
-import Email from "../assets/email.jpeg"
-import Webdev from "../assets/web development.jpeg"
-import Geo from "../assets/geo.jpeg"
-import Branding from "../assets/branding.jpeg"
+import Seo from "../assets/seo.webp"
+import Content from "../assets/content creation.webp"
+import Strategy from "../assets/strategy.webp"
+import Web from "../assets/we b design.webp"
+import PPC from "../assets/services/Latest PPC Trends in 2022_ Need To Be Follow.webp"
+import Smm from "../assets/smm.webp"
+import Camp from "../assets/campaign.webp"
+import Email from "../assets/email.webp"
+import Webdev from "../assets/web development.webp"
+import Geo from "../assets/geo.webp"
+import Branding from "../assets/branding.webp"
 import {Helmet } from 'react-helmet'
 const serviceItems = [
   {
-    icon: <Brain className="w-12 h-12" />,
+
     title: "Generative Engine Optimization",
-    description: "Optimize your content for the future of AI-driven discovery. Our GEO services ensure your brand and messaging are fine-tuned for AI chatbots, language models, and generative search systems—making your content more discoverable, contextual, and valuable in AI interactions.",
-    image:Geo ,
-    path:"/services/geo-service",
+    description: "Future proof your content for the age of AI. Our GEO solutions help your brand thrive in conversations with AI assistants, chatbots, and generative search tools ensuring you're not just found, but favoured.",
+    image: Geo,
+    path: "/services/geo-service",
     features: [
-      "Optimized content for AI chatbots and assistants",
-    "Structured data and context-rich formatting",
-    "Enhanced discoverability in generative search engines",
-    "Future-proof SEO aligned with AI language models"
+      "Content made for AI interactions and generative platforms",
+      "Semantic structuring and context enriched formatting",
+      "Increased visibility in AI made discovery engines",
+      "Future looking SEO custom to language model algorithms"
     ],
     bgColor: "black"
   },
   {
-    icon: <Brain className="w-12 h-12" />,
     title: "AI-Powered SEO",
-    description: "Leverage the power of artificial intelligence to optimize your website for search engines. Our AI-powered SEO services analyze search patterns, competitor strategies, and user behavior to deliver targeted optimizations that drive organic traffic and improve rankings.",
+    description: "Supercharge your search performance with intelligent optimization. Our AI driven SEO services go beyond traditional tactics analysing search trends, competitor moves, and user intent to deliver smarter strategies that boost rankings and drive meaningful traffic.",
     image: Seo,
-    path:"/services/seo-service",
+    path: "/services/seo-service",
     features: [
-      "Real-time data processing",
-      "Pattern recognition for keyword optimization",
-      "Predictive modeling for content strategy",
-      "Automated reporting with actionable insights"
+      "Instant insights through live data analysis",
+      "Smarter keyword targeting with pattern detection",
+      "Predictive content strategies based on user behaviour",
+      "Automated, insight rich reporting for continuous improvement"
     ],
     bgColor: "black"
   },
   {
-    icon: <Brain className="w-12 h-12" />,
     title: "Branding",
-    description: "Your brand is more than just a logo—it's the emotional connection people have with your business. We help you build a brand that resonates deeply with your audience and stands the test of time. From defining your unique voice and visual identity to crafting consistent messaging across platforms, our branding services are designed to position you as a leader in your industry. Whether you're launching a new venture or rebranding an existing one, we develop powerful narratives and cohesive visuals that spark recognition and loyalty.",
+    description: "Your brand is the story people remember and the feeling they trust. We help shape brands that not only look great but mean something—brands that spark recognition, inspire loyalty, and lead with purpose. From strategy to storytelling to design, we make every element reflect your essence and connect with your audience.",
     image: Branding,
-    path:"/services/branding",
+    path: "/services/branding",
     features: [
-      "Brand strategy & positioning",
-      "Logo design & visual identity systems",
-      "Tone of voice & messaging frameworks",
-      "Consistent cross-platform branding assets"
+      "Strategic brand positioning and development",
+      "Logo creation and cohesive visual identity systems",
+      "Voice and messaging that reflect your unique personality",
+      "Unified branding across every platform and touchpoint"
     ],
     bgColor: "black"
-  },  
+  },
   {
-    icon: <Code className="w-12 h-12" />,
     title: "Web Development",
-    description: "Create a powerful online presence with our cutting-edge web development services. We build fast, secure, and scalable websites optimized for both users and search engines, ensuring your digital foundation supports all your marketing efforts.",
+    description: "Establish a strong online presence with our expert web development services. We build fast, secure, and scalable websites that deliver seamless user experiences and exceptional SEO performance. Our solutions form the digital backbone of your brand supporting your marketing efforts and driving sustainable growth.",
     image: Webdev,
-    path:"/services/web-development",
+    path: "/services/web-development",
     features: [
       "Modern frontend frameworks (React, Vue, Angular)",
       "Scalable backend architectures",
-      "Performance optimization",
-      "SEO-friendly structure and implementation"
+      "Speed and efficiency improvements",
+      "SEO friendly structure and execution"
     ],
     bgColor: "black"
   },
   {
-    icon: <Pen className="w-12 h-12" />,
     title: "Web Designing",
-    description: "Transform your digital presence with our exceptional web design services. Our team creates visually stunning, intuitive interfaces that engage visitors, communicate your brand story, and guide users toward conversion with purposeful design elements.",
+    description: "Improve your digital presence with our exceptional web design services. Our team creates visually stunning, intuitive interfaces that engage visitors, communicate your brand story, and guide users toward conversion with purposeful design elements.",
     image: Web,
-    path:"/services/web-designing",
+    path: "/services/web-designing",
     features: [
-      "User-centered design approach",
+      "User focused design approach",
       "Responsive design for all devices",
-      "Brand-aligned visual language",
-      "Conversion-optimized interfaces"
+      "Brand aligned visual language",
+      "Interfaces designed for maximum conversions"
     ],
     bgColor: "black"
   },
   {
-    icon: <Bot className="w-12 h-12" />,
     title: "AI-Powered PPC / Paid Ads",
-    description: "Transform your advertising campaigns with our AI-driven PPC services. We use machine learning algorithms to optimize bidding strategies, target high-intent audiences, and dynamically adjust ad content for maximum conversion rates and ROI.",
+    description: "Improve your advertising campaigns with our AI assisted PPC services. We use machine learning algorithms to optimize bidding strategies, target high intended audiences, and dynamically adjust ad content for maximum conversion rates and ROI.",
     image: PPC,
-    path:"/services/paid-ads",
+    path: "/services/paid-ads",
     features: [
       "Campaign automation with machine learning",
-      "Dynamic A/B testing for continuous improvement",
+      "High effective A/B testing for continuous improvement",
       "Customer journey mapping for targeted messaging",
-      "Real-time performance tracking and optimization"
+      "Live performance tracking and optimization"
     ],
     bgColor: "black"
   },
   {
-    icon: <Target className="w-12 h-12" />,
     title: "AI Social Media Marketing",
-    description: "Revolutionize your social media presence with our AI-powered strategies. Our tools analyze audience behavior, trending content, and engagement patterns to create tailored social media campaigns that resonate with your target audience and drive meaningful interactions.",
+    description: "Revolutionize your social media presence with our AI powered strategies. Our tools analyse audience behaviour, trending content, and engagement patterns to create best custom social media campaigns that resonate with your target audience and help meaningful interactions.",
     image: Smm,
-    path:"/services/socialmedia-marketing",
+    path: "/services/socialmedia-marketing",
     features: [
       "Advanced audience segmentation and targeting",
-      "Behavioral analysis for content optimization",
+      "Behavioural analysis for content optimization",
       "Custom audience building and expansion",
-      "Look-alike modeling for new audience discovery"
+      "Look alike modelling for new audience discoveries"
     ],
     bgColor: "black"
   },
   {
-    icon: <Megaphone className="w-12 h-12" />,
     title: "Email Marketing Automation",
-    description: "Take your email marketing to the next level with our AI-powered automation solutions. From personalized content creation to dynamic segmentation and optimal send times, our system ensures your messages reach the right audience at the right moment.",
+    description: "Take your email marketing to the next level with our AI assisted automation solutions. From personalized content creation to dynamic segmentation and optimal send times, our system ensures your messages reach the right audience at the right moment.",
     image: Email,
-    path:"/services/email-automation",
+    path: "/services/email-automation",
     features: [
       "Content personalization at scale",
-      "Behavioral trigger-based campaigns",
-      "Predictive analytics for optimal send times",
+      "Behavioural action based campaigns",
+      "Predictive analytics for peak send times",
       "Conversion path optimization"
     ],
     bgColor: "black"
   },
   {
-    icon: <LineChart className="w-12 h-12" />,
     title: "Content Marketing with AI tools",
-    description: "Elevate your content strategy with our AI-enhanced content marketing services. We combine creative expertise with data-driven insights to produce engaging, relevant content that attracts, engages, and converts your target audience while building brand authority.",
+    description: "Upgrade your content strategy with our AI helping content marketing services. We combine creative expertise with data make insights to produce engaging, relevant content that attracts, engages, and converts your target audience while building brand authority.",
     image: Content,
-    path:"/services/content-marketing",
+    path: "/services/content-marketing",
     features: [
-      "AI-assisted content creation and optimization",
+      "AI assisted content creation and optimization",
       "Topic and keyword opportunity identification",
       "Content performance prediction",
       "Automated content distribution"
@@ -155,13 +135,12 @@ const serviceItems = [
     bgColor: "black"
   },
   {
-    icon: <Zap className="w-12 h-12" />,
     title: "AI Chatbots & Lead Generation",
-    description: "Revolutionize your customer acquisition with intelligent chatbots that engage visitors 24/7. Our AI chatbots qualify leads, answer questions, and guide prospects through your sales funnel, ensuring no opportunity is missed while delivering personalized experiences.",
+    description: "Modernize your customer acquisition with intelligent chatbots that engage visitors 24/7. Our AI chatbots qualify leads, answer questions, and guide prospects through your sales funnel, ensuring no opportunity is missed while delivering personalized experiences.",
     image: Strategy,
-    path:"/services/chat-bots",
+    path: "/services/chat-bots",
     features: [
-      "Natural language processing for human-like conversations",
+      "Natural language processing for human like conversations",
       "Intent recognition and contextual responses",
       "Seamless handoff to human agents when needed",
       "Continuous learning from interactions"
@@ -169,20 +148,19 @@ const serviceItems = [
     bgColor: "black"
   },
   {
-    icon: <SlidersHorizontal className="w-12 h-12" />,
     title: "Customization & Strategy",
-    description: "Get a tailored marketing approach designed specifically for your business goals. Our strategic services combine industry expertise with AI-powered insights to develop comprehensive marketing plans that align with your vision and deliver measurable results.",
+    description: "Get a custom marketing approach designed specifically for your business goals. Our strategic services combine industry expertise with AI powered insights to develop comprehensive marketing plans that align with your vision and deliver measurable results.",
     image: Camp,
-    path:"/services/customization",
+    path: "/services/customization",
     features: [
       "Comprehensive competitive analysis",
-      "Data-driven strategy development",
+      "Data made strategy development",
       "Custom KPI setting and tracking",
-      "Ongoing optimization based on performance"
+      "Ongoing configuration based on performance"
     ],
     bgColor: "black"
   }
-];
+]
 
 const Services = () => {
   const { ref: heroRef, inView: heroInView } = useInView({

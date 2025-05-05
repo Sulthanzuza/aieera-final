@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { LayoutDashboard, Zap, Server, TrendingUp,ArrowRight } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
-import Img1 from '../assets/services/web dev1.jpg'
-import Img2 from '../assets/services/webdev2.jpeg'
-import Img3 from '../assets/services/webdev3.jpeg'
-import Img4 from '../assets/services/web devbg.jpeg'
-import BG from '../assets/services/web devbg.jpeg'
-import Main from "../assets/web development.jpeg"
+import Img1 from '../assets/services/web dev1.webp'
+import Img2 from '../assets/services/webdev2.webp'
+import Img3 from '../assets/services/webdev3.webp'
+import Img4 from '../assets/services/web devbg.webp'
+import BG from '../assets/services/web devbg.webp'
+import Main from "../assets/web development.webp"
 import Helmet from 'react-helmet'
 const images = [Img1, Img2, Img4, Img3];
 const Webdev = () => {

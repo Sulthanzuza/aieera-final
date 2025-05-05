@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { TrendingUp, Search, Code, ArrowRight,Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
-import Img1 from '../assets/services/email3.jpeg'
-import Img2 from '../assets/services/email2.jpeg'
-import Img3 from '../assets/services/email1.jpeg'
-import Img4 from '../assets/services/img4.jpeg'
-import Main from '../assets/services/emailmain.jpeg'
+import Img1 from '../assets/services/email3.webp'
+import Img2 from '../assets/services/email2.webp'
+import Img3 from '../assets/services/email1.webp'
+import Img4 from '../assets/services/img4.webp'
+import Main from '../assets/services/emailmain.webp'
 import Helmet from 'react-helmet'
-import Bg from '../assets/services/emailbg.jpeg' 
+import Bg from '../assets/services/emailbg.webp' 
 const images = [Img1, Img2, Img4,Img3];
 const EmailAuto = () => {
   const [ref, inView] = useInView({

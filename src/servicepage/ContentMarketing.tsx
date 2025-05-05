@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { TrendingUp, Search, Code, ArrowRight,Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
-import Img1 from '../assets/services/content 1.jpeg'
-import Img2 from '../assets/services/content2.jpeg'
-import Img3 from '../assets/services/content3.jpeg'
-import Img4 from '../assets/services/content4.jpeg'
-import Img5 from '../assets/services/content5.jpeg'
+import Img1 from '../assets/services/content 1.webp'
+import Img2 from '../assets/services/content2.webp'
+import Img3 from '../assets/services/content3.webp'
+import Img4 from '../assets/services/content4.webp'
+import Img5 from '../assets/services/content5.webp'
 import Helmet from 'react-helmet'
-import Main from '../assets/services/content main.jpeg'
-import Bg from '../assets/services/contentbg.jpeg' 
+import Main from '../assets/services/content main.webp'
+import Bg from '../assets/services/contentbg.webp' 
 const images = [Img1, Img2, Img4,Img3,Img5];
 const Content = () => {
   const [ref, inView] = useInView({

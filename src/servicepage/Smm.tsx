@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { TrendingUp, Search, Code, ArrowRight,Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
-import Img1 from '../assets/services/smm1.jpeg'
-import Img2 from '../assets/services/smm2.jpeg'
-import Img3 from '../assets/services/smm3.jpeg'
-import Img4 from '../assets/services/Social Media Management Strategies.jpeg'
+import Img1 from '../assets/services/smm1.webp'
+import Img2 from '../assets/services/smm2.webp'
+import Img3 from '../assets/services/smm3.webp'
+import Img4 from '../assets/services/Social Media Management Strategies.webp'
 import Helmet from 'react-helmet'
-import Main from '../assets/services/ssmmain.jpeg'
-import Bg from '../assets/services/ssmbg.jpeg' 
+import Main from '../assets/services/ssmmain.webp'
+import Bg from '../assets/services/ssmbg.webp' 
 const images = [Img1, Img2, Img4,Img3];
 const SMM = () => {
   const [ref, inView] = useInView({
@@ -188,6 +188,7 @@ const SMM = () => {
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
                 <img 
   src={images[index]}
+   loading="lazy"
   alt={feature.title}
   className="rounded-2xl shadow-2xl"
 />

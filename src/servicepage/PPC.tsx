@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import {  BarChart2, RefreshCcw, Compass, ArrowRight,Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
-import Img1 from '../assets/services/ppc2.jpeg'
-import Img2 from '../assets/services/ppc3.jpeg'
-import Img3 from '../assets/services/ppcbg.jpeg'
-import Img4 from '../assets/services/Latest PPC Trends in 2022_ Need To Be Follow.jpeg'
-import Bg from '../assets/ppc.jpeg' 
-import Main from '../assets/services/best digital marketing company in Chennai.jpeg'
+import Img1 from '../assets/services/ppc2.webp'
+import Img2 from '../assets/services/ppc3.webp'
+import Img3 from '../assets/services/ppcbg.webp'
+import Img4 from '../assets/services/Latest PPC Trends in 2022_ Need To Be Follow.webp'
+import Bg from '../assets/ppc.webp' 
+import Main from '../assets/services/best digital marketing company in Chennai.webp'
 import Helmet from 'react-helmet'
 
 

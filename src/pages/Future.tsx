@@ -1,14 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
-
-import Seo from "../assets/seo.jpeg"
-import Fully from "../assets/🎮 Level Up Your Workspace_ AI Edition 2024.jpeg"
-import More from "../assets/Pioneering Progress_ Navigating Digital Transformation Services.jpeg"
-import Pedictive from "../assets/Play preview video.jpeg"
-import AI from "../assets/🗣️ AI Voice_ Super Realistic!.jpeg"
-import Human from "../assets/@parisisarobot ✶˖_°࿐.jpeg"
-import Omni from "../assets/download (1).jpeg"
+import Fully from "../assets/🎮 Level Up Your Workspace_ AI Edition 2024.webp"
+import More from "../assets/Pioneering Progress_ Navigating Digital Transformation Services.webp"
+import Pedictive from "../assets/Play preview video.webp"
+import AI from "../assets/🗣️ AI Voice_ Super Realistic!.webp"
+import Human from "../assets/@parisisarobot ✶˖_°࿐ (1).webp"
+import Omni from "../assets/download (1).webp"
 
 const roadmapItems = [
   {
@@ -227,7 +224,7 @@ const Future = () => {
                   
                   
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                    <span className={`bg-clip-text text-transparent text-slate-700`}>
+                    <span className={`bg-clip-text text-transparent text-slate-200`}>
                       {item.title}
                     </span>
                   </h3>
@@ -241,6 +238,7 @@ const Future = () => {
                     <img 
                       src={item.image} 
                       alt={item.title} 
+                       loading="lazy"
                       className="w-full h-auto object-cover"
                     />
                   </motion.div>
