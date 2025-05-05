@@ -28,7 +28,7 @@ import { useNavigate} from 'react-router-dom';
 // Service items with added image URLs and slugs for navigation
 const serviceItems = [
   {
-    title: "AI Guided SEO",
+    title: "AI Powered SEO",
     description: "Smarter search rankings, effortlessly.",
     path: "/services/seo-service", // Added path for navigation
     image: Seo,
@@ -43,14 +43,15 @@ const serviceItems = [
   {
 
     title: "Generative Engine Optimization",
-    description: "Optimize your content for the future of AI-driven discovery",
-    path: "/services/geo-service", // Added path for navigation
+    description: " Smarter strategies. Faster growth",
+    path: "/services/geo-service",
+    desc1:" It accelerates growth by continuously learning, adapting, and effective performance in live.",
     image: Geo,
     features: [
-      "Optimized content for AI chatbots and assistants",
-      "Structured data and context-rich formatting",
-      "Enhanced discoverability in generative search engines",
-      "Future-proof SEO aligned with AI language models"
+      "AI driven search data campaign adjustments in real time",
+      " Predictive content and keyword suggestions",
+      " Auto optimization of ads, SEO, and emails based on live data",
+      "Increased ROI through adaptive learning models"
     ]
   },
   {
@@ -83,7 +84,7 @@ const serviceItems = [
   },
   {
  
-    title: "Automated Email Engagement",
+    title: "Email Marketing Automation",
     description: "Emails that feel personal sent automatically",
     path: "/services/email-automation",
     image: Email,
@@ -98,14 +99,15 @@ const serviceItems = [
   {
 
     title: "Branding",
-    description: "Build a brand that speaks, resonates, and scales—powered by AI intelligence.",
-    path: "/services/branding", // Updated path
-    image: Branding, // Replace with your branding-related image if needed
+    description: "Build a brand they remember and trust",
+    path: "/services/branding", 
+    desc1:"A strong brand earns trust, stands out from competitors, and keeps customers coming back.",
+    image: Branding,
     features: [
-      "Visual identity systems designed for digital and AI-first platforms",
-      "AI-led brand positioning and tone of voice development",
-      "Omnichannel consistency across digital, print, and social",
-      "Reputation tracking and real-time sentiment analysis"
+      "Brand identity development (logos, colours, typography)",
+      "Brand voice and messaging guidelines",
+      "Market positioning and storytelling",
+      " Visual and verbal consistency across all channels"
     ]
   },
   {
@@ -168,7 +170,7 @@ const serviceItems = [
 
     title: "Web Designing",
     description: "Designs that captivate and convert.",
-    path: "/services/web-designing", // Added path for navigation
+    path: "/services/web-designing", 
     image: Web,
     desc1: "We make visually stunning, instinctual websites that reflect your brand's personality and guide users exactly where you want them to go.",
     features: [
@@ -459,7 +461,7 @@ const Home = () => {
                 >
                   {/* Microdata attributes for individual services */}
                   <meta itemProp="name" content={item.title} />
-                  <meta itemProp="description" content={item.description} />
+                  <meta itemProp=" text-justify description" content={item.description} />
                   <meta itemProp="url" content={`${window.location.origin}${item.path}`} />
 
                   {/* Background Image - Hidden by default, shown on hover */}
@@ -542,7 +544,7 @@ const Home = () => {
               <span className="text-gray-400" itemProp="name">aieera</span> AI Automated Marketing
             </h2>
 
-            <p className="text-gray-300 text-base sm:text-lg md:text-xl mb-8 max-w-lg mx-auto md:mx-0" itemProp="description">
+            <p className="text-gray-300 text-base text-justify sm:text-lg md:text-xl mb-8 max-w-lg mx-auto md:mx-0" itemProp="description">
               Our team drives growth through targeted research data data effective strategies, creative innovation, and a deep understanding of the brand marketing.
             </p>
           </motion.div>
@@ -570,6 +572,53 @@ const Home = () => {
         </div>
 
       </div>
+      <div className=" w-full min-h-screen overflow-hidden bg-black" itemScope itemType="https://schema.org/Organization">
+
+
+<div className="relative z-10 flex flex-col md:flex-row items-center justify-center min-h-screen w-full px-4 md:px-12 gap-10 pt-20 md:pt-0">
+
+
+
+ 
+  <motion.div
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.8, delay: 0.3 }}
+    className="w-full md:w-1/2 px-4 hidden md:block"
+  >
+    <div className="relative">
+      <div className="absolute -inset-0.5 bg-gradient-to-r from-gray-500 to-gray-700 rounded-2xl blur opacity-50"></div>
+      <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
+        <img
+          src={teamwork}
+          alt="Digital Marketing Team"
+          className="w-full h-auto opacity-90"
+          itemProp="image"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </motion.div>
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    className="w-full md:w-1/2 text-center md:text-left"
+  >
+    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-200 leading-tight mb-6" itemProp="slogan">
+    Shaping Tomorrow’s Brands Today
+    </h2>
+
+    <p className="text-gray-300 text-base text-justify sm:text-lg md:text-xl mb-8 max-w-lg mx-auto md:mx-0" itemProp="description">
+    Choosing aieera means more than just hiring a marketing team it's about partnering with a team that lives and breathes innovation, purpose, and results. We foster a culture rooted in happiness, dedication, and shared success where every milestone we reach with you is a victory for us all.
+Our passionate team doesn’t just show up to work they show up with AI assisted tools, creative ideas, collaborative energy, and big dreams. We believe in more than just meeting expectations we believe in exceeding them through meaningful innovation, relentless effort, and a genuine desire to see you grow.
+In our world, innovation isn’t just welcomed t’s cherished, nurtured, and turned into results. With aieera, you’re not only keeping up with the future of marketing you’re helping to shape it
+
+    </p>
+  </motion.div>
+</div>
+
+</div>
     </div>
   );
 };

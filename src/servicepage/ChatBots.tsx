@@ -79,41 +79,42 @@ const ChatBots = () => {
               
               <link rel="canonical" href={window.location.href} />
             </Helmet>
-      <div className="relative min-h-screen">
-      <div
-  className="absolute inset-0 bg-cover bg-center opacity-10"
-  style={{ backgroundImage: `url(${Bg})` }}
-/>
- <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/80 to-[#0A0A0A]" />
+            <div className="relative min-h-screen">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url(${Bg})` }}
+        /> 
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/80 to-[#0A0A0A]" />
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="relative z-10 pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+          className="relative z-10 pt-20 md:pt-28 lg:pt-32 pb-12 md:pb-16 lg:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
         >
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-            <div className="flex-1 text-left">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
+            <div className="flex-1 text-center lg:text-left w-full lg:w-auto">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
-                className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-1 rounded-full text-sm font-medium mb-6"
+                className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-1 rounded-full text-sm font-medium mb-4 md:mb-6"
               >
-                Next-Gen SEO Solution
+              Conversational AI, Real-Time Leads
+
               </motion.div>
               
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="mb-6"
+                className="mb-4 md:mb-6"
               >
-                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                AI Chatbots &
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-center lg:text-left">
+                AI Chatbots
                 </h1>
-                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                Lead Generation is
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-center lg:text-left">
+                & Lead Generation is
                 </h1>
                 <AnimatedWords words={animatedWords} interval={3000} />
               </motion.div>
@@ -122,27 +123,40 @@ const ChatBots = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.7 }}
-                className="text-xl text-gray-300 mb-8 max-w-2xl"
+                className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto lg:mx-0"
               >
-             "What if SEO could predict trends before they happen?"</motion.p>
-              
+               Are you capturing leads or losing them to silence?
 
+              </motion.p>
             </div>
             
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
-              className="flex-1 relative"
+              className="flex-1 relative w-full max-w-sm sm:max-w-md md:max-w-lg mt-6 lg:mt-0"
             >
-              <div className="relative w-full aspect-square max-w-lg mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-r ffrom-gray-100 to-stone-100 rounded-full blur-3xl opacity-20 animate-pulse" />
-                <img 
-                  loading="lazy"
-                  src={Main}
-                  alt="AI Visualization"
-                  className="relative z-10 rounded-2xl object-cover w-full h-full"
-                />
+              <div className="relative w-full aspect-square mx-auto">
+                {/* Background gradient glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-stone-100 rounded-full blur-3xl opacity-20 animate-pulse" />
+                
+                <motion.div
+                  className="relative z-10 w-full h-full rounded-2xl overflow-hidden"
+                  initial={{ clipPath: 'inset(0 0 100% 0)' }}  
+                  animate={{ clipPath: 'inset(0 0 0% 0)' }}
+                  transition={{
+                    duration: 3.2,
+                    delay: 0.7,
+                    ease: [0.25, 1, 0.5, 1]
+                  }}
+                >
+                  <img
+                    src={Main}
+                    alt="AI Visualization"
+                    loading="lazy"
+                    className="object-cover w-full h-full"
+                  />
+                </motion.div>
               </div>
             </motion.div>
           </div>

@@ -32,7 +32,7 @@ const ServiceSection: React.FC<ServiceProps> = ({ service, index }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12 md:gap-16`}>
-          {/* Image Side */}
+         
           <motion.div 
             initial={{ x: isEven ? -50 : 50, opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : { x: isEven ? -50 : 50, opacity: 0 }}
@@ -54,7 +54,7 @@ const ServiceSection: React.FC<ServiceProps> = ({ service, index }) => {
             </div>
           </motion.div>
 
-          {/* Content Side */}
+          
           <motion.div 
             initial={{ x: isEven ? 50 : -50, opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : { x: isEven ? 50 : -50, opacity: 0 }}
@@ -70,7 +70,7 @@ const ServiceSection: React.FC<ServiceProps> = ({ service, index }) => {
 
 
               
-              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-300 mb-8 text-justify leading-relaxed">
                 {service.description}
               </p>
               

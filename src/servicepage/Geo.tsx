@@ -68,59 +68,57 @@ const GEOService = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-      
       <Helmet>
-              
-              <title>Generative Engine Optimization Agency | Advanced GEO Services</title>
-              <meta name="description" content="Boost your digital presence with our Generative Engine Optimization services. As a leading GEO agency, we drive smarter, faster, and more personalized online growth." />
-              <meta name="keywords" content="Generative Engine Optimization Agency, generative engine optimization services" />
-              <meta property="og:title" content="Generative Engine Optimization Agency | Advanced GEO Services" />
-              <meta property="og:description" content="Boost your digital presence with our Generative Engine Optimization services. As a leading GEO agency, we drive smarter, faster, and more personalized online growth." />
-              <meta property="og:url" content={window.location.href} />
-              <meta property="og:type" content="website" />
-              <meta property="og:site_name" content="aieera" />
-              <meta name="robots" content="index, follow" />
-              <meta name="viewport" content="width=device-width, initial-scale=1" />
-              <meta name="author" content="aieera" />
-              <meta name="language" content="English" />
-              
-              
-              <link rel="canonical" href={window.location.href} />
-            </Helmet> 
+        <title>Generative Engine Optimization Agency | Advanced GEO Services</title>
+        <meta name="description" content="Boost your digital presence with our Generative Engine Optimization services. As a leading GEO agency, we drive smarter, faster, and more personalized online growth." />
+        <meta name="keywords" content="Generative Engine Optimization Agency, generative engine optimization services" />
+        <meta property="og:title" content="Generative Engine Optimization Agency | Advanced GEO Services" />
+        <meta property="og:description" content="Boost your digital presence with our Generative Engine Optimization services. As a leading GEO agency, we drive smarter, faster, and more personalized online growth." />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="aieera" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="aieera" />
+        <meta name="language" content="English" />
+        <link rel="canonical" href={window.location.href} />
+      </Helmet> 
+      
+      {/* Hero Section */}
       <div className="relative min-h-screen">
-      <div
-  className="absolute inset-0 bg-cover bg-center opacity-10"
-  style={{ backgroundImage: `url(${bg})` }}
-/> 
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url(${bg})` }}
+        /> 
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/80 to-[#0A0A0A]" />
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="relative z-10 pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+          className="relative z-10 pt-20 md:pt-28 lg:pt-32 pb-12 md:pb-16 lg:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
         >
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-            <div className="flex-1 text-left">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
+            <div className="flex-1 text-center lg:text-left w-full lg:w-auto">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
-                className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-1 rounded-full text-sm font-medium mb-6"
+                className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-1 rounded-full text-sm font-medium mb-4 md:mb-6"
               >
-                Next-Gen SEO Solution
+                Next-Gen is GEO
               </motion.div>
               
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="mb-6"
+                className="mb-4 md:mb-6"
               >
-                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-center lg:text-left">
                   Generative Engine
                 </h1>
-                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-center lg:text-left">
                   Optimization is
                 </h1>
                 <AnimatedWords words={animatedWords} interval={3000} />
@@ -130,101 +128,93 @@ const GEOService = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.7 }}
-                className="text-xl text-gray-300 mb-8 max-w-2xl"
+                className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto lg:mx-0"
               >
-                Traditional SEO alone won’t cut it success now depends on how well your content serves AI driven platforms.
+                Is your SEO strategy ready for the generative era?
               </motion.p>
-              
-              
             </div>
             
             <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: 0.5 }}
-      className="flex-1 relative"
-    >
-      <div className="relative w-full aspect-square max-w-lg mx-auto">
-        {/* Background gradient glow effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-stone-100 rounded-full blur-3xl opacity-20 animate-pulse" />
-        
-        
-        <motion.div
-          className="relative z-10 w-full h-full rounded-2xl overflow-hidden"
-          initial={{ clipPath: 'inset(0 0 100% 0)' }}  
-          animate={{ clipPath: 'inset(0 0 0% 0)' }}
-          transition={{
-            duration: 3.2,
-            delay: 0.7,
-            ease: [0.25, 1, 0.5, 1]
-          }}
-        >
-          <img
-            src={main}
-            alt="AI Visualization"
-              loading="lazy"
-            className="object-cover w-full h-full"
-          />
-        </motion.div>
-      </div>
-    </motion.div>
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5 }}
+              className="flex-1 relative w-full max-w-sm sm:max-w-md md:max-w-lg mt-6 lg:mt-0"
+            >
+              <div className="relative w-full aspect-square mx-auto">
+                {/* Background gradient glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-stone-100 rounded-full blur-3xl opacity-20 animate-pulse" />
+                
+                <motion.div
+                  className="relative z-10 w-full h-full rounded-2xl overflow-hidden"
+                  initial={{ clipPath: 'inset(0 0 100% 0)' }}  
+                  animate={{ clipPath: 'inset(0 0 0% 0)' }}
+                  transition={{
+                    duration: 3.2,
+                    delay: 0.7,
+                    ease: [0.25, 1, 0.5, 1]
+                  }}
+                >
+                  <img
+                    src={main}
+                    alt="AI Visualization"
+                    loading="lazy"
+                    className="object-cover w-full h-full"
+                  />
+                </motion.div>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
 
       {/* Features Section */}
-      <section ref={ref} className="py-20 ">
+      <section ref={ref} className="py-12 md:py-16 lg:py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 to-transparent" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-8 md:mb-12 lg:mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Choose GEO?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            AI assistants like ChatGPT, Bard, and Copilot are becoming the new front door to the internet. To stay relevant, your content must not only rank on search engines but also be understood, selected, and surfaced by AI.
-
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Why Choose GEO?</h2>
+            <p className="text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+              AI assistants like ChatGPT, Bard, and Copilot are becoming the new front door to the internet. To stay relevant, your content must not only rank on search engines but also be understood, selected, and surfaced by AI.
             </p>
           </motion.div>
 
-          <div className="mt-20 space-y-20">
+          <div className="mt-12 lg:mt-20 space-y-12 md:space-y-16 lg:space-y-20">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="flex flex-col lg:flex-row items-center gap-12 relative"
+                className="flex flex-col lg:flex-row items-center gap-8 md:gap-10 lg:gap-12 relative"
               >
-                <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
+                <div className={`w-full lg:w-1/2 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-stone-100 rounded-2xl blur-2xl opacity-20" />
-                    <div className="relative bg-gray-900/30 p-8 rounded-2xl border border-white/10">
-                     
-                      <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
-                      <h6 className="text-xl mb-4">{feature.heading}</h6>
-                      <p className="text-gray-300">{feature.description}</p>
-                      
+                    <div className="relative bg-gray-900/30 p-4 sm:p-6 md:p-8 rounded-2xl border border-white/10">
+                      <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4">{feature.title}</h3>
+                      <h6 className="text-lg md:text-xl mb-2 md:mb-4">{feature.heading}</h6>
+                      <p className="text-sm md:text-base text-gray-300 whitespace-pre-line">{feature.description}</p>
                     </div>
                   </div>
                 </div>
-                <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
-                <img 
-  src={images[index]}
-  alt={feature.title}
-  className="rounded-2xl shadow-2xl"
-    loading="lazy"
-/>
+                <div className={`w-full lg:w-1/2 mt-6 lg:mt-0 ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
+                  <img 
+                    src={images[index]}
+                    alt={feature.title}
+                    className="rounded-2xl shadow-2xl w-full h-auto"
+                    loading="lazy"
+                  />
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
-    
     </div>
   );
 };

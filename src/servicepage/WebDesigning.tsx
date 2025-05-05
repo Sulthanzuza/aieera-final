@@ -3,11 +3,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Pen, LayoutTemplate, Eye, Code2, Sparkles ,ArrowRight } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
-import Img1 from '../assets/services/web des1.webp'
-import Img2 from '../assets/services/geo2.webp'
-import Img3 from '../assets/services/geo3.webp'
-import Img4 from '../assets/services/geo4.webp' 
-import BG from '../assets/services/webdesbg.webp'
+import Img1 from '../assets/services/web des1.jpeg'
+import Img2 from '../assets/services/geo2.jpeg'
+import Img3 from '../assets/services/geo3.jpeg'
+import Img4 from '../assets/services/geo4.jpeg' 
+import BG from '../assets/services/webdesbg.jpeg'
+import Main from "../assets/services/pexels-photo-4348404.webp"
 const images = [Img1, Img2, Img4,Img3];
 const Webdesign = () => {
   const [ref, inView] = useInView({
@@ -61,68 +62,81 @@ const Webdesign = () => {
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
       {/* Hero Section with Animated Background */}
       <div className="relative min-h-screen">
-      <div
-  className="absolute inset-0 bg-cover bg-center opacity-10"
-  style={{ backgroundImage: `url(${BG})` }}
-/>
-  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/80 to-[#0A0A0A]" />
-  
-        <motion.div
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url(${BG})` }}
+        /> 
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0A0A]/80 to-[#0A0A0A]" />
+        
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="relative z-10 pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+          className="relative z-10 pt-20 md:pt-28 lg:pt-32 pb-12 md:pb-16 lg:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
         >
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-            <div className="flex-1 text-left">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
+            <div className="flex-1 text-center lg:text-left w-full lg:w-auto">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
-                className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-1 rounded-full text-sm font-medium mb-6"
+                className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-1 rounded-full text-sm font-medium mb-4 md:mb-6"
               >
-                Intelligent Web Design
+                 Intelligent Web Design
               </motion.div>
-  
+              
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="mb-6"
+                className="mb-4 md:mb-6"
               >
-                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-center lg:text-left">
                   Web Designing
                 </h1>
-                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                   is
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-center lg:text-left">
+                 is
                 </h1>
                 <AnimatedWords words={animatedWords} interval={3000} />
               </motion.div>
-  
-              <motion.p
+              
+              <motion.p 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.7 }}
-                className="text-xl text-gray-300 mb-8 max-w-2xl"
+                className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto lg:mx-0"
               >
-                "What if your website didn’t just *look* good—but guided users effortlessly toward action?"
+               What if your website actually drove sales, not just traffic?
               </motion.p>
             </div>
-  
+            
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
-              className="flex-1 relative"
+              className="flex-1 relative w-full max-w-sm sm:max-w-md md:max-w-lg mt-6 lg:mt-0"
             >
-              <div className="relative w-full aspect-square max-w-lg mx-auto">
+              <div className="relative w-full aspect-square mx-auto">
+                {/* Background gradient glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-stone-100 rounded-full blur-3xl opacity-20 animate-pulse" />
-                <img
-                  src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg"
-                  alt="Web Design Illustration"
-                   loading="lazy"
-                  className="relative z-10 rounded-2xl object-cover w-full h-full"
-                />
+                
+                <motion.div
+                  className="relative z-10 w-full h-full rounded-2xl overflow-hidden"
+                  initial={{ clipPath: 'inset(0 0 100% 0)' }}  
+                  animate={{ clipPath: 'inset(0 0 0% 0)' }}
+                  transition={{
+                    duration: 3.2,
+                    delay: 0.7,
+                    ease: [0.25, 1, 0.5, 1]
+                  }}
+                >
+                  <img
+                    src={Main}
+                    alt="AI Visualization"
+                    loading="lazy"
+                    className="object-cover w-full h-full"
+                  />
+                </motion.div>
               </div>
             </motion.div>
           </div>
@@ -139,7 +153,7 @@ const Webdesign = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Our Web Designs Work</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Why Do Users Stay Longer on Our Websites?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Beyond aesthetics our designs are rooted in psychology, interactive, and clarity to convert casual visits into long connections. </p>
           </motion.div>
@@ -170,7 +184,6 @@ const Webdesign = () => {
                     src={`https://images.pexels.com/photos/${3861958 + index}/pexels-photo-${3861958 + index}.jpeg`}
                     alt={feature.title}
                     className="rounded-2xl shadow-2xl"
-                     loading="lazy"
                   />
                 </div>
               </motion.div>

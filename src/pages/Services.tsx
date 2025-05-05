@@ -31,7 +31,7 @@ const serviceItems = [
     bgColor: "black"
   },
   {
-    title: "AI-Powered SEO",
+    title: "AI Powered SEO",
     description: "Supercharge your search performance with intelligent optimization. Our AI driven SEO services go beyond traditional tactics analysing search trends, competitor moves, and user intent to deliver smarter strategies that boost rankings and drive meaningful traffic.",
     image: Seo,
     path: "/services/seo-service",
@@ -96,7 +96,7 @@ const serviceItems = [
     bgColor: "black"
   },
   {
-    title: "AI Social Media Marketing",
+    title: "Next Gen Social Media Marketing",
     description: "Revolutionize your social media presence with our AI powered strategies. Our tools analyse audience behaviour, trending content, and engagement patterns to create best custom social media campaigns that resonate with your target audience and help meaningful interactions.",
     image: Smm,
     path: "/services/socialmedia-marketing",

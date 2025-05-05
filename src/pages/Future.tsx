@@ -224,7 +224,7 @@ const Future = () => {
                   
                   
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                    <span className={`bg-clip-text text-transparent text-slate-200`}>
+                    <span className={`bg-clip-text text-transparent text-white`}>
                       {item.title}
                     </span>
                   </h3>

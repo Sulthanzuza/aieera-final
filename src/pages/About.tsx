@@ -87,7 +87,7 @@ const About = () => {
             transition={{ duration: 1 }}
             className="relative lg:sticky lg:top-24"
           >
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-700 to-gray-900 rounded-full opacity-20 blur-3xl" />  <div className="relative flex justify-center items-center">
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-700 to-gray-900 rounded-full opacity-20 blur-2xl" />  <div className="relative flex justify-center items-center">
               <motion.div
                 animate={{
                   scale: [1, 1.05, 1],
@@ -100,7 +100,7 @@ const About = () => {
                 }}
                 className="w-full max-w-md aspect-square relative"
               >
-                <img src={Logo} alt="logo"  loading="lazy" className="w-full h-full object-contain brightness-10 " />
+                <img src={Logo} alt="logo"  loading="lazy" className="w-full h-full object-contain filter invert brightness-10 " />
                 <motion.div
                   animate={{
                     scale: [1, 1.1, 1],
@@ -111,7 +111,7 @@ const About = () => {
                     repeat: Infinity,
                     repeatType: "reverse"
                   }}
-                  className="absolute inset-0 bg-gradient-to-r from-gray-500 to-white-900 rounded-full opacity-10 blur-2xl"
+                  className="absolute inset-0 bg-gradient-to-r from-gray-500 to-slate-900 rounded-full opacity-10 blur-3xl"
                 />
               </motion.div>
             </div>
