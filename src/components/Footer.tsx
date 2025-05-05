@@ -46,7 +46,7 @@ const Footer: FC = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-black to-zinc-500 text-white px-6 py-12 border-white">
+    <footer className="bg-gradient-to-b from-neutral-900 to-slate-900 text-white px-6 py-12 border-white">
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand & Social */}
