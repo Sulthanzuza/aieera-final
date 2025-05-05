@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Pen, LayoutTemplate, Eye, Code2, Sparkles ,ArrowRight } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
-import Img1 from '../assets/services/web des1.jpeg'
-import Img2 from '../assets/services/geo2.jpeg'
-import Img3 from '../assets/services/geo3.jpeg'
-import Img4 from '../assets/services/geo4.jpeg' 
-import BG from '../assets/services/webdesbg.jpeg'
+import Img1 from '../assets/services/web des1.webp'
+import Img2 from '../assets/services/geo2.webp'
+import Img3 from '../assets/services/geo3.webp'
+import Img4 from '../assets/services/geo4.webp' 
+import BG from '../assets/services/webdesbg.webp'
 import Main from "../assets/services/pexels-photo-4348404.webp"
 const images = [Img1, Img2, Img4,Img3];
 const Webdesign = () => {

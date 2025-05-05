@@ -21,8 +21,9 @@ import Camp from "../assets/campaign.webp"
 import Email from "../assets/email.webp"
 import Webdev from "../assets/web development.webp"
 import Geo from "../assets/geo.webp"
-import Branding from "../assets/branding1.png"
+import Branding from "../assets/branding1.webp"
 import { useNavigate} from 'react-router-dom';
+import team from "../assets/AdobeStock_854517591_Preview (1).webp"
 
 
 // Service items with added image URLs and slugs for navigation
@@ -549,56 +550,55 @@ const Home = () => {
             </p>
           </motion.div>
 
-          {/* Image Section */}
+         
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="w-full md:w-1/2 px-4 hidden md:block"
-          >
-            <div className="relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-gray-500 to-gray-700 rounded-2xl blur opacity-50"></div>
-              <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
-                <img
-                  src={teamwork}
-                  alt="Digital Marketing Team"
-                  className="w-full h-auto opacity-90"
-                  itemProp="image"
-                  loading="lazy"
-                />
-              </div>
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="w-full sm:w-4/5 md:w-3/4 lg:w-1/2 px-4"
+        >
+          <div className="relative">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-gray-500 to-gray-700 rounded-2xl blur opacity-50"></div>
+            <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
+              <img
+                src={teamwork}
+                alt="Digital Marketing Team"
+                className="w-full h-auto opacity-90"
+                itemProp="image"
+                loading="lazy"
+              />
             </div>
-          </motion.div>
+          </div>
+        </motion.div>
         </div>
 
       </div>
       <div className=" w-full min-h-screen overflow-hidden bg-black" itemScope itemType="https://schema.org/Organization">
-
 
 <div className="relative z-10 flex flex-col md:flex-row items-center justify-center min-h-screen w-full px-4 md:px-12 gap-10 pt-20 md:pt-0">
 
 
 
  
-  <motion.div
-    initial={{ opacity: 0, scale: 0.8 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.8, delay: 0.3 }}
-    className="w-full md:w-1/2 px-4 hidden md:block"
-  >
-    <div className="relative">
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-gray-500 to-gray-700 rounded-2xl blur opacity-50"></div>
-      <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
-        <img
-          src={teamwork}
-          alt="Digital Marketing Team"
-          className="w-full h-auto opacity-90"
-          itemProp="image"
-          loading="lazy"
-        />
-      </div>
-    </div>
-  </motion.div>
+<motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="w-full sm:w-4/5 md:w-3/4 lg:w-1/2 px-4"
+        >
+          <div className="relative">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-gray-500 to-gray-700 rounded-2xl blur opacity-50"></div>
+            <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
+              <img
+                src={team}
+                alt="Digital Marketing Team"
+                className="w-full h-auto opacity-90"
+                itemProp="image"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </motion.div>
   <motion.div
     initial={{ opacity: 0, y: 40 }}
     animate={{ opacity: 1, y: 0 }}
@@ -611,8 +611,7 @@ const Home = () => {
 
     <p className="text-gray-300 text-base text-justify sm:text-lg md:text-xl mb-8 max-w-lg mx-auto md:mx-0" itemProp="description">
     Choosing aieera means more than just hiring a marketing team it's about partnering with a team that lives and breathes innovation, purpose, and results. We foster a culture rooted in happiness, dedication, and shared success where every milestone we reach with you is a victory for us all.
-Our passionate team doesn’t just show up to work they show up with AI assisted tools, creative ideas, collaborative energy, and big dreams. We believe in more than just meeting expectations we believe in exceeding them through meaningful innovation, relentless effort, and a genuine desire to see you grow.
-In our world, innovation isn’t just welcomed t’s cherished, nurtured, and turned into results. With aieera, you’re not only keeping up with the future of marketing you’re helping to shape it
+Our passionate team doesn’t just show up to work they show up with AI assisted tools, creative ideas, collaborative energy, and big dreams. In our world, innovation isn’t just welcomed t’s cherished, nurtured, and turned into results. With aieera, you’re not only keeping up with the future of marketing, you're helping to shape it.
 
     </p>
   </motion.div>

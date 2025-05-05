@@ -6,7 +6,7 @@ import {
 
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import FooterLogo from "../assets/Logo with name large.png";
+import FooterLogo from "../assets/Logo with name large.webp";
 
 interface SocialLink {
   name: string;
