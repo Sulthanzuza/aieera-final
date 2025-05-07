@@ -22,7 +22,9 @@ import Webdev from './servicepage/WebDevelopment'
 import WebDesign from './servicepage/WebDesigning'
 import PaidAds from "./servicepage/PPC"
 import Whatsapp from "./components/WhatsappFloatButton"
+import usePageTracking from './components/usePageTracking';
 function App() {
+  usePageTracking();
   return (
     <BrowserRouter>
       <ScrollToTop /> 
