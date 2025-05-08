@@ -148,7 +148,7 @@ const Footer: FC = () => {
       <div className="border-t border-gray-700 mt-12 pt-8 text-center text-sm text-gray-400">
         <p>
           Copyright ©  {new Date().getFullYear()}<span className="relative inline-block cursor-pointer group">
-  Aieera Digital Marketing.
+   Aieera Digital Marketing.
   <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
 </span>
 
