@@ -21,7 +21,7 @@ const serviceItems = [
     title: "Generative Engine Optimization",
     description: "Future proof your content for the age of AI. Our GEO solutions help your brand thrive in conversations with AI assistants, chatbots, and generative search tools ensuring you're not just found, but favoured.",
     image: Geo,
-    path: "/services/geo-service",
+    path: "/services/generative-engine-optimization",
     features: [
       "Content made for AI interactions and generative platforms",
       "Semantic structuring and context enriched formatting",
@@ -34,7 +34,7 @@ const serviceItems = [
     title: "AI Powered SEO",
     description: "Supercharge your search performance with intelligent optimization. Our AI driven SEO services go beyond traditional tactics analysing search trends, competitor moves, and user intent to deliver smarter strategies that boost rankings and drive meaningful traffic.",
     image: Seo,
-    path: "/services/seo-service",
+    path: "/services/search-engine-optimization",
     features: [
       "Instant insights through live data analysis",
       "Smarter keyword targeting with pattern detection",

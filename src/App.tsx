@@ -33,8 +33,8 @@ function App() {
           <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/services" element={<Services />} />
-  <Route path="/services/geo-service" element={<Geo />} />
-  <Route path="/services/Seo-service" element={<Seo />} />
+  <Route path="/services/generative-engine-optimization" element={<Geo />} />
+  <Route path="/services/search-engine-optimization" element={<Seo />} />
   <Route path="/services/web-development" element={<Webdev />} />
   <Route path="/services/web-designing" element={<WebDesign />} />
   <Route path="/services/paid-ads" element={<PaidAds />} />

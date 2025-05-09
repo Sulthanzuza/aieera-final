@@ -31,7 +31,7 @@ const serviceItems = [
   {
     title: "AI Powered SEO",
     description: "Smarter search rankings, effortlessly.",
-    path: "/services/seo-service", // Added path for navigation
+    path: "/services/search-engine-optimization", // Added path for navigation
     image: Seo,
     desc1: "Stay ahead of the competition with AI guided SEO that analyzes live trends, keywords, and competitor agendas to boost your search performance. Our digital marketing services learn in real time to improve market changes.",
     features: [
@@ -45,7 +45,7 @@ const serviceItems = [
 
     title: "Generative Engine Optimization",
     description: " Smarter strategies. Faster growth",
-    path: "/services/geo-service",
+    path: "/services/generative-engine-optimization",
     desc1:" It accelerates growth by continuously learning, adapting, and effective performance in live.",
     image: Geo,
     features: [

@@ -9,11 +9,11 @@ const About = () => {
     <div className="min-h-screen pt-16 bg-black">
       <Helmet>
               
-              <title> AI Digital Marketing Solutions | Automate Online Growth with AI</title>
-              <meta name="description" content="We are a leading AI-powered digital marketing agency in Dubai, offering intelligent online marketing solutions to help your brand grow smarter and faster." />
+              <title> Top AI Digital Marketing Agency in Dubai | Smart Online Marketing</title>
+              <meta name="description" content=" We are a leading AI-powered digital marketing agency in Dubai, offering intelligent online marketing solutions to help your brand grow smarter and faster." />
               <meta name="keywords" content="digital marketing agency in dubai, online marketing agency, ai digital marketing agency." />
-              <meta property="og:title" content=" AI Digital Marketing Solutions | Automate Online Growth with AI" />
-              <meta property="og:description" content="We are a leading AI-powered digital marketing agency in Dubai, offering intelligent online marketing solutions to help your brand grow smarter and faster" />
+              <meta property="og:title" content=" Top AI Digital Marketing Agency in Dubai | Smart Online Marketing" />
+              <meta property="og:description" content=" We are a leading AI-powered digital marketing agency in Dubai, offering intelligent online marketing solutions to help your brand grow smarter and faster." />
               <meta property="og:url" content={currentUrl} />
               <meta property="og:type" content="website" />
               <meta property="og:site_name" content="aieera" />
