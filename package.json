@@ -9,10 +9,6 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-   "reactSnap": {
-    "include": ["/", "/about", "/contact"],
-    "source": "dist"
-  },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.3.1",
     "framer-motion": "^11.0.8",
