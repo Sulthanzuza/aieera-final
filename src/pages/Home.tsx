@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import {  ArrowRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
-import { Helmet } from 'react-helmet';
+import { Helmet,HelmetProvider } from 'react-helmet-async';
 import BackgroundVideo from "../components/BackgroundVideo";
 import 'swiper/css';
 import BackgroundVide from '../assets/1851190-uhd_3840_2160_25fps.mp4'
@@ -281,7 +281,8 @@ const Home = () => {
   return (
     <div className="min-h-screen pt-16 bg-black">
 
-      <Helmet>
+      <HelmetProvider>
+        <Helmet>
         <title>AI Digital Marketing Solutions | Automate Online Growth with AI</title>
         <meta name="description" content="Explore the future of digital marketing with AI. We deliver powerful AI-driven strategies that boost engagement, conversions, and business growth." />
         <meta name="keywords" content="digital marketing with ai, ai digital marketing, ai for digital marketing, ai in digital marketing" />
@@ -290,6 +291,7 @@ const Home = () => {
         <meta property="og:description" content="Explore the future of digital marketing with AI. We deliver powerful AI-driven strategies that boost engagement, conversions, and business growth." />
         <meta property="og:url" content={currentUrl} />
         <meta property="og:type" content="website" />
+        
         <meta property="og:site_name" content="aieera" />
 
         <meta name="robots" content="index, follow" />
@@ -302,7 +304,8 @@ const Home = () => {
         <script type="application/ld+json">
           {JSON.stringify(generateSchemaMarkup())}
         </script>
-      </Helmet>
+        </Helmet>
+      </HelmetProvider>
 
 
       <div className="relative">

@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet'; 
+import { Helmet,HelmetProvider } from 'react-helmet-async';
 import Logo from "../assets/Logo large single.webp"; 
 
 const About = () => {
   const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
   return (
     <div className="min-h-screen pt-16 bg-black">
-      <Helmet>
-              
+      <HelmetProvider>
+               <Helmet>
               <title> Top AI Digital Marketing Agency in Dubai | Smart Online Marketing</title>
               <meta name="description" content=" We are a leading AI-powered digital marketing agency in Dubai, offering intelligent online marketing solutions to help your brand grow smarter and faster." />
               <meta name="keywords" content="digital marketing agency in dubai, online marketing agency, ai digital marketing agency." />
@@ -24,7 +24,8 @@ const About = () => {
               
               
               <link rel="canonical" href={currentUrl} />
-            </Helmet>
+              </Helmet>
+            </HelmetProvider>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative ">
         <motion.div
           initial={{ opacity: 0, y: -50 }}

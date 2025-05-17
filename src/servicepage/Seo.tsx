@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { TrendingUp, Search, Code, ArrowRight,Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
 import BG from "../assets/services/seo1.webp"
 import Img1 from '../assets/services/seo2.webp'
@@ -10,7 +9,7 @@ import Img3 from '../assets/services/seo1.webp'
 import Img4 from '../assets/services/seo4.webp' 
 import Img5 from '../assets/services/seo 5.webp'
 import Seo from '../assets/seo.webp'
-import Helmet from 'react-helmet'
+import { Helmet,HelmetProvider } from 'react-helmet-async';
 const images = [Img1, Img2, Img4,Img3,Img5];
 const SEOService = () => {
   const [ref, inView] = useInView({
@@ -66,8 +65,8 @@ const SEOService = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-           <Helmet>
-              
+           <HelmetProvider>
+              <Helmet>
               <title>SEO Agency in Dubai | Boost Rankings with AI SEO Tools</title>
               <meta name="description" content="Maximize your visibility with our Dubai-based SEO agency. We combine AI SEO tools with proven strategies to rank higher and grow your online presence" />
               <meta name="keywords" content="seo dubai, seo with ai, ai tools for seo, seo ai tools, seo agency in dubai, search engine optimization agency" />
@@ -83,7 +82,8 @@ const SEOService = () => {
               
               
               <link rel="canonical" href={window.location.href} />
-            </Helmet> 
+              </Helmet>
+            </HelmetProvider> 
             <div className="relative min-h-screen">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10"

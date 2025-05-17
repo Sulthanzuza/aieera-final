@@ -1,14 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { TrendingUp, Search, Code, ArrowRight,Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
 import Img1 from '../assets/services/content 1.webp'
 import Img2 from '../assets/services/content2.webp'
 import Img3 from '../assets/services/content3.webp'
 import Img4 from '../assets/services/content4.webp'
 import Img5 from '../assets/services/content5.webp'
-import Helmet from 'react-helmet'
+import { Helmet,HelmetProvider } from 'react-helmet-async';
 import Main from '../assets/services/content main.webp'
 import Bg from '../assets/services/contentbg.webp' 
 const images = [Img1, Img2, Img4,Img3,Img5];
@@ -66,8 +65,8 @@ const Content = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-     <Helmet>
-              
+     <HelmetProvider>
+              <Helmet>
               <title> Content Creation Agency Dubai | Performance Marketing Experts</title>
               <meta name="description" content="Create powerful content that converts. Our content creation agency in Dubai specializes in performance marketing to grow your brand faster and smarter." />
               <meta name="keywords" content="content creation agency dubai, performance marketing agency in dubai" />
@@ -83,7 +82,8 @@ const Content = () => {
               
               
               <link rel="canonical" href={window.location.href} />
-            </Helmet>
+              </Helmet>
+            </HelmetProvider>
             <div className="relative min-h-screen">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10"

@@ -1,13 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { TrendingUp, Search, Code, ArrowRight,Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
 import Img1 from '../assets/services/smm1.webp'
 import Img2 from '../assets/services/smm2.webp'
 import Img3 from '../assets/services/smm3.webp'
 import Img4 from '../assets/services/Social Media Management Strategies.webp'
-import Helmet from 'react-helmet'
+import { Helmet,HelmetProvider } from 'react-helmet-async';
 import Main from '../assets/services/ssmmain.webp'
 import Bg from '../assets/services/ssmbg.webp' 
 import { main } from 'framer-motion/m';
@@ -62,8 +61,8 @@ const SMM = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-      <Helmet>
-              
+      <HelmetProvider>
+              <Helmet>
               <title>Social Media Marketing Agency Dubai | SMM Company UAE </title>
               <meta name="description" content=" Leading social media management company in Dubai. Grow your brand online with powerful strategies crafted by a top social media marketing agency" />
               <meta name="keywords" content="social media management company dubai, social media marketing agency dubai " />
@@ -79,7 +78,8 @@ const SMM = () => {
               
               
               <link rel="canonical" href={window.location.href} />
-            </Helmet>
+              </Helmet>
+            </HelmetProvider>
             <div className="relative min-h-screen">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10"

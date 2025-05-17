@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { TrendingUp, Search, Code, ArrowRight,Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
-import Helmet from 'react-helmet'
+import {Helmet,HelmetProvider } from 'react-helmet-async';
 import Img1 from '../assets/services/chatbot1.webp'
 import Img2 from '../assets/services/chatbot2.webp'
 import Img3 from '../assets/services/chatbot3.webp'
@@ -61,8 +60,8 @@ const ChatBots = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-     <Helmet>
-              
+     <HelmetProvider>
+              <Helmet>
               <title>:Lead Generation Chatbots | Top Lead Generation Company Dubai</title>
               <meta name="description" content="Capture more leads with smart chatbots. As a leading lead generation company in Dubai, we help you automate, qualify, and grow your customer base efficiently." />
               <meta name="keywords" content="lead generation chatbots, lead generation companies in dubai" />
@@ -78,7 +77,8 @@ const ChatBots = () => {
               
               
               <link rel="canonical" href={window.location.href} />
-            </Helmet>
+              </Helmet>
+            </HelmetProvider>
             <div className="relative min-h-screen">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10"
@@ -182,37 +182,37 @@ Smarter conversations, faster responses, and more qualified leads AI chatbots re
           </motion.div>
 
           <div className="mt-20 space-y-20">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="flex flex-col lg:flex-row items-center gap-12 relative"
-              >
-                <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-stone-100 rounded-2xl blur-2xl opacity-20" />
-                    <div className="relative bg-gray-900 p-8 rounded-2xl border border-white/10">
-                      
-                      <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
-                      <h6 className="text-xl  mb-4">{feature.heading}</h6>
-                      <p className="text-gray-300">{feature.description}</p>
-                     
+                      {features.map((feature, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, y: 50 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.8 }}
+                          className="flex flex-col lg:flex-row items-center gap-12 relative"
+                        >
+                          <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
+                            <div className="relative">
+                              <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-stone-100 rounded-2xl blur-2xl opacity-20" />
+                              <div className="relative bg-gray-900/30 p-8 rounded-2xl border border-white/10">
+                              
+                                <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                                <h6 className="text-xl mb-4">{feature.heading}</h6>
+                                <p className="text-gray-300">{feature.description}</p>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
+                          <img 
+            src={images[index]}
+            alt={feature.title}
+              loading="lazy"
+            className="rounded-2xl shadow-2xl"
+          />
+                          </div>
+                        </motion.div>
+                      ))}
                     </div>
-                  </div>
-                </div>
-                <div className={`flex-1 ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
-                <img 
-  src={images[index]}
-  alt={feature.title}
-    loading="lazy"
-  className="rounded-2xl shadow-2xl"
-/>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 

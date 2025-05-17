@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import {  BarChart2, RefreshCcw, Compass, ArrowRight,Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
 import Img1 from '../assets/services/ppc2.webp'
 import Img2 from '../assets/services/ppc3.webp'
@@ -9,7 +8,7 @@ import Img3 from '../assets/services/ppcbg.webp'
 import Img4 from '../assets/services/Latest PPC Trends in 2022_ Need To Be Follow.webp'
 import Bg from '../assets/ppc.webp' 
 import Main from '../assets/services/best digital marketing company in Chennai.webp'
-import Helmet from 'react-helmet'
+import { Helmet,HelmetProvider } from 'react-helmet-async';
 
 
 
@@ -63,8 +62,8 @@ const PaidAds = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-     <Helmet>
-              
+     <HelmetProvider>
+              <Helmet>
               <title>PPC Agency Dubai | Google Ads Management Experts</title>
               <meta name="description" content="Partner with a top PPC agency in Dubai. Expert Google Ads management and PPC services tailored to maximize your ROI and drive targeted traffic" />
               <meta name="keywords" content="ppc agency dubai, google ads agency in dubai, ppc management dubai" />
@@ -80,7 +79,8 @@ const PaidAds = () => {
               
               
               <link rel="canonical" href={window.location.href} />
-            </Helmet>
+              </Helmet>
+            </HelmetProvider>
             <div className="relative min-h-screen">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10"

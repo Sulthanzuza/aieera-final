@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Pen, LayoutTemplate, Eye, Code2, Sparkles ,ArrowRight } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
 import Img1 from '../assets/services/web des1.webp'
 import Img2 from '../assets/services/geo2.webp'

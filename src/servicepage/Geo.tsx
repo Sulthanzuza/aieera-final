@@ -1,14 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Bot, Brain, Database, LineChart, MessageSquare, Search, ArrowRight } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
 import Img1 from '../assets/services/geo1.webp'
 import Img2 from '../assets/services/geo2.webp'
 import Img3 from '../assets/services/geo3.webp'
 import Img4 from '../assets/services/geo4.webp' 
 import Img5 from '../assets/services/geo 5.webp'
-import Helmet from 'react-helmet';
+import { Helmet,HelmetProvider } from 'react-helmet-async';
 import bg from '../assets/pexels-pixabay-373543.webp'
 import main from '../assets/pexels-tara-winstead-8386440.webp'
 const images = [Img1, Img2, Img4,Img3, Img5];
@@ -68,7 +67,8 @@ const GEOService = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-      <Helmet>
+      <HelmetProvider>
+        <Helmet>
         <title>Generative Engine Optimization Agency | Advanced GEO Services</title>
         <meta name="description" content="Boost your digital presence with our Generative Engine Optimization services. As a leading GEO agency, we drive smarter, faster, and more personalized online growth." />
         <meta name="keywords" content="Generative Engine Optimization Agency, generative engine optimization services" />
@@ -82,7 +82,8 @@ const GEOService = () => {
         <meta name="author" content="aieera" />
         <meta name="language" content="English" />
         <link rel="canonical" href={window.location.href} />
-      </Helmet> 
+        </Helmet>
+      </HelmetProvider> 
       
       {/* Hero Section */}
       <div className="relative min-h-screen">

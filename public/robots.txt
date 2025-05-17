@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://aieera.com/sitemap.xml
+Sitemap: https://www.aieera.com/sitemap.xml

@@ -1,14 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { TrendingUp, Search, Code, ArrowRight, Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
 import Img1 from '../assets/services/brandding1.webp'
 import Img2 from '../assets/services/branding2.webp'
 import Img3 from '../assets/services/pexels-sliceisop-2460434.webp'
 import Img4 from '../assets/services/pexels-eva-bronzini-7661590.webp'
 import BG from '../assets/services/branding 1.webp'
-import Helmet from 'react-helmet'
+import { Helmet,HelmetProvider } from 'react-helmet-async';
 const images = [Img1, Img2, Img4, Img3];
 
 const Branding = () => {
@@ -54,8 +53,8 @@ const Branding = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-        <Helmet>
-              
+        <HelmetProvider>
+              <Helmet>
               <title>Top Branding Agency in Dubai | Creative Branding Solutions</title>
               <meta name="description" content="Looking for the best branding agency in Dubai? Our creative agency delivers powerful branding strategies that elevate your business identity and market presence" />
               <meta name="keywords" content="branding agency dubai, creative agency dubai" />
@@ -68,10 +67,9 @@ const Branding = () => {
               <meta name="viewport" content="width=device-width, initial-scale=1" />
               <meta name="author" content="aieera" />
               <meta name="language" content="English" />
-              
-              
               <link rel="canonical" href={window.location.href} />
-            </Helmet>
+              </Helmet>
+            </HelmetProvider>
             <div className="relative min-h-screen">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10"

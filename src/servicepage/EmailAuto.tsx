@@ -1,14 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { TrendingUp, Search, Code, ArrowRight,Activity } from 'lucide-react';
 import AnimatedWords from '../components/AnimatedWords';
 import Img1 from '../assets/services/email3.webp'
 import Img2 from '../assets/services/email2.webp'
 import Img3 from '../assets/services/email1.webp'
 import Img4 from '../assets/services/img4.webp'
 import Main from '../assets/services/emailmain.webp'
-import Helmet from 'react-helmet'
+import { Helmet,HelmetProvider } from 'react-helmet-async';
 import Bg from '../assets/services/emailbg.webp' 
 const images = [Img1, Img2, Img4,Img3];
 const EmailAuto = () => {
@@ -59,8 +58,8 @@ const EmailAuto = () => {
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
-     <Helmet>
-              
+     <HelmetProvider>
+              <Helmet>
               <title>Email Marketing Services in Dubai | Boost Customer Engagement</title>
               <meta name="description" content="Enhance your outreach with professional email marketing services in Dubai. We create personalized campaigns that increase engagement and drive conversions." />
               <meta name="keywords" content="email marketing services in dubai" />
@@ -76,7 +75,8 @@ const EmailAuto = () => {
               
               
               <link rel="canonical" href={window.location.href} />
-            </Helmet>
+              </Helmet>
+            </HelmetProvider>
             <div className="relative min-h-screen">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10"

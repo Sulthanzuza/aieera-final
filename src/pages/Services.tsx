@@ -14,7 +14,7 @@ import Email from "../assets/email.webp"
 import Webdev from "../assets/web development.webp"
 import Geo from "../assets/geo.webp"
 import Branding from "../assets/branding.webp"
-import {Helmet } from 'react-helmet'
+import {Helmet, HelmetProvider } from 'react-helmet-async';
 const serviceItems = [
   {
 
@@ -170,8 +170,8 @@ const Services = () => {
 
   return (
     <div className="in-h-screen pt-16 bg-black overflow-hidden">
-     <Helmet>
-              
+     <HelmetProvider>
+              <Helmet>
               <title>Digital Marketing Services Tailored for Growth | AI-Powered Campaigns</title>
               <meta name="description" content="Get expert digital marketing services using advanced AI tools. From SEO to social media, we create customized campaigns that drive measurable results." />
               <meta name="keywords" content="digital marketing services" />
@@ -187,7 +187,8 @@ const Services = () => {
               
               
               <link rel="canonical" href={window.location.href} />
-            </Helmet> 
+              </Helmet>
+            </HelmetProvider> 
                  <div id="services" className="pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 relative">
           <motion.div
