@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet,HelmetProvider } from 'react-helmet-async';
-import Logo from "../assets/Logo large single.webp"; 
+import Logo from "../assets/Single logo with white gradient.webp"; 
 
 const About = () => {
   const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
@@ -101,7 +101,7 @@ const About = () => {
                 }}
                 className="w-full max-w-md aspect-square relative"
               >
-                <img src={Logo} alt="logo"  loading="lazy" className="w-full h-full object-contain filter invert brightness-10 " />
+                <img src={Logo} alt="logo"  loading="lazy" className="w-full h-full object-contain  brightness-90 " />
                 <motion.div
                   animate={{
                     scale: [1, 1.1, 1],

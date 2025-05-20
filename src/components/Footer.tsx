@@ -6,7 +6,7 @@ import {
 
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import FooterLogo from "../assets/Logo with name large.webp";
+import FooterLogo from "../assets/full logo with white gradient.webp";
 
 interface SocialLink {
   name: string;
@@ -56,7 +56,7 @@ const Footer: FC = () => {
              loading="lazy"
               src={FooterLogo}
               alt="Aieera Digital Marketing Logo"
-              className="h-40 w-auto filter invert"
+              className="h-40 w-auto"
             />
             <p className="text-xl text-gray-300 mt-2 ">
               Future Marketing Company
