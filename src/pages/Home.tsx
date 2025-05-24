@@ -219,10 +219,10 @@ const Home = () => {
     const organizationSchema = {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "aieera",
+      "name": "Aieera Digital Marketing",
       "description": "Explore the future of digital marketing with AI. We deliver powerful AI-driven strategies that boost engagement, conversions, and business growth.",
       "url": window.location.origin,
-      "logo": `${window.location.origin}/logo.png`,
+      "logo": `${window.location.origin}/Logo.png`,
       "sameAs": [
         "https://www.facebook.com/aieerafm",
         "https://www.linkedin.com/company/aieera",
