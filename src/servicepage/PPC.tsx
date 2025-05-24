@@ -152,7 +152,7 @@ const PaidAds = () => {
                 >
                   <img
                     src={Main}
-                    alt="AI Visualization"
+                    alt="ai digital marketing"
                     loading="lazy"
                     className="object-cover w-full h-full"
                   />

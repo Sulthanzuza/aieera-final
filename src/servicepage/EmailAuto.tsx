@@ -148,7 +148,7 @@ const EmailAuto = () => {
                 >
                   <img
                     src={Main}
-                    alt="AI Visualization"
+                    alt="best digital marketing company in duabi"
                     loading="lazy"
                     className="object-cover w-full h-full"
                   />

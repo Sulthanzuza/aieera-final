@@ -314,6 +314,7 @@ const Home = () => {
         <BackgroundVideo
   videoSrc={BackgroundVide}
   posterSrc={BgPoster}
+  
   className="min-h-screen"
 />
 

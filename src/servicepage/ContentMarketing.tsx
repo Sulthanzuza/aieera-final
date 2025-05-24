@@ -156,7 +156,7 @@ const Content = () => {
                 >
                   <img
                     src={Main}
-                    alt="AI Visualization"
+                    alt="aieera digital marketing dubai"
                     loading="lazy"
                     className="object-cover w-full h-full"
                   />

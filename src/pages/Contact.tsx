@@ -8,8 +8,7 @@ const contactMethods = [
     title: "Phone",
     details: "+971 545458167",
     link: "https://wa.me/+971545458167",
-    description: "Monday to Friday, 9am to 6pm"
-  },
+     },
   {
     icon: <Mail className="w-6 h-6" />,
     title: "Email",
@@ -20,8 +19,7 @@ const contactMethods = [
   {
     icon: <MapPin className="w-6 h-6" />,
     title: "Office",
-    details: "Naif,deira",
-    description: "Dubai"
+    details: "Freelance"
   }
 ];
 

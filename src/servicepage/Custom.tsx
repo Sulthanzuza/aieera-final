@@ -165,7 +165,7 @@ const Customization = () => {
                 >
                   <img
                     src={Main}
-                    alt="AI Visualization"
+                    alt=" best digital marketing agency in dubai"
                     loading="lazy"
                     className="object-cover w-full h-full"
                   />

@@ -152,7 +152,7 @@ const ChatBots = () => {
                 >
                   <img
                     src={Main}
-                    alt="AI Visualization"
+                    alt="Aieera AI Chatbots"
                     loading="lazy"
                     className="object-cover w-full h-full"
                   />

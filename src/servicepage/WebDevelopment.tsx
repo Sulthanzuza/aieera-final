@@ -150,7 +150,7 @@ const Webdev = () => {
                 >
                   <img
                     src={Main}
-                    alt="AI Visualization"
+                    alt="Digital Marketing Website Development"
                     loading="lazy"
                     className="object-cover w-full h-full"
                   />

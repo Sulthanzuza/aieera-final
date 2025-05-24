@@ -141,7 +141,7 @@ const Branding = () => {
                 >
                   <img
                     src={Img3}
-                    alt="AI Visualization"
+                    alt="Aieera Branding"
                     loading="lazy"
                     className="object-cover w-full h-full"
                   />

@@ -151,7 +151,7 @@ const SMM = () => {
                 >
                   <img
                     src={Main}
-                    alt="AI Visualization"
+                    alt="best social media marketing"
                     loading="lazy"
                     className="object-cover w-full h-full"
                   />

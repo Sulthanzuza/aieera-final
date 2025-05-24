@@ -155,7 +155,7 @@ const SEOService = () => {
                 >
                   <img
                     src={Seo}
-                    alt="AI Visualization"
+                    alt="seo dubai"
                     loading="lazy"
                     className="object-cover w-full h-full"
                   />

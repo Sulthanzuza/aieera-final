@@ -157,7 +157,7 @@ const GEOService = () => {
                 >
                   <img
                     src={main}
-                    alt="AI Visualization"
+                    alt="GEO digital marketing"
                     loading="lazy"
                     className="object-cover w-full h-full"
                   />

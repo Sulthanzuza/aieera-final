@@ -101,7 +101,7 @@ const About = () => {
                 }}
                 className="w-full max-w-md aspect-square relative"
               >
-                <img src={Logo} alt="logo"  loading="lazy" className="w-full h-full object-contain  brightness-90 " />
+                <img src={Logo} alt="aieera digital marketing"  loading="lazy" className="w-full h-full object-contain  brightness-90 " />
                 <motion.div
                   animate={{
                     scale: [1, 1.1, 1],
