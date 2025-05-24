@@ -291,7 +291,7 @@ const Home = () => {
         <meta property="og:description" content="Explore the future of digital marketing with AI. We deliver powerful AI-driven strategies that boost engagement, conversions, and business growth." />
         <meta property="og:url" content={currentUrl} />
         <meta property="og:type" content="website" />
-        
+        <meta property="og:image" content="https://www.aieera.com/Logo.png" />
         <meta property="og:site_name" content="aieera" />
 
         <meta name="robots" content="index, follow" />
