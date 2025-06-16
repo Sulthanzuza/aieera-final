@@ -614,7 +614,7 @@ const Home = () => {
     </h2>
 
     <p className="text-gray-300 text-base text-justify sm:text-lg md:text-xl mb-8 max-w-lg mx-auto md:mx-0" itemProp="description">
-    Choosing aieera means more than just hiring a marketing team it's about partnering with a team that lives and breathes innovation, purpose, and results. We foster a culture rooted in happiness, dedication, and shared success where every milestone we reach with you is a victory for us all.
+    Choosing aieera AI means more than just hiring a marketing team it's about partnering with a team that lives and breathes innovation, purpose, and results. We foster a culture rooted in happiness, dedication, and shared success where every milestone we reach with you is a victory for us all.
 Our passionate team doesn’t just show up to work they show up with AI assisted tools, creative ideas, collaborative energy, and big dreams. In our world, innovation isn’t just welcomed t’s cherished, nurtured, and turned into results. With aieera, you’re not only keeping up with the future of marketing, you're helping to shape it.
 
     </p>
