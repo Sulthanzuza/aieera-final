@@ -72,7 +72,7 @@ const Content = () => {
               <meta name="keywords" content="content creation agency dubai, performance marketing agency in dubai" />
               <meta property="og:title" content=" Content Creation Agency Dubai | Performance Marketing Experts" />
               <meta property="og:description" content="Create powerful content that converts. Our content creation agency in Dubai specializes in performance marketing to grow your brand faster and smarter." />
-              <meta property="og:url" content={window.location.href} />
+              <meta property="og:url" content='https://www.aieera.com/services/content-marketing' />
               <meta property="og:type" content="website" />
               <meta property="og:site_name" content="aieera" />
               <meta name="robots" content="index, follow" />
@@ -81,7 +81,7 @@ const Content = () => {
               <meta name="language" content="English" />
               
               
-              <link rel="canonical" href={window.location.href} />
+              <link rel="canonical" href='https://www.aieera.com/services/content-marketing' />
               </Helmet>
             </HelmetProvider>
             <div className="relative min-h-screen">

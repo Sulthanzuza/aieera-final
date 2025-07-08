@@ -177,7 +177,7 @@ const Services = () => {
               <meta name="keywords" content="digital marketing services" />
               <meta property="og:title" content="Digital Marketing Services Tailored for Growth | AI-Powered Campaigns" />
               <meta property="og:description" content="Get expert digital marketing services using advanced AI tools. From SEO to social media, we create customized campaigns that drive measurable results." />
-              <meta property="og:url" content={window.location.href} />
+              <meta property="og:url" content='https://www.aieera.com/services' />
               <meta property="og:type" content="website" />
               <meta property="og:site_name" content="aieera" />
               <meta name="robots" content="index, follow" />
@@ -186,7 +186,7 @@ const Services = () => {
               <meta name="language" content="English" />
               
               
-              <link rel="canonical" href={window.location.href} />
+              <link rel="canonical" href='https://www.aieera.com/services' />
               </Helmet>
             </HelmetProvider> 
                  <div id="services" className="pt-20">

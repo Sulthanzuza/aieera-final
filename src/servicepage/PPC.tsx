@@ -69,7 +69,7 @@ const PaidAds = () => {
               <meta name="keywords" content="ppc agency dubai, google ads agency in dubai, ppc management dubai" />
               <meta property="og:title" content="PPC Agency Dubai | Google Ads Management Experts" />
               <meta property="og:description" content="Partner with a top PPC agency in Dubai. Expert Google Ads management and PPC services tailored to maximize your ROI and drive targeted traffic" />
-              <meta property="og:url" content={window.location.href} />
+              <meta property="og:url" content='https://www.aieera.com/services/paid-ads' />
               <meta property="og:type" content="website" />
               <meta property="og:site_name" content="aieera" />
               <meta name="robots" content="index, follow" />
@@ -78,7 +78,7 @@ const PaidAds = () => {
               <meta name="language" content="English" />
               
               
-              <link rel="canonical" href={window.location.href} />
+              <link rel="canonical" href='https://www.aieera.com/services/paid-ads' />
               </Helmet>
             </HelmetProvider>
             <div className="relative min-h-screen">

@@ -72,7 +72,7 @@ const SEOService = () => {
               <meta name="keywords" content="seo dubai, seo with ai, ai tools for seo, seo ai tools, seo agency in dubai, search engine optimization agency" />
               <meta property="og:title" content="SEO Agency in Dubai | Boost Rankings with AI SEO Tools" />
               <meta property="og:description" content="Maximize your visibility with our Dubai-based SEO agency. We combine AI SEO tools with proven strategies to rank higher and grow your online presence" />
-              <meta property="og:url" content={window.location.href} />
+              <meta property="og:url" content='https://www.aieera.com/services/search-engine-optimization' />
               <meta property="og:type" content="website" />
               <meta property="og:site_name" content="aieera" />
               <meta name="robots" content="index, follow" />
@@ -81,7 +81,7 @@ const SEOService = () => {
               <meta name="language" content="English" />
               
               
-              <link rel="canonical" href={window.location.href} />
+              <link rel="canonical" href='https://www.aieera.com/services/search-engine-optimization' />
               </Helmet>
             </HelmetProvider> 
             <div className="relative min-h-screen">

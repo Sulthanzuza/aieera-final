@@ -65,7 +65,7 @@ const EmailAuto = () => {
               <meta name="keywords" content="email marketing services in dubai" />
               <meta property="og:title" content="Email Marketing Services in Dubai | Boost Customer Engagement" />
               <meta property="og:description" content="Enhance your outreach with professional email marketing services in Dubai. We create personalized campaigns that increase engagement and drive conversions." />
-              <meta property="og:url" content={window.location.href} />
+              <meta property="og:url" content='https://www.aieera.com/services/email-automation' />
               <meta property="og:type" content="website" />
               <meta property="og:site_name" content="aieera" />
               <meta name="robots" content="index, follow" />
@@ -74,7 +74,7 @@ const EmailAuto = () => {
               <meta name="language" content="English" />
               
               
-              <link rel="canonical" href={window.location.href} />
+              <link rel="canonical" href='https://www.aieera.com/services/email-automation' />
               </Helmet>
             </HelmetProvider>
             <div className="relative min-h-screen">

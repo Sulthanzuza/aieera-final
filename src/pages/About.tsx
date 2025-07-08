@@ -21,8 +21,6 @@ const About = () => {
               <meta name="viewport" content="width=device-width, initial-scale=1" />
               <meta name="author" content="aieera" />
               <meta name="language" content="English" />
-              
-              
               <link rel="canonical" href={currentUrl} />
               </Helmet>
             </HelmetProvider>

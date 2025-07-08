@@ -1,5 +1,6 @@
 import { React, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 import {  ArrowRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
@@ -212,7 +213,8 @@ const Home = () => {
     navigate(path);
   };
 
-  const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
+  const location = useLocation();
+  const canonicalUrl = `https://www.aieera.com${location.pathname}`;
 
   const generateSchemaMarkup = () => {
     // Organization schema
@@ -254,7 +256,7 @@ const Home = () => {
             "@type": "Service",
             "name": service.title,
             "description": service.description,
-            "url": `${window.location.origin}${service.path}`
+            "url": canonicalUrl
           },
           "position": index + 1
         }))
@@ -267,11 +269,11 @@ const Home = () => {
       "@type": "WebPage",
       "name": "AI-Powered Digital Marketing Services | aieera",
       "description": "Explore the future of digital marketing with AI. We deliver powerful AI-driven strategies that boost engagement, conversions, and business growth.",
-      "url": currentUrl,
+      "url": canonicalUrl,
       "mainEntity": {
         "@type": "WebSite",
         "name": "aieera - AI Digital Marketing Agency",
-        "url": window.location.origin
+        "url": 'https://www.aieera.com'
       }
     };
 
@@ -289,7 +291,7 @@ const Home = () => {
 
         <meta property="og:title" content="AI Digital Marketing Solutions | Automate Online Growth with AI" />
         <meta property="og:description" content="Explore the future of digital marketing with AI. We deliver powerful AI-driven strategies that boost engagement, conversions, and business growth." />
-        <meta property="og:url" content={currentUrl} />
+        <meta property="og:url" content='https://www.aieera.com'/>
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.aieera.com/Logo.png" />
         <meta property="og:site_name" content="aieera" />
@@ -299,7 +301,7 @@ const Home = () => {
         <meta name="author" content="aieera" />
         <meta name="language" content="English" />
 
-        <link rel="canonical" href={currentUrl} />
+        <link rel="canonical" href={canonicalUrl} />
 
         <script type="application/ld+json">
           {JSON.stringify(generateSchemaMarkup())}

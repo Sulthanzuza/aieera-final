@@ -67,7 +67,7 @@ const ChatBots = () => {
               <meta name="keywords" content="lead generation chatbots, lead generation companies in dubai" />
               <meta property="og:title" content=":Lead Generation Chatbots | Top Lead Generation Company Dubai" />
               <meta property="og:description" content="Capture more leads with smart chatbots. As a leading lead generation company in Dubai, we help you automate, qualify, and grow your customer base efficiently." />
-              <meta property="og:url" content={window.location.href} />
+              <meta property="og:url" content='https://www.aieera.com/services/chat-bots' />
               <meta property="og:type" content="website" />
               <meta property="og:site_name" content="aieera" />
               <meta name="robots" content="index, follow" />
@@ -76,7 +76,7 @@ const ChatBots = () => {
               <meta name="language" content="English" />
               
               
-              <link rel="canonical" href={window.location.href} />
+              <link rel="canonical" href='https://www.aieera.com/services/chat-bots' />
               </Helmet>
             </HelmetProvider>
             <div className="relative min-h-screen">

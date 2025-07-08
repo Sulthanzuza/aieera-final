@@ -67,7 +67,7 @@ const Webdev = () => {
               <meta name="keywords" content="web development company in uae, website development company dubai, website design company dubai" />
               <meta property="og:title" content="Web Development Company in UAE | Website Design Dubai" />
               <meta property="og:description" content="Professional web development company in UAE offering website design and development services in Dubai. Build stunning, high-performing websites with us today" />
-              <meta property="og:url" content={window.location.href} />
+              <meta property="og:url" content='https://www.aieera.com/services/web-development' />
               <meta property="og:type" content="website" />
               <meta property="og:site_name" content="aieera" />
               <meta name="robots" content="index, follow" />
@@ -76,7 +76,7 @@ const Webdev = () => {
               <meta name="language" content="English" />
               
               
-              <link rel="canonical" href={window.location.href} />
+              <link rel="canonical" href='https://www.aieera.com/services/web-development' />
               </Helmet>
             </HelmetProvider>
             <div className="relative min-h-screen">

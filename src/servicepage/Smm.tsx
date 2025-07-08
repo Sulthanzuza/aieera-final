@@ -68,7 +68,7 @@ const SMM = () => {
               <meta name="keywords" content="social media management company dubai, social media marketing agency dubai " />
               <meta property="og:title" content="Social Media Marketing Agency Dubai | SMM Company UAE" />
               <meta property="og:description" content=" Leading social media management company in Dubai. Grow your brand online with powerful strategies crafted by a top social media marketing agency" />
-              <meta property="og:url" content={window.location.href} />
+              <meta property="og:url" content='https://www.aieera.com/services/socialmedia-marketing' />
               <meta property="og:type" content="website" />
               <meta property="og:site_name" content="aieera" />
               <meta name="robots" content="index, follow" />
@@ -77,7 +77,7 @@ const SMM = () => {
               <meta name="language" content="English" />
               
               
-              <link rel="canonical" href={window.location.href} />
+              <link rel="canonical" href='https://www.aieera.com/services/socialmedia-marketing' />
               </Helmet>
             </HelmetProvider>
             <div className="relative min-h-screen">

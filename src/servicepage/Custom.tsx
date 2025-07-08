@@ -80,7 +80,7 @@ const Customization = () => {
               <meta name="keywords" content="personalized digital marketing" />
               <meta property="og:title" content="Personalized Digital Marketing Strategies | Custom Growth Solutions" />
               <meta property="og:description" content="Unlock your brand’s full potential with personalized digital marketing strategies. Customized solutions designed to drive measurable growth and success" />
-              <meta property="og:url" content={window.location.href} />
+              <meta property="og:url" content='https://www.aieera.com/services/customization' />
               <meta property="og:type" content="website" />
               <meta property="og:site_name" content="aieera" />
               <meta name="robots" content="index, follow" />
@@ -89,7 +89,7 @@ const Customization = () => {
               <meta name="language" content="English" />
               
               
-              <link rel="canonical" href={window.location.href} />
+              <link rel="canonical" href='https://www.aieera.com/services/customization' />
               </Helmet>
             </HelmetProvider>
             <div className="relative min-h-screen">

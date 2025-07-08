@@ -74,14 +74,14 @@ const GEOService = () => {
         <meta name="keywords" content="Generative Engine Optimization Agency, generative engine optimization services" />
         <meta property="og:title" content="Generative Engine Optimization Agency | Advanced GEO Services" />
         <meta property="og:description" content="Boost your digital presence with our Generative Engine Optimization services. As a leading GEO agency, we drive smarter, faster, and more personalized online growth." />
-        <meta property="og:url" content={window.location.href} />
+        <meta property="og:url" content='https://www.aieera.com/services/generative-engine-optimization' />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="aieera" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="aieera" />
         <meta name="language" content="English" />
-        <link rel="canonical" href={window.location.href} />
+        <link rel="canonical" href='https://www.aieera.com/services/generative-engine-optimization' />
         </Helmet>
       </HelmetProvider> 
       
