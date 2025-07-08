@@ -1,6 +1,43 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/" }
-    ]
-  }
-  
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "aieera.com"
+        }
+      ],
+      "destination": "https://www.aieera.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "aieera-final-sulthanshas-projects.vercel.app"
+        }
+      ],
+      "destination": "https://www.aieera.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "aieera-final-git-main-sulthanshas-projects.vercel.app"
+        }
+      ],
+      "destination": "https://www.aieera.com/$1",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
