@@ -22,9 +22,11 @@ import Webdev from './servicepage/WebDevelopment'
 import WebDesign from './servicepage/WebDesigning'
 import PaidAds from "./servicepage/PPC"
 import Whatsapp from "./components/WhatsappFloatButton"
+import MetaPixelTracker from './components/MetaPixelTracker';
 function App() {
   return (
     <BrowserRouter>
+    <MetaPixelTracker />
       <ScrollToTop /> 
       <div className="flex flex-col min-h-screen overflow-x-hidden">
         <main className="flex-grow">
