@@ -26,7 +26,7 @@ const Navbar = () => {
     { name: 'GEO', path: '/services/generative-engine-optimization' },
     { name: 'Paid Ads', path: '/services/paid-ads' },
     { name: 'SEO', path: '/services/search-engine-optimization' },
-    { name: 'Social Media MArketing', path: '/services/socialmedia-marketing' },
+    { name: 'Social Media Marketing', path: '/services/socialmedia-marketing' },
     { name: 'Web Desiging', path: '/services/web-designing' },
     { name: 'Web Development', path: '/services/web-development' },
   ];
