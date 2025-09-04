@@ -32,10 +32,7 @@ const About = () => {
           className="text-center mb-16 "
         >
           <h1 className="text-5xl md:text-7xl font-bold text-gray-400 mb-8">
-            Unlock New Possibilities
-            <br />
-              with 
-              aieera
+            About aieera <br/> Redefining Technology & Marketing
           </h1>
           <motion.p
             initial={{ opacity: 0 }}
