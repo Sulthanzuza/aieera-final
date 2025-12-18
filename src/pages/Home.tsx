@@ -331,21 +331,54 @@ const Home = () => {
             transition={{ duration: 1.0 }}
             className="text-center mb-20"
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-                Welcome to the
-              </span>
-              <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-                ERA of Digital Marketing with <span className="animated-gradient bg-clip-text text-transparent bg-gradient-to-r from-white via-silver to-gray-300">
-                  AI
-                </span>,
-              </span>
-              <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-                Built for You
-              </span>
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+  <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+    Welcome to the
+  </span>
+  <br />
+  <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+    ER
+    {/* The Wrapper for A */}
+    <span className="relative inline-block text-white"> 
+      {/* We use a span for the A to ensure it's visible and the hat anchors to it */}
+      <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+        A
+      </span>
+      
+      <motion.img 
+        src="https://cdn-icons-png.flaticon.com/512/744/744546.png" 
+        alt="Christmas Cap"
+        className="absolute pointer-events-none"
+        style={{
+          /* em units make it scale perfectly with the font size */
+          width: "1.1em", 
+          height: "auto",
+          top: "-0.15em",
+          left: ".00em",
+          rotate: "-15deg",
+          filter: "drop-shadow(2px 4px 8px rgba(0,0,0,0.5))",
+          zIndex: 50
+        }}
+        initial={{ y: -20, opacity: 0, scale: 0.5 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{ 
+          delay: 1.2, 
+          type: "spring", 
+          stiffness: 200, 
+          damping: 10 
+        }}
+      />
+    </span>
+    {" "}of Digital Marketing with{" "}
+    <span className="animated-gradient bg-clip-text text-transparent bg-gradient-to-r from-white via-silver to-gray-300">
+      AI
+    </span>,
+  </span>
+  <br />
+  <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+    Built for You
+  </span>
+</h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
