@@ -345,29 +345,7 @@ const Home = () => {
         A
       </span>
       
-      <motion.img 
-        src="https://cdn-icons-png.flaticon.com/512/744/744546.png" 
-        alt="Christmas Cap"
-        className="absolute pointer-events-none"
-        style={{
-          /* em units make it scale perfectly with the font size */
-          width: "1.1em", 
-          height: "auto",
-          top: "-0.15em",
-          left: ".00em",
-          rotate: "-15deg",
-          filter: "drop-shadow(2px 4px 8px rgba(0,0,0,0.5))",
-          zIndex: 50
-        }}
-        initial={{ y: -20, opacity: 0, scale: 0.5 }}
-        animate={{ y: 0, opacity: 1, scale: 1 }}
-        transition={{ 
-          delay: 1.2, 
-          type: "spring", 
-          stiffness: 200, 
-          damping: 10 
-        }}
-      />
+     
     </span>
     {" "}of Digital Marketing with{" "}
     <span className="animated-gradient bg-clip-text text-transparent bg-gradient-to-r from-white via-silver to-gray-300">

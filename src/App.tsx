@@ -23,25 +23,12 @@ import WebDesign from './servicepage/WebDesigning'
 import PaidAds from "./servicepage/PPC"
 import Whatsapp from "./components/WhatsappFloatButton"
 import MetaPixelTracker from './components/MetaPixelTracker';
-import Santa from "./components/Santa";
-import Snowfall from 'react-snowfall';
 
 function App() {
   return (
     <BrowserRouter>
     <MetaPixelTracker />
-    <Santa />
-     <Snowfall
-        color="#f3fcffff"
-        snowflakeCount={200}  
-        style={{
-          position: 'fixed',
-          width: '100vw',
-          height: '100vh',
-          zIndex: 9999,
-          pointerEvents: 'none', 
-        }}
-      />
+   
       <ScrollToTop /> 
       <div className="flex flex-col min-h-screen overflow-x-hidden">
         <main className="flex-grow">
